@@ -6,6 +6,7 @@
 |--- algorithms
 |       |--- backtracking
 |       |--- greedyAlgorithms
+|       |--- twoPointers
 |       |--- windowSliding
 |--- dataStructures
 |       |--- array
