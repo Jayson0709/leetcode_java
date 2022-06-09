@@ -16,3 +16,8 @@
 |--- math
 |--- string
 ```
+
+## Credit
+[LeetCode-EN](https://leetcode.com/problemset/all/)
+
+[LeetCode-CN](https://leetcode.cn/problemset/all/)
