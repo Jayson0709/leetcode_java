@@ -6,6 +6,7 @@
 Project root
 |--- algorithms
 |       |--- backtracking
+|       |--- dynamicProgramming
 |       |--- greedyAlgorithms
 |       |--- sorting
 |       |--- twoPointers
