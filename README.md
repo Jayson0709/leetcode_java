@@ -9,6 +9,7 @@ Project root
 |       |--- binarySearch
 |       |--- dynamicProgramming
 |       |--- greedyAlgorithms
+|       |--- searching
 |       |--- sorting
 |       |--- twoPointers
 |       |--- windowSliding
