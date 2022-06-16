@@ -70,6 +70,7 @@ public class Q890 {
             }
             words[i] = wordsList.get(i);
         }
+        cin.close();
 
         List<String> result = findAndReplacePattern(words, pattern);
         System.out.print("[");

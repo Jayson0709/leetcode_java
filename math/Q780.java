@@ -60,6 +60,7 @@ public class Q780 {
         int sy = cin.nextInt();
         int tx = cin.nextInt();
         int ty = cin.nextInt();
+        cin.close();
 
         boolean result = reachingPoints(sx, sy, tx, ty);
         System.out.println(result);
