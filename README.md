@@ -17,6 +17,7 @@ Project root
 |       |--- array
 |       |--- hashMap
 |       |--- linkedList
+|       |--- queue
 |--- math
 |--- string
 ```
