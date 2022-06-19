@@ -1,4 +1,4 @@
-package dataStructures.tree;
+package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 

@@ -48,6 +48,8 @@ class TreeNode {
         this.right = right;
     }
 
+    // a simple implementation for tree node insertion
+    // Does not support null value input.
     public void insert(TreeNode node, int value) {
         if (value < node.val) {
             if (node.left != null) {
