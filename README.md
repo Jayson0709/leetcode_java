@@ -6,10 +6,12 @@
 Project root
 |--- algorithms
 |       |--- backtracking
-|       |--- binarySearch
 |       |--- dynamicProgramming
 |       |--- greedyAlgorithms
 |       |--- searching
+|       |       |--- binarySearch
+|       |       |--- dfs
+|       |       |--- unionFind
 |       |--- sorting
 |       |--- twoPointers
 |       |--- windowSliding
