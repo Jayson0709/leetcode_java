@@ -18,6 +18,7 @@ Project root
 |       |--- hashMap
 |       |--- linkedList
 |       |--- queue
+|       |--- tree
 |--- math
 |--- string
 ```
