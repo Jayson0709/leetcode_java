@@ -1,4 +1,4 @@
-package algorithms.searching;
+package algorithms.search.unionFind;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 

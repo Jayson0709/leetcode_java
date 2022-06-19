@@ -1,4 +1,4 @@
-package algorithms.binarySearch;
+package algorithms.search.binarySearch;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
