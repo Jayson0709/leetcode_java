@@ -9,6 +9,7 @@ Project root
 |       |--- dynamicProgramming
 |       |--- greedyAlgorithms
 |       |--- searching
+|       |       |--- bfs
 |       |       |--- binarySearch
 |       |       |--- dfs
 |       |       |--- unionFind
@@ -20,7 +21,11 @@ Project root
 |       |--- hashMap
 |       |--- linkedList
 |       |--- queue
+|       |--- stack
 |       |--- tree
+|       |       |--- binarySearchTree
+|       |       |--- binaryTree
+|       |       |--- segmentTree
 |--- math
 |--- string
 ```
