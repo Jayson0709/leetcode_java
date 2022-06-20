@@ -21,7 +21,7 @@ import java.nio.charset.StandardCharsets;
 //    0 <= arr[i]<= 10000
 
 
-public class smallestK {
+public class SmallestK {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
         int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();

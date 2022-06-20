@@ -6,6 +6,7 @@
 Project root
 |--- algorithms
 |       |--- backtracking
+|       |--- bitManipulation
 |       |--- dynamicProgramming
 |       |--- greedyAlgorithms
 |       |--- searching
