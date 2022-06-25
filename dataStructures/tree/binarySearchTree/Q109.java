@@ -120,7 +120,7 @@ public class Q109 {
                 System.out.print(root.val);
                 i++;
             } else {
-                System.out.print(" ," + root.val);
+                System.out.print(", " + root.val);
             }
             root = root.right;
         }

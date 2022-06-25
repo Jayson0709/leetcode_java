@@ -127,7 +127,7 @@ public class Q669 {
                 System.out.print(root.val);
                 i++;
             } else {
-                System.out.print(" ," + root.val);
+                System.out.print(", " + root.val);
             }
             root = root.right;
         }
