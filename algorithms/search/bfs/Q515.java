@@ -49,7 +49,7 @@ public class Q515 {
 
         TreeNode root = new TreeNode(data[0]);
         for (int i = 1; i < data.length; i++) {
-            root.insert(root, data[i]);
+            root.insertInBT(root, data[i]);
         }
         List<Integer> result = largestValues(root);
         System.out.print("[");

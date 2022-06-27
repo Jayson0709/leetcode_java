@@ -56,20 +56,43 @@ class TreeNode {
         this.right = right;
     }
 
-    // a simple implementation for tree node insertion
+    // a simple implementation for binary search tree node insertion
     // Does not support null value input.
-    public void insert(TreeNode node, int value) {
+    public void insertInBST(TreeNode node, int value) {
         if (value < node.val) {
             if (node.left != null) {
-                insert(node.left, value);
+                insertInBST(node.left, value);
             } else {
                 node.left = new TreeNode(value);
             }
         } else if (value > node.val) {
             if (node.right != null) {
-                insert(node.right, value);
+                insertInBST(node.right, value);
             } else {
                 node.right = new TreeNode(value);
+            }
+        }
+    }
+
+    // a simple implementation for binary tree node insertion.
+    // Does not support null value input.
+    public void insertInBT(TreeNode node, int value) {
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(node);
+        while (!q.isEmpty()) {
+            node = q.peek();
+            q.remove();
+            if (node.left == null) {
+                node.left = new TreeNode(value);
+                break;
+            } else {
+                q.add(node.left);
+            }
+            if (node.right == null) {
+                node.right = new TreeNode(value);
+                break;
+            } else {
+                q.add(node.right);
             }
         }
     }
@@ -85,10 +108,10 @@ public class Q100 {
         TreeNode p = new TreeNode(data1[0]);
         TreeNode q = new TreeNode(data2[0]);
         for (int i = 1; i < data1.length; i++) {
-            p.insert(p, data1[i]);
+            p.insertInBT(p, data1[i]);
         }
         for (int i = 1; i < data2.length; i++) {
-            q.insert(q, data2[i]);
+            q.insertInBT(q, data2[i]);
         }
 
         boolean result = isSameTree(p ,q);

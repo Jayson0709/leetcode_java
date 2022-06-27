@@ -48,7 +48,7 @@ public class Q513 {
         cin.close();
         TreeNode root = new TreeNode(data[0]);
         for (int i = 1; i < data.length; i++) {
-            root.insert(root, data[i]);
+            root.insertInBT(root, data[i]);
         }
         int result = findBottomLeftValue(root);
         System.out.println(result);

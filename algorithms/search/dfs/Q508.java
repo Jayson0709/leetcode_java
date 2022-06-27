@@ -48,20 +48,43 @@ class TreeNode {
         this.right = right;
     }
 
-    // a simple implementation for tree node insertion
+    // a simple implementation for binary search tree node insertion
     // Does not support null value input.
-    public void insert(TreeNode node, int value) {
+    public void insertInBST(TreeNode node, int value) {
         if (value < node.val) {
             if (node.left != null) {
-                insert(node.left, value);
+                insertInBST(node.left, value);
             } else {
                 node.left = new TreeNode(value);
             }
         } else if (value > node.val) {
             if (node.right != null) {
-                insert(node.right, value);
+                insertInBST(node.right, value);
             } else {
                 node.right = new TreeNode(value);
+            }
+        }
+    }
+
+    // a simple implementation for binary tree node insertion
+    // Does not support null value input.
+    public void insertInBT(TreeNode node, int value) {
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(node);
+        while (!q.isEmpty()) {
+            node = q.peek();
+            q.remove();
+            if (node.left == null) {
+                node.left = new TreeNode(value);
+                break;
+            } else {
+                q.add(node.left);
+            }
+            if (node.right == null) {
+                node.right = new TreeNode(value);
+                break;
+            } else {
+                q.add(node.right);
             }
         }
     }
@@ -78,7 +101,7 @@ public class Q508 {
         TreeNode root = new TreeNode();
         root.val = data[0];
         for (int i = 1; i < data.length; i++) {
-            root.insert(root, data[i]);
+            root.insertInBT(root, data[i]);
         }
         int[] result = findFrequentTreeSum(root);
         System.out.print("[");
