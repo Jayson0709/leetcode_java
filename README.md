@@ -9,6 +9,7 @@ Project root
 |       |--- bitManipulation
 |       |--- dynamicProgramming
 |       |--- greedyAlgorithms
+|       |--- memoization
 |       |--- quickSelect
 |       |--- searching
 |       |       |--- bfs
