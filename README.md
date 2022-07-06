@@ -29,6 +29,7 @@ Project root
 |       |       |--- binarySearchTree
 |       |       |--- binaryTree
 |       |       |--- segmentTree
+|       |       |--- trie
 |--- math
 |--- string
 ```
