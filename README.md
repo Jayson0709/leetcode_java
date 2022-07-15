@@ -28,6 +28,7 @@ Project root
 |       |--- tree
 |       |       |--- binarySearchTree
 |       |       |--- binaryTree
+|       |       |--- quadTree
 |       |       |--- segmentTree
 |       |       |--- trie
 |--- math
