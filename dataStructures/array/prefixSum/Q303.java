@@ -1,4 +1,4 @@
-package dataStructures.array;
+package dataStructures.array.prefixSum;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -57,7 +57,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q303 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] orders = cin.nextLine().strip().split(" ");
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         List<int[]> sumRanges = new ArrayList<>();

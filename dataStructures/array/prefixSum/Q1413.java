@@ -1,4 +1,4 @@
-package dataStructures.array;
+package dataStructures.array.prefixSum;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 

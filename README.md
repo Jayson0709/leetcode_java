@@ -21,6 +21,7 @@ Project root
 |       |--- windowSliding
 |--- dataStructures
 |       |--- array
+|       |       |--- prefixSum
 |       |--- hashMap
 |       |--- linkedList
 |       |--- queue
