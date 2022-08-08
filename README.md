@@ -7,6 +7,7 @@ Project root
 |--- algorithms
 |       |--- backtracking
 |       |--- bitManipulation
+|       |--- divideAndConquer
 |       |--- dynamicProgramming
 |       |--- greedyAlgorithms
 |       |--- memoization
