@@ -22,7 +22,9 @@ Project root
 |       |--- windowSliding
 |--- dataStructures
 |       |--- array
+|       |       |--- matrix
 |       |       |--- prefixSum
+|       |       |--- simpleArray
 |       |--- hashMap
 |       |--- linkedList
 |       |--- queue
