@@ -1,4 +1,4 @@
-package dataStructures.array;
+package dataStructures.array.matrix;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -41,7 +41,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q498 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> dataList = new ArrayList<>();
         while (true) {
             String line = cin.nextLine().strip();

@@ -1,4 +1,4 @@
-package dataStructures.array;
+package dataStructures.array.simpleArray;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -89,7 +89,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1620 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> inputData = new ArrayList<>();
         while (true) {
             String curLine = cin.nextLine().strip();

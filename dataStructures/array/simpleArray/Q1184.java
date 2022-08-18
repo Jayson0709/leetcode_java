@@ -1,4 +1,4 @@
-package dataStructures.array;
+package dataStructures.array.simpleArray;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -93,7 +93,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1184 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] distance = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int start = cin.nextInt();
         int destination = cin.nextInt();

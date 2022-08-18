@@ -1,4 +1,4 @@
-package dataStructures.array;
+package dataStructures.array.matrix;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
