@@ -1,4 +1,4 @@
-﻿# My solutions to some LeetCode questions (Java version) 
+﻿# Solutions to some LeetCode questions (Java version) 
  (The project will be updated and categorized regularly.)
 
 ## Current Layout
@@ -26,6 +26,7 @@ Project root
 |       |       |--- prefixSum
 |       |       |--- simpleArray
 |       |--- hashMap
+|       |--- hashSet
 |       |--- linkedList
 |       |--- queue
 |       |--- stack
