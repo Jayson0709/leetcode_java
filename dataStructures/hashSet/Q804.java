@@ -1,4 +1,4 @@
-package dataStructures.hashMap;
+package dataStructures.hashSet;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 

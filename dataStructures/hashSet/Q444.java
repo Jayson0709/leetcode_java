@@ -1,4 +1,4 @@
-package dataStructures.hashMap;
+package dataStructures.hashSet;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -52,7 +52,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q444 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         List<int[]> seqData = new ArrayList<>();
         while (true) {

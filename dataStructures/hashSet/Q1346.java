@@ -1,4 +1,4 @@
-package dataStructures.hashMap;
+package dataStructures.hashSet;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -63,7 +63,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1346 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         boolean result = checkIfExist(arr);

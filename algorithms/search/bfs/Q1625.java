@@ -26,7 +26,7 @@ import java.nio.charset.StandardCharsets;
 //    Add:    "5121"
 //    Rotate: "2151"
 //    Add:    "2050"
-//    There is no way to obtain a string that is lexicographically smaller then "2050".
+//    There is no way to obtain a string that is lexicographically smaller than "2050".
 //
 //    Example 2:
 //    Input: s = "74", a = 5, b = 1
@@ -105,10 +105,9 @@ import java.nio.charset.StandardCharsets;
 
 
 public class Q1625 {
-    HashSet<String> strSet = new HashSet<>();
 
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String s = cin.nextLine().strip();
         int a = cin.nextInt();
         int b = cin.nextInt();
