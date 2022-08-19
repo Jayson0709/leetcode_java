@@ -1,5 +1,5 @@
 ﻿# Solutions to some LeetCode questions (Java version) 
- (The project will be updated and categorized regularly.)
+ (This project will be updated regularly.)
 
 ## Current Layout
 ```
