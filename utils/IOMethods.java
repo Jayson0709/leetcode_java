@@ -109,11 +109,9 @@ public class IOMethods {
                 root = root.left;
             }
             root = stack.pop();
+            output.append(", ").append(root.val);
             if (i == 0) {
-                output.append(", ").append(root.val);
                 i++;
-            } else {
-                output.append(", ").append(root.val);
             }
             root = root.right;
         }
