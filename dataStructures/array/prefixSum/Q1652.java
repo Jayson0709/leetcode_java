@@ -116,7 +116,7 @@ public class Q1652 {
             for (int i = 0; i < n; i++) {
                 int x = i + k;
                 if (x > 0) {
-                    code[i] = prefixSum[i - 1] + prefixSum[x - 1];
+                    code[i] = prefixSum[i - 1] - prefixSum[x - 1];
                 } else {
                     // when i == 0, there is no prefix[i-1]
                     code[i] = i == 0 ? 0 : prefixSum[i - 1];
