@@ -10,6 +10,7 @@ Project root
 |       |--- divideAndConquer
 |       |--- dynamicProgramming
 |       |--- greedyAlgorithms
+|       |--- math
 |       |--- memoization
 |       |--- quickSelect
 |       |--- searching
@@ -36,8 +37,9 @@ Project root
 |       |       |--- quadTree
 |       |       |--- segmentTree
 |       |       |--- trie
-|--- math
-|--- string
+|--- sharedClasses
+|       |--- ListNode
+|       |--- TreeNode
 ```
 
 ## Credit
