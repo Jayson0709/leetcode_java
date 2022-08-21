@@ -102,7 +102,7 @@ public class Q1206 {
         output.append("[");
         if (orders[0].equals("Skiplist")) {
             Skiplist obj = new Skiplist();
-            output.append(", null");
+            output.append("null");
             for (int i = 1; i < orders.length; i++) {
                 switch (orders[i]) {
                     case "add" -> {
@@ -153,9 +153,7 @@ class Skiplist {
         return curr != null && curr.val == target;
     }
 
-    public void add(int num) {
-        SkiplistNode[] update = new SkiplistNode[MAX_LEVEL];
-        Arrays.fill(update, head);
+    public SkiplistNode findClosestElement(SkiplistNode[] update, int num) {
         SkiplistNode curr = this.head;
         for (int i = level - 1; i >= 0; i--) {
             /* At level i, find the element that is less than and closest to num. */
@@ -164,6 +162,13 @@ class Skiplist {
             }
             update[i] = curr;
         }
+        return curr;
+    }
+
+    public void add(int num) {
+        SkiplistNode[] update = new SkiplistNode[MAX_LEVEL];
+        Arrays.fill(update, head);
+        findClosestElement(update, num);
         int lv = randomLevel();
         level = Math.max(level, lv);
         SkiplistNode newNode = new SkiplistNode(num, lv);
@@ -176,14 +181,7 @@ class Skiplist {
 
     public boolean erase(int num) {
         SkiplistNode[] update = new SkiplistNode[MAX_LEVEL];
-        SkiplistNode curr = this.head;
-        for (int i = level - 1; i >= 0; i--) {
-            /* At level i, find the element that is less than and closest to num. */
-            while (curr.forward[i] != null && curr.forward[i].val < num) {
-                curr = curr.forward[i];
-            }
-            update[i] = curr;
-        }
+        SkiplistNode curr = findClosestElement(update, num);
         curr = curr.forward[0];
         /* If it does not exist, return false. */
         if (curr == null || curr.val != num) {
