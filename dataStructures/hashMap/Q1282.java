@@ -1,7 +1,7 @@
 package dataStructures.hashMap;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.OutputMethods;
+import utils.*;
 
 
 //There are n people that are split into some unknown number of groups. Each person is labeled with a unique ID from 0 to n - 1.

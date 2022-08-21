@@ -1,7 +1,7 @@
 package dataStructures.hashMap;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.OutputMethods;
+import utils.*;
 
 
 //Given a list of strings words and a string pattern, return a list of words[i] that match pattern. You may return the answer in any order.

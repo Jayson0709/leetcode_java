@@ -1,7 +1,7 @@
 package algorithms.twoPointers;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.OutputMethods;
+import utils.*;
 
 
 //Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers.

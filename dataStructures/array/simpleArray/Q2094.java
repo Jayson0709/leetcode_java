@@ -1,7 +1,7 @@
 package dataStructures.array.simpleArray;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.OutputMethods;
+import utils.*;
 
 
 //You are given an integer array digits, where each element is a digit. The array may contain duplicates.

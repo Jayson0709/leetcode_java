@@ -1,7 +1,7 @@
 package dataStructures.string;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.OutputMethods;
+import utils.*;
 
 
 //Given an array of string words. Return all strings in words which is substring of another word in any order.

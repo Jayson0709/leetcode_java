@@ -2,7 +2,7 @@ package algorithms.divideAndConquer;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
-import utils.OutputMethods;
+import utils.*;
 
 
 //Given the head of a linked list, return the list after sorting it in ascending order.

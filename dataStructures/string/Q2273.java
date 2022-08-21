@@ -1,7 +1,7 @@
 package dataStructures.string;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.OutputMethods;
+import utils.*;
 
 
 //You are given a 0-indexed string array words, where words[i] consists of lowercase English letters.

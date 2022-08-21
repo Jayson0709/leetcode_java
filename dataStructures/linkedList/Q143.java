@@ -2,7 +2,7 @@ package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
-import utils.OutputMethods;
+import utils.*;
 
 
 //You are given the head of a singly linked-list. The list can be represented as:

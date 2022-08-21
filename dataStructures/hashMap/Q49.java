@@ -1,7 +1,7 @@
 package dataStructures.hashMap;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.OutputMethods;
+import utils.*;
 
 
 //Given an array of strings strs, group the anagrams together. You can return the answer in any order.

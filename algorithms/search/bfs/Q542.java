@@ -1,7 +1,7 @@
 package algorithms.search.bfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.OutputMethods;
+import utils.*;
 
 
 //Given an m x n binary matrix mat, return the distance of the nearest 0 for each cell.

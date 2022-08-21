@@ -1,7 +1,7 @@
 package algorithms.backtracking;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.OutputMethods;
+import utils.*;
 
 
 //Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.

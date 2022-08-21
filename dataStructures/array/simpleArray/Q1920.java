@@ -1,5 +1,5 @@
 package dataStructures.array.simpleArray;
-import utils.OutputMethods;
+import utils.*;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;

@@ -1,5 +1,5 @@
 package dataStructures.hashMap;
-import utils.OutputMethods;
+import utils.*;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
