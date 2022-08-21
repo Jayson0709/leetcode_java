@@ -31,6 +31,7 @@ Project root
 |       |--- linkedList
 |       |--- queue
 |       |--- stack
+|       |--- string
 |       |--- tree
 |       |       |--- binarySearchTree
 |       |       |--- binaryTree
