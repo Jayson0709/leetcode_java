@@ -1,7 +1,7 @@
 package dataStructures.string;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given an array of string words. Return all strings in words which is substring of another word in any order.
@@ -64,7 +64,7 @@ public class Q1408 {
         String[] words = cin.nextLine().strip().split(" ");
         cin.close();
         List<String> result = stringMatching(words);
-        IOMethods.outputListData(result);
+        OutputMethods.outputListData(result);
     }
 
     private static List<String> stringMatching(String[] words) {

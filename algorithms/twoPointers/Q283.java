@@ -1,5 +1,5 @@
 package algorithms.twoPointers;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -51,7 +51,7 @@ public class Q283 {
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         moveZeros(nums);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(nums).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(nums).boxed().toArray(Integer[]::new)));
     }
 
     private static void moveZeros(int[] nums) {

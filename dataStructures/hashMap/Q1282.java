@@ -1,7 +1,7 @@
 package dataStructures.hashMap;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //There are n people that are split into some unknown number of groups. Each person is labeled with a unique ID from 0 to n - 1.
@@ -65,7 +65,7 @@ public class Q1282 {
         int[] groupSizes = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         List<List<Integer>> result = groupThePeople(groupSizes);
-        IOMethods.outputEmbeddedListData(result);
+        OutputMethods.outputEmbeddedListData(result);
     }
 
     private static List<List<Integer>> groupThePeople(int[] groupSizes) {

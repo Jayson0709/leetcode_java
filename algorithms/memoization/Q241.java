@@ -1,5 +1,5 @@
 package algorithms.memoization;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -66,7 +66,7 @@ public class Q241 {
         cin.close();
 
         List<Integer> result = diffWaysToCompute(expression);
-        IOMethods.outputListData(result);
+        OutputMethods.outputListData(result);
     }
 
     // Method 1: Memoization

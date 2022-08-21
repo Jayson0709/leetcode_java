@@ -1,5 +1,5 @@
 package algorithms.sorting;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -43,7 +43,7 @@ public class Q912 {
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         int[] result = sortArray(nums);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     // Version 1: Quick Sort

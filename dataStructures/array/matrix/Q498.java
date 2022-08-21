@@ -1,5 +1,5 @@
 package dataStructures.array.matrix;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -60,7 +60,7 @@ public class Q498 {
         }
 
         int[] result = findDiagonalOrder(mat);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] findDiagonalOrder(int[][] mat) {

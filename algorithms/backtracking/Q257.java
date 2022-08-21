@@ -2,7 +2,7 @@ package algorithms.backtracking;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the root of a binary tree, return all root-to-leaf paths in any order.
@@ -63,7 +63,7 @@ public class Q257 {
             root.insertInBT(root, data[i]);
         }
         List<String> result = binaryTreePaths(root);
-        IOMethods.outputListData(result);
+        OutputMethods.outputListData(result);
     }
 
     private static List<String> binaryTreePaths(TreeNode root) {

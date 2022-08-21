@@ -1,7 +1,7 @@
 package dataStructures.array.simpleArray;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //You are given an integer array digits, where each element is a digit. The array may contain duplicates.
@@ -81,7 +81,7 @@ public class Q2094 {
         int[] digits = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         int[] result = findEvenNumbers(digits);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] findEvenNumbers(int[] digits) {

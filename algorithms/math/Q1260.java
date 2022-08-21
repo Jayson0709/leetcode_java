@@ -1,5 +1,5 @@
 package algorithms.math;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -103,7 +103,7 @@ public class Q1260 {
             grid[i] = data.get(i);
         }
         List<List<Integer>> result = shiftGrid(grid, k);
-        IOMethods.outputEmbeddedListData(result);
+        OutputMethods.outputEmbeddedListData(result);
     }
 
     private static List<List<Integer>> shiftGrid(int[][] grid, int k) {

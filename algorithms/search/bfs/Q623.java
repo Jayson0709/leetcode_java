@@ -2,7 +2,7 @@ package algorithms.search.bfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the root of a binary tree and two integers val and depth, add a row of nodes with value val at the given depth 'depth'.
@@ -100,7 +100,7 @@ public class Q623 {
         for (int i = 1; i < data.length; i++) {
             root.insertInBT(root, data[i]);
         }
-        System.out.println(IOMethods.levelOrderTraversalOutput(addOneRow(root, val, depth)));
+        System.out.println(OutputMethods.levelOrderTraversalOutput(addOneRow(root, val, depth)));
     }
 
 

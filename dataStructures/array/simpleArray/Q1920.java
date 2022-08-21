@@ -1,5 +1,5 @@
 package dataStructures.array.simpleArray;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -67,7 +67,7 @@ public class Q1920 {
         cin.close();
 
         int[] result = buildArray(nums);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     // Method 1: O(n) space complexity

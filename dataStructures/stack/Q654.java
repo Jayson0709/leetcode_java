@@ -2,7 +2,7 @@ package dataStructures.stack;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //You are given an integer array nums with no duplicates. A maximum binary tree can be built recursively from nums using the following algorithm:
@@ -99,7 +99,7 @@ public class Q654 {
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         TreeNode resultNode = constructMaximumBinaryTree(nums);
-        System.out.println(IOMethods.levelOrderTraversalOutput(resultNode));
+        System.out.println(OutputMethods.levelOrderTraversalOutput(resultNode));
     }
 
     // Method 1: Recursion

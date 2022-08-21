@@ -1,5 +1,5 @@
 package algorithms.twoPointers;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -85,7 +85,7 @@ public class Q88 {
         cin.close();
 
         merge(nums1, m, nums2, n);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(nums1).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(nums1).boxed().toArray(Integer[]::new)));
     }
 
     private static void merge(int[] nums1, int m, int[] nums2, int n) {

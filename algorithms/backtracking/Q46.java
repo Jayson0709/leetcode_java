@@ -1,7 +1,7 @@
 package algorithms.backtracking;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
@@ -50,7 +50,7 @@ public class Q46 {
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         List<List<Integer>> result = permute(nums);
-        IOMethods.outputEmbeddedListData(result);
+        OutputMethods.outputEmbeddedListData(result);
     }
 
     private static List<List<Integer>> permute(int[] nums) {

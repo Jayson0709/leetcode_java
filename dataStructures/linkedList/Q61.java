@@ -2,7 +2,7 @@ package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the head of a linked list, rotate the list to the right by k places.
@@ -65,7 +65,7 @@ public class Q61 {
         }
 
         ListNode resultHead = rotateRight(head, k);
-        System.out.println(IOMethods.outputLinkedListData(resultHead));
+        System.out.println(OutputMethods.outputLinkedListData(resultHead));
     }
 
     private static ListNode rotateRight(ListNode head, int k) {

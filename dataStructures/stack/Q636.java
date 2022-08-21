@@ -1,5 +1,5 @@
 package dataStructures.stack;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -131,7 +131,7 @@ public class Q636 {
         List<String> logs = Arrays.stream(cin.nextLine().strip().split(" ")).toList();
         cin.close();
         int[] result = exclusiveTime(n, logs);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] exclusiveTime(int n, List<String> logs) {

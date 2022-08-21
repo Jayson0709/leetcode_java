@@ -4,7 +4,7 @@ import sharedClasses.ListNode;
 import sharedClasses.TreeNode;
 
 
-public class IOMethods {
+public class OutputMethods {
 
     public static <T> StringBuilder outputListData(List<T> list) {
         StringBuilder res = new StringBuilder();

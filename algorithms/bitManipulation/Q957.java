@@ -1,5 +1,5 @@
 package algorithms.bitManipulation;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -83,7 +83,7 @@ public class Q957 {
         int n = Integer.parseInt(cin.nextLine().strip());
         cin.close();
         int[] result = prisonAfterNDays(cells, n);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] prisonAfterNDays(int[] cells, int n) {

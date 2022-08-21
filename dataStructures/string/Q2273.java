@@ -1,7 +1,7 @@
 package dataStructures.string;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //You are given a 0-indexed string array words, where words[i] consists of lowercase English letters.
@@ -83,7 +83,7 @@ public class Q2273 {
         String[] words = cin.nextLine().strip().split(" ");
         cin.close();
         List<String> result = removeAnagrams(words);
-        System.out.println(IOMethods.outputListData(result));
+        System.out.println(OutputMethods.outputListData(result));
     }
 
     private static List<String> removeAnagrams(String[] words) {

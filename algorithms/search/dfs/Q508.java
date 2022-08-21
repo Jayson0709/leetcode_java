@@ -2,7 +2,7 @@ package algorithms.search.dfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the root of a binary tree, return the most frequent subtree sum. If there is a tie, return all the values with the highest frequency in any order.
@@ -53,7 +53,7 @@ public class Q508 {
             root.insertInBT(root, data[i]);
         }
         int[] result = findFrequentTreeSum(root);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] findFrequentTreeSum(TreeNode root) {

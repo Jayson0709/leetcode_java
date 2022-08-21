@@ -1,5 +1,5 @@
 package dataStructures.array.simpleArray;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -58,7 +58,7 @@ public class Q1313 {
         cin.close();
 
         int[] result = decompressRLEList(nums);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] decompressRLEList(int[] nums){

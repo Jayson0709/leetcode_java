@@ -1,5 +1,5 @@
 package algorithms.search.bfs;
-import utils.IOMethods;
+import utils.OutputMethods;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -79,7 +79,7 @@ public class Q1129 {
             blueEdges[i] = Arrays.stream(blueEdgesData[i].split(",")).mapToInt(Integer::parseInt).toArray();
         }
         int[] result = shortestAlternatingPaths(n, redEdges, blueEdges);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] shortestAlternatingPaths(int n, int[][] redEdges, int[][] blueEdges) {

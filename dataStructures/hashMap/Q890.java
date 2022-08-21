@@ -1,7 +1,7 @@
 package dataStructures.hashMap;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given a list of strings words and a string pattern, return a list of words[i] that match pattern. You may return the answer in any order.
@@ -75,7 +75,7 @@ public class Q890 {
         cin.close();
 
         List<String> result = findAndReplacePattern(words, pattern);
-        IOMethods.outputListData(result);
+        OutputMethods.outputListData(result);
     }
 
     private static List<String> findAndReplacePattern(String[] words, String pattern) {

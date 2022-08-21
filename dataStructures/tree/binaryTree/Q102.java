@@ -2,7 +2,7 @@ package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
@@ -64,7 +64,7 @@ public class Q102 {
             root.insertInBT(root, data[i]);
         }
         List<List<Integer>> result = levelOrder(root);
-        IOMethods.outputEmbeddedListData(result);
+        OutputMethods.outputEmbeddedListData(result);
     }
 
     private static List<List<Integer>> levelOrder(TreeNode root) {

@@ -2,7 +2,7 @@ package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the root of a binary tree, return the inorder traversal of its nodes' values.
@@ -53,7 +53,7 @@ public class Q94 {
             root.insertInBT(root, data[i]);
         }
         List<Integer> result = inorderTraversal(root);
-        System.out.println(IOMethods.outputListData(result));
+        System.out.println(OutputMethods.outputListData(result));
     }
 
     // Method 1: Recursion

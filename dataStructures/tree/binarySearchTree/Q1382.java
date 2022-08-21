@@ -2,7 +2,7 @@ package dataStructures.tree.binarySearchTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the root of a binary search tree, return a balanced binary search tree with the same node values. If there is more than one answer, return any of them.
@@ -74,7 +74,7 @@ public class Q1382 {
             root.insertInBST(root, data[i]);
         }
         TreeNode resultNode = balanceBST(root);
-        System.out.println(IOMethods.inorderTraversalOutput(resultNode));
+        System.out.println(OutputMethods.inorderTraversalOutput(resultNode));
     }
 
     static List<Integer> inorderSeq = new ArrayList<>();

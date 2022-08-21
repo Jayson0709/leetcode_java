@@ -2,7 +2,7 @@ package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
@@ -67,7 +67,7 @@ public class Q83 {
             tempHead = tempNode;
         }
         ListNode resultHead = deleteDuplicates(head);
-        System.out.println(IOMethods.outputLinkedListData(resultHead));
+        System.out.println(OutputMethods.outputLinkedListData(resultHead));
     }
 
     // Method 1: Two Pointers

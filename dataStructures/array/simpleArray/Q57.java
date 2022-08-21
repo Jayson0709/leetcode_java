@@ -1,5 +1,5 @@
 package dataStructures.array.simpleArray;
-import utils.IOMethods;
+import utils.OutputMethods;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -82,7 +82,7 @@ public class Q57 {
             intervals[i] = data.get(i);
         }
         int[][] result = insert(intervals, newInterval);
-        IOMethods.output2DIntArrayData(result);
+        OutputMethods.output2DIntArrayData(result);
     }
 
     private static int[][] insert(int[][] intervals, int[] newInterval) {

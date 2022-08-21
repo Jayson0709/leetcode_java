@@ -1,5 +1,5 @@
 package algorithms.greedyAlgorithms;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -51,7 +51,7 @@ public class Q763 {
         cin.close();
 
         List<Integer> result = partitionLabels(s);
-        IOMethods.outputListData(result);
+        OutputMethods.outputListData(result);
     }
 
     private static List<Integer> partitionLabels(String s) {

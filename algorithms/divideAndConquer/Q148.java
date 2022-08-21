@@ -2,7 +2,7 @@ package algorithms.divideAndConquer;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the head of a linked list, return the list after sorting it in ascending order.
@@ -79,7 +79,7 @@ public class Q148 {
             p1 = temp;
         }
         ListNode resultHead = sortList(head);
-        System.out.println(IOMethods.outputLinkedListData(resultHead));
+        System.out.println(OutputMethods.outputLinkedListData(resultHead));
     }
 
     // Method 1: From top to bottom

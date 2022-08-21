@@ -1,5 +1,5 @@
 package dataStructures.array.simpleArray;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -57,7 +57,7 @@ public class Q1200 {
         int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         List<List<Integer>> result = minimumAbsDifference(arr);
-        IOMethods.outputEmbeddedListData(result);
+        OutputMethods.outputEmbeddedListData(result);
     }
 
     private static List<List<Integer>> minimumAbsDifference(int[] arr) {

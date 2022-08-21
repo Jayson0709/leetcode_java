@@ -1,5 +1,5 @@
 package dataStructures.stack;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -105,7 +105,7 @@ public class Q589 {
             }
         }
         result = preorder(root);
-        IOMethods.outputListData(result);
+        OutputMethods.outputListData(result);
     }
 
     // Method 1: recursively

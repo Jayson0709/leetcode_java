@@ -1,6 +1,5 @@
 package algorithms.math;
-import utils.IOMethods;
-
+import utils.OutputMethods;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -70,7 +69,7 @@ public class Q48 {
             matrix[i] = data.get(i);
         }
         rotate(matrix);
-        IOMethods.output2DIntArrayData(matrix);
+        OutputMethods.output2DIntArrayData(matrix);
     }
 
     private static void rotate(int[][] matrix) {

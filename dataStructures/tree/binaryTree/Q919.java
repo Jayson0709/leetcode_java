@@ -2,7 +2,7 @@ package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
@@ -97,7 +97,7 @@ public class Q919 {
                     int val = Integer.parseInt(cin.nextLine());
                     output.append(", ").append(obj.insert(val));
                 } else if (orders[i].equals("get_root")) {
-                    output.append(", ").append(IOMethods.levelOrderTraversalOutput(obj.get_root()));
+                    output.append(", ").append(OutputMethods.levelOrderTraversalOutput(obj.get_root()));
                 }
             }
         }

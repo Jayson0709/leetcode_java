@@ -2,7 +2,7 @@ package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //给定循环单调非递减列表中的一个点，写一个函数向这个列表中插入一个新元素insertVal ，使这个列表仍然是循环升序的。
@@ -50,7 +50,7 @@ public class Q708 {
         p.next= head;
 
         ListNode result = insert(head, insertVal);
-        System.out.println(IOMethods.outputLinkedListData(result));
+        System.out.println(OutputMethods.outputLinkedListData(result));
     }
 
     private static ListNode insert(ListNode head, int insertVal) {

@@ -1,5 +1,5 @@
 package algorithms.math;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -78,7 +78,7 @@ public class Q1276 {
         cin.close();
 
         List<Integer> result = numOfBurgers(tomatoSlices, cheeseSlices);
-        System.out.println(IOMethods.outputListData(result));
+        System.out.println(OutputMethods.outputListData(result));
     }
 
     private static List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {

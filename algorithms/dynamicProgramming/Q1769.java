@@ -1,5 +1,5 @@
 package algorithms.dynamicProgramming;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -65,7 +65,7 @@ public class Q1769 {
         cin.close();
 
         int[] result = minOperations(boxes);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] minOperations(String boxes) {

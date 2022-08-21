@@ -2,7 +2,7 @@ package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given the root of a binary tree, return the same tree where every subtree (of the given tree) not containing a 1 has been removed.
@@ -99,7 +99,7 @@ public class Q814 {
             root.insertInBT(root, data[i]);
         }
         TreeNode resultRoot = pruneTree(root);
-        System.out.print(IOMethods.inorderTraversalOutput(resultRoot));
+        System.out.print(OutputMethods.inorderTraversalOutput(resultRoot));
     }
 
     // Method 1: Recursion

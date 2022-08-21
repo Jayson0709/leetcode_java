@@ -1,5 +1,5 @@
 package algorithms.quickSelect;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -56,7 +56,7 @@ public class Q324 {
         cin.close();
 
         wiggleSort(nums);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(nums).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(nums).boxed().toArray(Integer[]::new)));
     }
 
     public static void wiggleSort(int[] nums) {

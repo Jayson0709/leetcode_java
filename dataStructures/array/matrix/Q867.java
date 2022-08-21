@@ -1,5 +1,5 @@
 package dataStructures.array.matrix;
-import utils.IOMethods;
+import utils.OutputMethods;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -59,7 +59,7 @@ public class Q867 {
             matrix[i] = matrixData.get(i);
         }
         int[][] result = transpose(matrix);
-        IOMethods.output2DIntArrayData(result);
+        OutputMethods.output2DIntArrayData(result);
     }
 
     private static int[][] transpose(int[][] matrix) {

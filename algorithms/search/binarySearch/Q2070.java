@@ -1,5 +1,5 @@
 package algorithms.search.binarySearch;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 import java.util.*;
 import java.nio.charset.StandardCharsets;
@@ -102,7 +102,7 @@ public class Q2070 {
             items[i] = data.get(i);
         }
         int[] result = maximumBeauty(items, queries);
-        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] maximumBeauty(int[][] items, int[] queries) {

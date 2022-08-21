@@ -2,7 +2,7 @@ package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
-import utils.IOMethods;
+import utils.OutputMethods;
 
 
 //Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
@@ -64,7 +64,7 @@ public class Q105 {
         int[] inorder = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         TreeNode resultNode = buildTree(preorder, inorder);
-        System.out.println(IOMethods.levelOrderTraversalOutput(resultNode));
+        System.out.println(OutputMethods.levelOrderTraversalOutput(resultNode));
     }
 
     // Method 1: Recursively (reference answer)
