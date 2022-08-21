@@ -2,7 +2,7 @@ package algorithms.windowSliding;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
-//Given a string s, find the length of the longest substring without repeating characters.
+//Given a dataStructures.string s, find the length of the longest substring without repeating characters.
 //
 //    Example 1:
 //    Input: s = "abcabcbb"
@@ -50,7 +50,7 @@ import java.nio.charset.StandardCharsets;
 
 class Q3 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String s = cin.nextLine().strip();
         cin.close();
         int result = lengthOfLongestSubstring(s);

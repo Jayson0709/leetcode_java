@@ -55,7 +55,7 @@ import java.util.*;
 
 class Q1 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] data = cin.nextLine().strip().split(" ");
         int target = cin.nextInt();
         int[] nums = new int[data.length];

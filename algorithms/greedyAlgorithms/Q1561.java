@@ -73,7 +73,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1561 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] piles = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         int result = maxCoins(piles);

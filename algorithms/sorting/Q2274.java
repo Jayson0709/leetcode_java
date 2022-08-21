@@ -58,7 +58,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q2274 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int bottom = cin.nextInt();
         int top = cin.nextInt();
         int[] special = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();

@@ -65,7 +65,7 @@ public class Q1971 {
     private static int[] root;
 
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int n = Integer.parseInt(cin.nextLine().strip());
         int[][] edges = new int[n][2];
         for (int i = 0; i < n; i++) {

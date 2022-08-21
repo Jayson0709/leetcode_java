@@ -59,7 +59,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q648 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] words = cin.nextLine().strip().split(" ");
         String sentence = cin.nextLine().strip();
         cin.close();

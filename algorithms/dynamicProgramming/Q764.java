@@ -50,7 +50,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q764 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int n = Integer.parseInt(cin.nextLine().strip());
         List<int[]> pairList = new ArrayList<>();
         while (true) {

@@ -63,7 +63,7 @@ public class Q721 {
     private static int[] parent;
 
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<List<String>> accounts = new ArrayList<>();
         while (true) {
             String line = cin.nextLine().strip();

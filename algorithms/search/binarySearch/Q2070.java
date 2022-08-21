@@ -81,7 +81,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q2070 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
         int[] line;
         while (true) {

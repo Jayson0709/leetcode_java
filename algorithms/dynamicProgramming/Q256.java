@@ -30,7 +30,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q256 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> dataList = new ArrayList<>();
         while (true) {
             String line = cin.nextLine().strip();

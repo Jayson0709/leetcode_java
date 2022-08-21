@@ -65,7 +65,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q2161 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int pivot = cin.nextInt();
         cin.close();

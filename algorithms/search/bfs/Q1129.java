@@ -64,7 +64,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1129 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int n = Integer.parseInt(cin.nextLine().strip());
         String[] redEdgesData = cin.nextLine().strip().split(" ");
         String[] blueEdgesData = cin.nextLine().strip().split(" ");

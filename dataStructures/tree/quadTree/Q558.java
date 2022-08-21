@@ -185,7 +185,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q558 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         Node quadTree1 = new Node();
         Node quadTree2 = new Node();
         cin.close();

@@ -49,7 +49,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1137 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int n = cin.nextInt();
         cin.close();
 

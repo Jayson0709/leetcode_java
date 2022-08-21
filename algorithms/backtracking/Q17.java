@@ -61,7 +61,7 @@ public class Q17 {
     static Map<Character, String> hMap = new HashMap<>();
 
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String digits = cin.nextLine().strip();
         cin.close();
 

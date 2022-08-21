@@ -79,7 +79,7 @@ class Node {
 
 public class Q138 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<String[]> data = new ArrayList<>();
         while (true) {
             String line = cin.nextLine().strip();

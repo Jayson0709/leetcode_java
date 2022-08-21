@@ -69,7 +69,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q731 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] orders = cin.nextLine().strip().split(" ");
         StringBuilder output = new StringBuilder();
         output.append("[");

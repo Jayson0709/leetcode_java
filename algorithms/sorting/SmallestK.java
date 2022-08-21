@@ -23,7 +23,7 @@ import java.nio.charset.StandardCharsets;
 
 public class SmallestK {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int k = cin.nextInt();
         cin.close();

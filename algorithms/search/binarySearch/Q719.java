@@ -60,7 +60,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q719 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int k = cin.nextInt();
         cin.close();

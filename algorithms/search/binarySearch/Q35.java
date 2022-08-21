@@ -50,7 +50,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q35 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int target = cin.nextInt();
         cin.close();

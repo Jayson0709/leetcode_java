@@ -65,7 +65,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q72 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String word1 = cin.nextLine().strip();
         String word2 = cin.nextLine().strip();
         cin.close();

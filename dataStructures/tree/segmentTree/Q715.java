@@ -66,7 +66,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q715 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] orders = cin.nextLine().strip().split(" ");
         List<int[]> rangePairs = new ArrayList<>();
         cin.nextLine();

@@ -65,7 +65,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q401 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int turnedOn = cin.nextInt();
         cin.close();
         StringBuilder output = new StringBuilder();

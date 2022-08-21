@@ -64,7 +64,7 @@ class ListNode {
 
 public class Q109 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] data1 = cin.nextLine().strip().split(" ");
         ListNode head = new ListNode(Integer.parseInt(data1[0]));
         ListNode tempHead1 = head;

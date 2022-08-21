@@ -33,7 +33,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q708 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8.name());
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int insertVal = cin.nextInt();
         cin.close();
