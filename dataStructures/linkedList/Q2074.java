@@ -1,7 +1,7 @@
 package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-
+import sharedClasses.ListNode;
 
 //You are given the head of a linked list.
 //

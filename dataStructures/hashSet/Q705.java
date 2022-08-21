@@ -1,6 +1,7 @@
 package dataStructures.hashSet;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.ListNode;
 
 
 //Design a HashSet without using any built-in hash table libraries.
@@ -65,14 +66,6 @@ import java.nio.charset.StandardCharsets;
 //    0 <= key <= 10^6
 //    最多调用 10^4 次 add、remove 和 contains
 
-
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
 
 
 public class Q705 {

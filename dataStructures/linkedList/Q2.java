@@ -1,6 +1,8 @@
 package dataStructures.linkedList;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import sharedClasses.ListNode;
+
 
 //You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sumas a linked list.
 //
@@ -53,14 +55,6 @@ import java.util.*;
 // 每个链表中的节点数在范围 [1, 100] 内
 // 0 <= Node.val <= 9
 // 题目数据保证列表表示的数字不含前导零
-
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
 
 public class Q2 {
 

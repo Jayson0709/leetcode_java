@@ -1,6 +1,8 @@
 package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.ListNode;
+
 
 //Given the head of a linked list, rotate the list to the right by k places.
 //

@@ -2,6 +2,7 @@ package dataStructures.tree.binarySearchTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
+import sharedClasses.ListNode;
 
 
 //Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
@@ -56,13 +57,6 @@ import sharedClasses.TreeNode;
 //    -105<= Node.val <= 105
 
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
 
 public class Q109 {
     public static void main(String[] args) {
