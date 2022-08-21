@@ -1,7 +1,7 @@
 package algorithms.search.bfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
-
+import sharedClasses.TreeNode;
 
 //Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
 //

@@ -1,6 +1,7 @@
 package algorithms.search.dfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.TreeNode;
 
 
 //Given the root of a binary tree, return the most frequent subtree sum. If there is a tie, return all the values with the highest frequency in any order.
@@ -36,59 +37,6 @@ import java.nio.charset.StandardCharsets;
 //    节点数在[1, 104]范围内
 //    -105<= Node.val <= 105
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-
-    // a simple implementation for binary search tree node insertion
-    // Does not support null value input.
-    public void insertInBST(TreeNode node, int value) {
-        if (value < node.val) {
-            if (node.left != null) {
-                insertInBST(node.left, value);
-            } else {
-                node.left = new TreeNode(value);
-            }
-        } else if (value > node.val) {
-            if (node.right != null) {
-                insertInBST(node.right, value);
-            } else {
-                node.right = new TreeNode(value);
-            }
-        }
-    }
-
-    // a simple implementation for binary tree node insertion
-    // Does not support null value input.
-    public void insertInBT(TreeNode node, int value) {
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(node);
-        while (!q.isEmpty()) {
-            node = q.peek();
-            q.remove();
-            if (node.left == null) {
-                node.left = new TreeNode(value);
-                break;
-            } else {
-                q.add(node.left);
-            }
-            if (node.right == null) {
-                node.right = new TreeNode(value);
-                break;
-            } else {
-                q.add(node.right);
-            }
-        }
-    }
-}
 
 public class Q508 {
     static Map<Integer, Integer> hMap = new HashMap<>();

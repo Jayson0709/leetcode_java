@@ -1,6 +1,8 @@
 package dataStructures.tree.binarySearchTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.TreeNode;
+
 
 //Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
 //

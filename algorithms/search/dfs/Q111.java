@@ -1,6 +1,7 @@
 package algorithms.search.dfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.TreeNode;
 
 
 //Given a binary tree, find its minimum depth.

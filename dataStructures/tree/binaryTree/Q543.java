@@ -1,6 +1,7 @@
 package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.TreeNode;
 
 
 //Given the root of a binary tree, return the length of the diameter of the tree.

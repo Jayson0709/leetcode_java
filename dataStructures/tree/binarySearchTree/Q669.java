@@ -1,6 +1,7 @@
 package dataStructures.tree.binarySearchTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.TreeNode;
 
 //Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high]. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node's descendant should remain a descendant). It can be proven that there is a unique answer.
 //
@@ -41,60 +42,6 @@ import java.nio.charset.StandardCharsets;
 //    题目数据保证输入是一棵有效的二叉搜索树
 //    0 <= low <= high <= 104
 
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-
-    // a simple implementation for tree node insertion
-    // Does not support null value input.
-    public void insertInBST(TreeNode node, int value) {
-        if (value < node.val) {
-            if (node.left != null) {
-                insertInBST(node.left, value);
-            } else {
-                node.left = new TreeNode(value);
-            }
-        } else if (value > node.val) {
-            if (node.right != null) {
-                insertInBST(node.right, value);
-            } else {
-                node.right = new TreeNode(value);
-            }
-        }
-    }
-
-    // a simple implementation for binary tree node insertion
-    // Does not support null value input.
-    public void insertInBT(TreeNode node, int value) {
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(node);
-        while (!q.isEmpty()) {
-            node = q.peek();
-            q.remove();
-            if (node.left == null) {
-                node.left = new TreeNode(value);
-                break;
-            } else {
-                q.add(node.left);
-            }
-            if (node.right == null) {
-                node.right = new TreeNode(value);
-                break;
-            } else {
-                q.add(node.right);
-            }
-        }
-    }
-}
 
 public class Q669 {
     public static void main(String[] args) {

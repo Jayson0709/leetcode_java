@@ -1,6 +1,8 @@
 package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.TreeNode;
+
 
 //Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 //

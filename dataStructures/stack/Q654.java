@@ -1,6 +1,7 @@
 package dataStructures.stack;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.TreeNode;
 
 
 //You are given an integer array nums with no duplicates. A maximum binary tree can be built recursively from nums using the following algorithm:
@@ -89,60 +90,6 @@ import java.nio.charset.StandardCharsets;
 //    0 <= nums[i] <= 1000
 //    nums 中的所有整数 互不相同
 
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-
-    // a simple implementation for tree node insertion
-    // Does not support null value input.
-    public void insertInBST(TreeNode node, int value) {
-        if (value < node.val) {
-            if (node.left != null) {
-                insertInBST(node.left, value);
-            } else {
-                node.left = new TreeNode(value);
-            }
-        } else if (value > node.val) {
-            if (node.right != null) {
-                insertInBST(node.right, value);
-            } else {
-                node.right = new TreeNode(value);
-            }
-        }
-    }
-
-    // a simple implementation for binary tree node insertion
-    // Does not support null value input.
-    public void insertInBT(TreeNode node, int value) {
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(node);
-        while (!q.isEmpty()) {
-            node = q.peek();
-            q.remove();
-            if (node.left == null) {
-                node.left = new TreeNode(value);
-                break;
-            } else {
-                q.add(node.left);
-            }
-            if (node.right == null) {
-                node.right = new TreeNode(value);
-                break;
-            } else {
-                q.add(node.right);
-            }
-        }
-    }
-}
 
 
 public class Q654 {

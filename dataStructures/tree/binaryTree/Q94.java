@@ -1,6 +1,7 @@
 package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.TreeNode;
 
 //Given the root of a binary tree, return the inorder traversal of its nodes' values.
 //
@@ -39,60 +40,6 @@ import java.nio.charset.StandardCharsets;
 //    树中节点数目在范围 [0, 100] 内
 //    -100 <= Node.val <= 100
 
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-
-    // a simple implementation for tree node insertion
-    // Does not support null value input.
-    public void insertInBST(TreeNode node, int value) {
-        if (value < node.val) {
-            if (node.left != null) {
-                insertInBST(node.left, value);
-            } else {
-                node.left = new TreeNode(value);
-            }
-        } else if (value > node.val) {
-            if (node.right != null) {
-                insertInBST(node.right, value);
-            } else {
-                node.right = new TreeNode(value);
-            }
-        }
-    }
-
-    // a simple implementation for binary tree node insertion
-    // Does not support null value input.
-    public void insertInBT(TreeNode node, int value) {
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(node);
-        while (!q.isEmpty()) {
-            node = q.peek();
-            q.remove();
-            if (node.left == null) {
-                node.left = new TreeNode(value);
-                break;
-            } else {
-                q.add(node.left);
-            }
-            if (node.right == null) {
-                node.right = new TreeNode(value);
-                break;
-            } else {
-                q.add(node.right);
-            }
-        }
-    }
-}
 
 public class Q94 {
     public static void main(String[] args) {

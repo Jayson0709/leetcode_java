@@ -1,6 +1,7 @@
 package algorithms.search.dfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import sharedClasses.TreeNode;
 
 
 //Given the root of a binary tree, return the maximum width of the given tree.
