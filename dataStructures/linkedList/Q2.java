@@ -2,6 +2,7 @@ package dataStructures.linkedList;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import sharedClasses.ListNode;
+import utils.IOMethods;
 
 
 //You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sumas a linked list.
@@ -79,20 +80,7 @@ public class Q2 {
         cin.close();
 
         ListNode result = addTwoNumbers(l1, l2);
-
-        System.out.print("[");
-        int i = 0;
-        while (result != null) {
-            if (i == 0) {
-                System.out.print(result.val);
-                result = result.next;
-            } else {
-                System.out.print("," + result.val);
-                result = result.next;
-            }
-            i++;
-        }
-        System.out.print("]");
+        System.out.println(IOMethods.outputLinkedListData(result));
     }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {

@@ -1,4 +1,6 @@
 package dataStructures.queue;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -64,15 +66,7 @@ public class Q239 {
         cin.close();
 
         int[] result = maxSlidingWindow(nums, k);
-        System.out.print("[");
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                System.out.print(result[i]);
-            } else {
-                System.out.print("," + result[i]);
-            }
-        }
-        System.out.print("]");
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     // Method 1: Priority Queue

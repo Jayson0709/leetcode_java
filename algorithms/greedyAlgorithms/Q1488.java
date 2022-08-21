@@ -1,4 +1,6 @@
 package algorithms.greedyAlgorithms;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -100,17 +102,8 @@ public class Q1488 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] rains = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-
         int[] result = avoidFlood(rains);
-        System.out.print("[");
-        for(int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                System.out.print(result[i]);
-            } else {
-                System.out.print("," + result[i]);
-            }
-        }
-        System.out.print("]");
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] avoidFlood(int[] rains) {

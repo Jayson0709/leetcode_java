@@ -1,11 +1,12 @@
 package dataStructures.array.simpleArray;
+import utils.IOMethods;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
 
-//You are given an array of non-overlapping intervals intervals where intervals[i] = [starti, endi] represent the start and the end of the ith interval and intervals is sorted in ascending order by starti. You are also given an interval newInterval = [start, end] that represents the start and end of another interval.
+//You are given an array of non-overlapping intervals 'intervals' where intervals[i] = [start_i, end_i] represent the start and the end of the ith interval and intervals is sorted in ascending order by start_i. You are also given an interval newInterval = [start, end] that represents the start and end of another interval.
 //
-//    Insert newInterval into intervals such that intervals is still sorted in ascending order by starti and intervals still does not have any overlapping intervals (merge overlapping intervals if necessary).
+//    Insert newInterval into intervals such that intervals is still sorted in ascending order by start_i and intervals still does not have any overlapping intervals (merge overlapping intervals if necessary).
 //
 //    Return intervals after the insertion.
 //
@@ -21,8 +22,8 @@ import java.nio.charset.StandardCharsets;
 //    Constraints:
 //    0 <= intervals.length <= 10^4
 //    intervals[i].length == 2
-//    0 <= starti <= endi <= 10^5
-//    intervals is sorted by starti in ascending order.
+//    0 <= start_i <= end_i <= 10^5
+//    intervals is sorted by start_i in ascending order.
 //    newInterval.length == 2
 //    0 <= start <= end <= 10^5
 
@@ -80,31 +81,8 @@ public class Q57 {
         for (int i = 0; i < data.size(); i++) {
             intervals[i] = data.get(i);
         }
-        StringBuilder output = new StringBuilder();
-        output.append("[");
         int[][] result = insert(intervals, newInterval);
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                outputData(result[i], output);
-            } else {
-                output.append(", ");
-                outputData(result[i], output);
-            }
-        }
-        output.append("]");
-        System.out.println(output);
-    }
-
-    private static void outputData(int[] array, StringBuilder output) {
-        output.append("[");
-        for (int i = 0; i < array.length; i++) {
-            if (i == 0) {
-                output.append(array[i]);
-            } else {
-                output.append(", ").append(array[i]);
-            }
-        }
-        output.append("]");
+        IOMethods.output2DIntArrayData(result);
     }
 
     private static int[][] insert(int[][] intervals, int[] newInterval) {

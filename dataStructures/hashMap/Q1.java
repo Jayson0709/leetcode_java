@@ -1,4 +1,6 @@
 package dataStructures.hashMap;
+import utils.IOMethods;
+
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -64,17 +66,8 @@ class Q1 {
         }
         cin.close();
 
-        int[] results = twoSum(nums, target);
-
-        System.out.print("[");
-        for (int i = 0; i < results.length; i++) {
-            if (i == 0) {
-                System.out.print(results[i]);
-            } else {
-                System.out.print("," + results[i]);
-            }
-        }
-        System.out.print("]");
+        int[] result = twoSum(nums, target);
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     public static int[] twoSum(int[] nums, int target) {

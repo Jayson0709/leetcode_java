@@ -1,4 +1,6 @@
 package dataStructures.stack;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -103,16 +105,7 @@ public class Q589 {
             }
         }
         result = preorder(root);
-
-        System.out.print("[");
-        for (int i = 0; i < result.size(); i++) {
-            if (i == 0) {
-                System.out.print(result.get(i));
-            } else {
-                System.out.print(", " + result.get(i));
-            }
-        }
-        System.out.print("]");
+        IOMethods.outputListData(result);
     }
 
     // Method 1: recursively

@@ -1,4 +1,6 @@
 package algorithms.math;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -65,18 +67,8 @@ public class Q66 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] digits = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-        StringBuilder output = new StringBuilder();
         int[] result = plusOne(digits);
-        output.append("[");
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                output.append(result[i]);
-            } else {
-                output.append(", ").append(result[i]);
-            }
-        }
-        output.append("]");
-        System.out.println(output);
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] plusOne(int[] digits) {

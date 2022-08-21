@@ -1,6 +1,7 @@
 package dataStructures.hashMap;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import utils.IOMethods;
 
 
 //There are n people that are split into some unknown number of groups. Each person is labeled with a unique ID from 0 to n - 1.
@@ -64,30 +65,7 @@ public class Q1282 {
         int[] groupSizes = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         List<List<Integer>> result = groupThePeople(groupSizes);
-        StringBuilder output = new StringBuilder();
-        output.append("[");
-        for (int i = 0; i < result.size(); i++) {
-            if (i == 0) {
-                outputData(result.get(i), output);
-            } else {
-                output.append(", ");
-                outputData(result.get(i), output);
-            }
-        }
-        output.append("]");
-        System.out.println(output);
-    }
-
-    private static void outputData(List<Integer> list, StringBuilder output) {
-        output.append("[");
-        for (int i = 0; i < list.size(); i++) {
-            if (i == 0) {
-                output.append(list.get(i));
-            } else {
-                output.append(", ").append(list.get(i));
-            }
-        }
-        output.append("]");
+        IOMethods.outputEmbeddedListData(result);
     }
 
     private static List<List<Integer>> groupThePeople(int[] groupSizes) {

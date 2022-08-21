@@ -1,6 +1,8 @@
 package algorithms.backtracking;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import utils.IOMethods;
+
 
 //Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
 //
@@ -47,35 +49,8 @@ public class Q46 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-
         List<List<Integer>> result = permute(nums);
-        System.out.print("[");
-        for (int i = 0; i < result.size(); i++) {
-            if (i == 0) {
-                System.out.print("[");
-                List<Integer> curList = result.get(i);
-                for (int j = 0; j < curList.size(); j++) {
-                    if (j == 0) {
-                        System.out.print(curList.get(j));
-                    } else {
-                        System.out.print("," + curList.get(j));
-                    }
-                }
-                System.out.print("]");
-            } else {
-                System.out.print(", [");
-                List<Integer> curList = result.get(i);
-                for (int j = 0; j < curList.size(); j++) {
-                    if (j == 0) {
-                        System.out.print(curList.get(j));
-                    } else {
-                        System.out.print("," + curList.get(j));
-                    }
-                }
-                System.out.print("]");
-            }
-        }
-        System.out.print("]");
+        IOMethods.outputEmbeddedListData(result);
     }
 
     private static List<List<Integer>> permute(int[] nums) {

@@ -1,4 +1,6 @@
 package dataStructures.array.prefixSum;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -80,17 +82,7 @@ public class Q1652 {
         int k = Integer.parseInt(cin.nextLine().strip());
         cin.close();
         int[] result = decrypt(code, k);
-        StringBuilder output = new StringBuilder();
-        output.append("[");
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                output.append(result[i]);
-            } else {
-                output.append(", ").append(result[i]);
-            }
-        }
-        output.append("]");
-        System.out.println(output);
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] decrypt(int[] code, int k) {

@@ -1,4 +1,6 @@
 package algorithms.sorting;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -64,15 +66,7 @@ public class Q506 {
         cin.close();
 
         String[] result = findRelativeRanks(score);
-        System.out.print("[");
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                System.out.print(result[i]);
-            } else {
-                System.out.print("," + result[i]);
-            }
-        }
-        System.out.print("]");
+        System.out.println(IOMethods.output1DArrayData(result));
     }
 
     private static String[] findRelativeRanks(int[] score) {

@@ -1,4 +1,6 @@
 package dataStructures.array.simpleArray;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -54,30 +56,8 @@ public class Q1200 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-
         List<List<Integer>> result = minimumAbsDifference(arr);
-        System.out.print("[");
-        for (int i = 0; i < result.size(); i++) {
-            if (i == 0) {
-                printData(result.get(i));
-            } else {
-                System.out.print(", ");
-                printData(result.get(i));
-            }
-        }
-        System.out.print("]");
-    }
-    
-    private static void printData(List<Integer> list) {
-        System.out.print("[");
-        for (int i = 0; i < list.size(); i++) {
-            if (i == 0) {
-                System.out.print(list.get(i));
-            } else {
-                System.out.print(", " + list.get(i));
-            }
-        }
-        System.out.print("]");
+        IOMethods.outputEmbeddedListData(result);
     }
 
     private static List<List<Integer>> minimumAbsDifference(int[] arr) {

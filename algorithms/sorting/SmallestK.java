@@ -1,4 +1,6 @@
 package algorithms.sorting;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -28,9 +30,7 @@ public class SmallestK {
         int k = cin.nextInt();
         cin.close();
         int[] result = getLeastNumbers(arr, k);
-        for (int num : result) {
-            System.out.print(num + " ");
-        }
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] getLeastNumbers(int[] arr, int k) {

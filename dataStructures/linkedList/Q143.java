@@ -2,6 +2,7 @@ package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
+import utils.IOMethods;
 
 
 //You are given the head of a singly linked-list. The list can be represented as:
@@ -77,15 +78,7 @@ public class Q143 {
             p = temp;
         }
         reorderList(head);
-        StringBuilder output = new StringBuilder();
-        output.append("[");
-        while (head != null) {
-            output.append(head.val).append(", ");
-            head = head.next;
-        }
-        output.delete(output.length() - 2, output.length());
-        output.append("]");
-        System.out.println(output);
+        System.out.println(IOMethods.outputLinkedListData(head));
     }
 
     // Method 1: linear list

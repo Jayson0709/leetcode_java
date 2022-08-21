@@ -2,6 +2,8 @@ package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
+import utils.IOMethods;
+
 
 //You are given the head of a linked list.
 //
@@ -122,18 +124,8 @@ public class Q2074 {
             p.next = node;
             p = node;
         }
-
         ListNode resultNode = reverseEvenLengthGroups(head);
-        StringBuilder output = new StringBuilder();
-        output.append("[");
-        output.append(resultNode.val);
-        resultNode = resultNode.next;
-        while (resultNode != null) {
-            output.append(", ").append(resultNode.val);
-            resultNode = resultNode.next;
-        }
-        output.append("]");
-        System.out.println(output);
+        System.out.println(IOMethods.outputLinkedListData(resultNode));
     }
 
     private static ListNode reverseEvenLengthGroups(ListNode head) {

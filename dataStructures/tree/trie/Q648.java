@@ -64,7 +64,6 @@ public class Q648 {
         String sentence = cin.nextLine().strip();
         cin.close();
         List<String> dictionary = new ArrayList<>(Arrays.asList(words));
-
         String result = replaceWords(dictionary, sentence);
         System.out.println(result);
     }

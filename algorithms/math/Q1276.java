@@ -1,4 +1,6 @@
 package algorithms.math;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -76,15 +78,7 @@ public class Q1276 {
         cin.close();
 
         List<Integer> result = numOfBurgers(tomatoSlices, cheeseSlices);
-        System.out.print("[");
-        for (int i = 0; i < result.size(); i++) {
-            if (i == 0) {
-                System.out.print(result.get(i));
-            } else {
-                System.out.print(", " + result.get(i));
-            }
-        }
-        System.out.print("]");
+        System.out.println(IOMethods.outputListData(result));
     }
 
     private static List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {

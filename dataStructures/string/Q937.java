@@ -1,4 +1,6 @@
 package dataStructures.string;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -83,15 +85,7 @@ public class Q937 {
         }
         cin.close();
         String[] result = reorderLogFiles(logs);
-        System.out.print("[");
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                System.out.print(result[i]);
-            } else {
-                System.out.print(", " + result[i]);
-            }
-        }
-        System.out.print("]");
+        System.out.println(IOMethods.output1DArrayData(result));
     }
 
     private static String[] reorderLogFiles(String[] logs) {

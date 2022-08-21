@@ -1,4 +1,5 @@
 package algorithms.twoPointers;
+import utils.IOMethods;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -59,17 +60,7 @@ public class Q922 {
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         int[] result = sortArrayByParityII(nums);
-        StringBuilder output = new StringBuilder();
-        output.append("[");
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                output.append(result[i]);
-            } else {
-                output.append(", ").append(result[i]);
-            }
-        }
-        output.append("]");
-        System.out.println(output);
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] sortArrayByParityII(int[] nums) {

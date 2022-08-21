@@ -1,4 +1,6 @@
 package algorithms.math;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -50,13 +52,7 @@ public class Q728 {
         int right = cin.nextInt();
         cin.close();
         List<Integer> result = selfDividingNumbers(left, right);
-        StringBuilder output = new StringBuilder();
-        output.append('[').append(result.get(0));
-        for (int i = 1; i < result.size(); i++) {
-            output.append(", ").append(result.get(i));
-        }
-        output.append(']');
-        System.out.println(output);
+        System.out.println(IOMethods.outputListData(result));
     }
 
     // Method 1: Use Math

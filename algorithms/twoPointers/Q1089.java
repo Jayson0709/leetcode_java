@@ -1,4 +1,6 @@
 package algorithms.twoPointers;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -47,16 +49,8 @@ public class Q1089 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-
         duplicateZeros(arr);
-        System.out.print("[");
-        for (int i = 0; i < arr.length; i++) {
-            if (i == 0)
-                System.out.print(arr[i]);
-            else
-                System.out.print("," + arr[i]);
-        }
-        System.out.print("]");
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(arr).boxed().toArray(Integer[]::new)));
     }
 
     // 方法一：双指针，模拟一个栈

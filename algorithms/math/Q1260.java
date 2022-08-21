@@ -1,4 +1,6 @@
 package algorithms.math;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -101,28 +103,7 @@ public class Q1260 {
             grid[i] = data.get(i);
         }
         List<List<Integer>> result = shiftGrid(grid, k);
-        System.out.print("[");
-        for (int i = 0; i < result.size(); i++) {
-            if (i == 0) {
-                outputListData(result.get(i));
-            } else {
-                System.out.print(", ");
-                outputListData(result.get(i));
-            }
-        }
-        System.out.print("]");
-    }
-
-    private static void outputListData(List<Integer> list) {
-        System.out.print("[");
-        for (int i = 0; i < list.size(); i++) {
-            if (i == 0) {
-                System.out.print(list.get(i));
-            } else {
-                System.out.print(", " + list.get(i));
-            }
-        }
-        System.out.print("]");
+        IOMethods.outputEmbeddedListData(result);
     }
 
     private static List<List<Integer>> shiftGrid(int[][] grid, int k) {

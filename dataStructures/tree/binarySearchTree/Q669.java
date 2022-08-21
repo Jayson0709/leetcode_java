@@ -2,6 +2,7 @@ package dataStructures.tree.binarySearchTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
+import utils.IOMethods;
 
 //Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high]. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node's descendant should remain a descendant). It can be proven that there is a unique answer.
 //
@@ -56,7 +57,7 @@ public class Q669 {
             root.insertInBST(root, data[i]);
         }
         // Tree traversal
-        inorderTraversal(trimBST(root, low, high));
+        System.out.println(IOMethods.levelOrderTraversalOutput(trimBST(root, low, high)));
     }
 
     private static TreeNode trimBST(TreeNode root, int low, int high) {
@@ -81,26 +82,5 @@ public class Q669 {
             root.right = trimBST(root.right, low, high);
         }
         return root;
-    }
-
-    private static void inorderTraversal(TreeNode root) {
-        System.out.print("[");
-        Deque<TreeNode> stack = new LinkedList<>();
-        int i = 0;
-        while (root != null || !stack.isEmpty()) {
-            while (root != null) {
-                stack.push(root);
-                root = root.left;
-            }
-            root = stack.pop();
-            if (i == 0) {
-                System.out.print(root.val);
-                i++;
-            } else {
-                System.out.print(", " + root.val);
-            }
-            root = root.right;
-        }
-        System.out.print("]");
     }
 }

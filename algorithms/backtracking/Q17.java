@@ -1,6 +1,8 @@
 package algorithms.backtracking;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import utils.IOMethods;
+
 
 //Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
 //
@@ -64,17 +66,8 @@ public class Q17 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String digits = cin.nextLine().strip();
         cin.close();
-
-        System.out.print("[");
         List<String> result = letterCombinations(digits);
-        for (int i = 0; i < result.size(); i++) {
-            if (i == 0) {
-                System.out.print(result.get(i));
-            } else {
-                System.out.print("," + result.get(i));
-            }
-        }
-        System.out.print("]");
+        IOMethods.outputListData(result);
     }
 
     private static List<String> letterCombinations(String digits) {

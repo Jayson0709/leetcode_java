@@ -2,6 +2,7 @@ package dataStructures.tree.binarySearchTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
+import utils.IOMethods;
 
 
 //Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
@@ -79,31 +80,7 @@ public class Q108 {
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         TreeNode resultNode = sortedArrayToBST(nums);
-        levelOrderTraversal(resultNode);
-    }
-
-    private static void levelOrderTraversal(TreeNode root) {
-        StringBuilder output = new StringBuilder();
-        if (root == null) {
-            System.out.println("[]");
-        } else {
-            output.append("[");
-            Queue<TreeNode> queue = new LinkedList<>();
-            queue.offer(root);
-            while (!queue.isEmpty()) {
-                TreeNode node = queue.poll();
-                output.append(node.val).append(", ");
-                if (node.left != null) {
-                    queue.offer(node.left);
-                }
-                if (node.right != null) {
-                    queue.offer(node.right);
-                }
-            }
-            output.delete(output.length() - 2, output.length());
-            output.append("]");
-            System.out.println(output);
-        }
+        System.out.println(IOMethods.levelOrderTraversalOutput(resultNode));
     }
 
     private static TreeNode sortedArrayToBST(int[] nums) {

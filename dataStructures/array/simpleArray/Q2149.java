@@ -1,4 +1,6 @@
 package dataStructures.array.simpleArray;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -72,14 +74,7 @@ public class Q2149 {
         cin.close();
 
         int[] result = rearrangeArray(nums);
-        System.out.print("[");
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0)
-                System.out.print(result[i]);
-            else
-                System.out.print("," + result[i]);
-        }
-        System.out.print("]");
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] rearrangeArray(int[] nums) {

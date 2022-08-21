@@ -2,6 +2,7 @@ package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
+import utils.IOMethods;
 
 
 //Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
@@ -66,15 +67,7 @@ public class Q92 {
             p = temp;
         }
         ListNode resultNode = reverseBetween(head, left, right);
-        StringBuilder output = new StringBuilder();
-        output.append("[");
-        while (resultNode != null) {
-            output.append(resultNode.val).append(", ");
-            resultNode = resultNode.next;
-        }
-        output.delete(output.length() - 2, output.length());
-        output.append("]");
-        System.out.println(output);
+        System.out.println(IOMethods.outputLinkedListData(resultNode));
     }
 
     private static ListNode reverseBetween(ListNode head, int left, int right) {

@@ -1,6 +1,7 @@
 package algorithms.search.bfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import utils.IOMethods;
 
 
 //Given an m x n binary matrix mat, return the distance of the nearest 0 for each cell.
@@ -76,34 +77,10 @@ public class Q542 {
             mat[i] = data.get(i);
         }
         int[][] result = updateMatrix(mat);
-        StringBuilder output = new StringBuilder();
-        output.append("[");
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                outputData(result[i], output);
-            } else {
-                output.append(", ");
-                outputData(result[i], output);
-            }
-        }
-        output.append("]");
-        System.out.println(output);
-    }
-
-    private static void outputData(int[] array, StringBuilder output) {
-        output.append("[");
-        for (int i = 0; i < array.length; i++) {
-            if (i == 0) {
-                output.append(array[i]);
-            } else {
-                output.append(", ").append(array[i]);
-            }
-        }
-        output.append("]");
+        IOMethods.output2DIntArrayData(result);
     }
 
     // Method 1: BFS
-
     static int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     private static int[][] updateMatrix(int[][] mat) {

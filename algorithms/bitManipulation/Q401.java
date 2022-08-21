@@ -1,6 +1,7 @@
 package algorithms.bitManipulation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+import utils.IOMethods;
 
 
 //A binary watch has 4 LEDs on the top to represent the hours (0-11), and 6 LEDs on the bottom to represent the minutes (0-59). Each LED represents a zero or one, with the least significant bit on the right.
@@ -68,15 +69,8 @@ public class Q401 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int turnedOn = cin.nextInt();
         cin.close();
-        StringBuilder output = new StringBuilder();
-        output.append("[");
         List<String> result = readBinaryWatch(turnedOn);
-        output.append(result.get(0));
-        for (int i = 1; i < result.size(); i++) {
-            output.append(", ").append(result.get(i));
-        }
-        output.append("]");
-        System.out.println(output);
+        IOMethods.outputListData(result);
     }
 
     // Method 1: Enumeration

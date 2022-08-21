@@ -2,6 +2,7 @@ package algorithms.search.bfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
+import utils.IOMethods;
 
 //Given the root of a binary tree, return an array of the largest value in each row of the tree (0-indexed).
 //
@@ -52,15 +53,7 @@ public class Q515 {
             root.insertInBT(root, data[i]);
         }
         List<Integer> result = largestValues(root);
-        System.out.print("[");
-        for (int i = 0; i < result.size(); i++) {
-            if (i == 0) {
-                System.out.print(result.get(i));
-            } else {
-                System.out.print("," + result.get(i));
-            }
-        }
-        System.out.print("]");
+        IOMethods.outputListData(result);
     }
 
     private static List<Integer> largestValues(TreeNode root) {

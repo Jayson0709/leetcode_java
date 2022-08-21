@@ -2,6 +2,7 @@ package dataStructures.tree.binaryTree;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
+import utils.IOMethods;
 
 
 //A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
@@ -90,38 +91,19 @@ public class Q919 {
             for (int i = 1; i < data.length; i++) {
                 root.insertInBT(root, data[i]);
             }
-
             CBTInserter obj = new CBTInserter(root);
             for (int i = 1; i < orders.length; i++) {
                 if (orders[i].equals("insert")) {
                     int val = Integer.parseInt(cin.nextLine());
                     output.append(", ").append(obj.insert(val));
                 } else if (orders[i].equals("get_root")) {
-                    output.append(", [");
-                    levelOrderTraversal(obj.get_root(), output);
-                    output.delete(output.length() - 2, output.length());
-                    output.append("]");
+                    output.append(", ").append(IOMethods.levelOrderTraversalOutput(obj.get_root()));
                 }
             }
         }
         cin.close();
         output.append("]");
-        System.out.print(output);
-    }
-
-    private static void levelOrderTraversal(TreeNode root, StringBuilder output) {
-        Queue<TreeNode> queue = new ArrayDeque<>();
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
-            output.append(node.val).append(", ");
-            if (node.left != null) {
-                queue.offer(node.left);
-            }
-            if (node.right != null) {
-                queue.offer(node.right);
-            }
-        }
+        System.out.println(output);
     }
 }
 

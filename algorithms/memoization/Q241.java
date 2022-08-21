@@ -1,4 +1,6 @@
 package algorithms.memoization;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -58,30 +60,20 @@ import java.nio.charset.StandardCharsets;
 
 
 public class Q241 {
-    // For method 1
-    static final int ADDITION = -1;
-    static final int SUBTRACTION = -2;
-    static final int MULTIPLICATION = -3;
-
-
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String expression = cin.nextLine().strip();
         cin.close();
 
         List<Integer> result = diffWaysToCompute(expression);
-        System.out.print("[");
-        for (int i = 0; i < result.size(); i++) {
-            if (i == 0) {
-                System.out.print(result.get(i));
-            } else {
-                System.out.print(", " + result.get(i));
-            }
-        }
-        System.out.print("]");
+        IOMethods.outputListData(result);
     }
 
     // Method 1: Memoization
+//    static final int ADDITION = -1;
+//    static final int SUBTRACTION = -2;
+//    static final int MULTIPLICATION = -3;
+//
 //    public static List<Integer> diffWaysToCompute(String expression) {
 //        List<Integer> ops = new ArrayList<Integer>();
 //        for (int i = 0; i < expression.length();) {

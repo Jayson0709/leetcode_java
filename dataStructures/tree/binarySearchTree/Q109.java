@@ -3,6 +3,7 @@ import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
 import sharedClasses.ListNode;
+import utils.IOMethods;
 
 
 //Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
@@ -70,7 +71,7 @@ public class Q109 {
             tempHead1 = tempNode;
         }
         cin.close();
-        inorderTraversal(sortedListToBST(head));
+        System.out.println(IOMethods.levelOrderTraversalOutput(sortedListToBST(head)));
     }
 
     private static TreeNode sortedListToBST(ListNode head) {
@@ -99,27 +100,5 @@ public class Q109 {
         // From the 'slow.next' node to the end of the list, all the nodes are the right part of the tree.
         curNode.right = sortedListToBST(slow.next);
         return curNode;
-    }
-
-
-    private static void inorderTraversal(TreeNode root) {
-        System.out.print("[");
-        Deque<TreeNode> stack = new LinkedList<>();
-        int i = 0;
-        while (root != null || !stack.isEmpty()) {
-            while (root != null) {
-                stack.push(root);
-                root = root.left;
-            }
-            root = stack.pop();
-            if (i == 0) {
-                System.out.print(root.val);
-                i++;
-            } else {
-                System.out.print(", " + root.val);
-            }
-            root = root.right;
-        }
-        System.out.print("]");
     }
 }

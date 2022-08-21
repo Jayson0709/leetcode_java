@@ -1,6 +1,8 @@
 package dataStructures.array.matrix;
+import utils.IOMethods;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
+
 
 //Given a 2D integer array matrix, return the transpose of matrix.
 //
@@ -57,12 +59,7 @@ public class Q867 {
             matrix[i] = matrixData.get(i);
         }
         int[][] result = transpose(matrix);
-        for (int[] ints : result) {
-            for (int anInt : ints) {
-                System.out.print(anInt + " ");
-            }
-            System.out.println();
-        }
+        IOMethods.output2DIntArrayData(result);
     }
 
     private static int[][] transpose(int[][] matrix) {

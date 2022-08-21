@@ -1,4 +1,5 @@
 package dataStructures.array.matrix;
+import utils.IOMethods;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -63,18 +64,8 @@ public class Q54 {
         for (int i = 0; i < data.size(); i++) {
             matrix[i] = data.get(i);
         }
-        StringBuilder output = new StringBuilder();
-        output.append("[");
         int[] result = spiralOrder(matrix);
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                output.append(result[i]);
-            } else {
-                output.append(", ").append(result[i]);
-            }
-        }
-        output.append("]");
-        System.out.println(output);
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     // Method 1: Use four variables to limit the boundary

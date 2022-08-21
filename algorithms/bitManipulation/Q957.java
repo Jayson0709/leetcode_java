@@ -1,4 +1,6 @@
 package algorithms.bitManipulation;
+import utils.IOMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -80,18 +82,8 @@ public class Q957 {
         int[] cells = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int n = Integer.parseInt(cin.nextLine().strip());
         cin.close();
-        StringBuilder res = new StringBuilder();
-        res.append("[");
         int[] result = prisonAfterNDays(cells, n);
-        for (int i = 0; i < result.length; i++) {
-            if (i == 0) {
-                res.append(result[i]);
-            } else {
-                res.append(", ").append(result[i]);
-            }
-        }
-        res.append("]");
-        System.out.println(res);
+        System.out.println(IOMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] prisonAfterNDays(int[] cells, int n) {

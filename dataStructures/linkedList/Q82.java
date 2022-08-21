@@ -2,6 +2,7 @@ package dataStructures.linkedList;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
+import utils.IOMethods;
 
 
 //Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
@@ -66,18 +67,7 @@ public class Q82 {
             l1 = tempHead;
         }
         ListNode resultHead = deleteDuplicates(head);
-        int index = 0;
-        System.out.print("[");
-        while (resultHead != null) {
-            if (index == 0) {
-                System.out.print(resultHead.val);
-            } else {
-                System.out.print(", " + resultHead.val);
-            }
-            resultHead = resultHead.next;
-            index++;
-        }
-        System.out.print("]");
+        System.out.println(IOMethods.outputLinkedListData(resultHead));
     }
 
     private static ListNode deleteDuplicates(ListNode head) {

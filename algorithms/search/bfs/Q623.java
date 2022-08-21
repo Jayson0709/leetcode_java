@@ -2,6 +2,8 @@ package algorithms.search.bfs;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.TreeNode;
+import utils.IOMethods;
+
 
 //Given the root of a binary tree and two integers val and depth, add a row of nodes with value val at the given depth 'depth'.
 //
@@ -98,32 +100,9 @@ public class Q623 {
         for (int i = 1; i < data.length; i++) {
             root.insertInBT(root, data[i]);
         }
-        levelOrderTraversal(addOneRow(root, val, depth));
+        System.out.println(IOMethods.levelOrderTraversalOutput(addOneRow(root, val, depth)));
     }
 
-    private static void levelOrderTraversal(TreeNode root) {
-        if (root == null) {
-            System.out.println("[]");
-        }
-        StringBuilder output = new StringBuilder();
-        output.append("[");
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
-            output.append(node.val).append(", ");
-            if (node.left != null) {
-                queue.offer(node.left);
-            }
-            if (node.right != null) {
-                queue.offer(node.right);
-            }
-
-        }
-        output.delete(output.length() - 2, output.length());
-        output.append("]");
-        System.out.println(output);
-    }
 
     // Method 1: DFS
 //    private static TreeNode addOneRow(TreeNode root, int val, int depth) {
