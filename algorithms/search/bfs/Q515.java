@@ -1,8 +1,13 @@
 package algorithms.search.bfs;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
-import utils.*;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
 
 //Given the root of a binary tree, return an array of the largest value in each row of the tree (0-indexed).
 //
@@ -44,14 +49,7 @@ import utils.*;
 
 public class Q515 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        TreeNode root = new TreeNode(data[0]);
-        for (int i = 1; i < data.length; i++) {
-            root.insertInBT(root, data[i]);
-        }
+        TreeNode root = InputMethods.getInputForOneTree();
         List<Integer> result = largestValues(root);
         OutputMethods.outputListData(result);
     }

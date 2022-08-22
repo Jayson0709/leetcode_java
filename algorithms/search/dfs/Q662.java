@@ -1,7 +1,10 @@
 package algorithms.search.dfs;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
+import utils.InputMethods;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 //Given the root of a binary tree, return the maximum width of the given tree.
@@ -103,13 +106,7 @@ import sharedClasses.TreeNode;
 
 public class Q662 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        TreeNode root = new TreeNode(data[0]);
-        for (int i = 1; i < data.length; i++) {
-            root.insertInBT(root, data[i]);
-        }
+        TreeNode root = InputMethods.getInputForOneTree();
         System.out.println(widthOfBinaryTree(root));
     }
 

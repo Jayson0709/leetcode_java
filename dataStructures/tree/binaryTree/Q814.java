@@ -1,8 +1,8 @@
 package dataStructures.tree.binaryTree;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
-import utils.*;
+import utils.InputMethods;
+import utils.OutputMethods;
 
 
 //Given the root of a binary tree, return the same tree where every subtree (of the given tree) not containing a 1 has been removed.
@@ -91,13 +91,7 @@ import utils.*;
 
 public class Q814 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        TreeNode root = new TreeNode(data[0]);
-        for (int i = 1; i < data.length; i++) {
-            root.insertInBT(root, data[i]);
-        }
+        TreeNode root = InputMethods.getInputForOneTree();
         TreeNode resultRoot = pruneTree(root);
         System.out.print(OutputMethods.inorderTraversalOutput(resultRoot));
     }

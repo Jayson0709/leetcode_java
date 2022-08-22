@@ -1,8 +1,13 @@
 package dataStructures.tree.binaryTree;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
-import utils.*;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
 
 
 //Given the root of a binary tree, return the inorder traversal of its nodes' values.
@@ -45,13 +50,7 @@ import utils.*;
 
 public class Q94 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        TreeNode root = new TreeNode(data[0]);
-        for (int i = 1; i < data.length; i++) {
-            root.insertInBT(root, data[i]);
-        }
+        TreeNode root = InputMethods.getInputForOneTree();
         List<Integer> result = inorderTraversal(root);
         System.out.println(OutputMethods.outputListData(result));
     }
