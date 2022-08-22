@@ -1,7 +1,11 @@
 package algorithms.search.bfs;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
+import utils.InputMethods;
+import utils.TwoOneDArray;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 
 //Given the roots of two binary trees p and q, write a function to check if they are the same or not.
@@ -49,20 +53,15 @@ import sharedClasses.TreeNode;
 
 public class Q100 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] data2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        TreeNode p = new TreeNode(data1[0]);
-        TreeNode q = new TreeNode(data2[0]);
-        for (int i = 1; i < data1.length; i++) {
-            p.insertInBT(p, data1[i]);
+        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
+        TreeNode p = new TreeNode(obj.array1[0]);
+        TreeNode q = new TreeNode(obj.array2[0]);
+        for (int i = 1; i < obj.array1.length; i++) {
+            p.insertInBT(p, obj.array1[i]);
         }
-        for (int i = 1; i < data2.length; i++) {
-            q.insertInBT(q, data2[i]);
+        for (int i = 1; i < obj.array2.length; i++) {
+            q.insertInBT(q, obj.array2[i]);
         }
-
         boolean result = isSameTree(p ,q);
         System.out.println(result);
     }

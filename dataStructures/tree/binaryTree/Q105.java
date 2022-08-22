@@ -1,8 +1,12 @@
 package dataStructures.tree.binaryTree;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
-import utils.*;
+import utils.InputMethods;
+import utils.OutputMethods;
+import utils.TwoOneDArray;
+
+import java.util.Deque;
+import java.util.LinkedList;
 
 
 //Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
@@ -59,11 +63,8 @@ import utils.*;
 
 public class Q105 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] preorder = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] inorder = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        TreeNode resultNode = buildTree(preorder, inorder);
+        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
+        TreeNode resultNode = buildTree(obj.array1, obj.array2);
         System.out.println(OutputMethods.levelOrderTraversalOutput(resultNode));
     }
 

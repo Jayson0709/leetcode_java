@@ -1,8 +1,10 @@
 package algorithms.sorting;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+import utils.TwoOneDArray;
+
+import java.util.Arrays;
 
 //Given two arrays arr1 and arr2, the elements of arr2 are distinct, and all elements in arr2 are also in arr1.
 //
@@ -44,11 +46,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1122 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] arr1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] arr2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int[] result = relativeSortArray(arr1, arr2);
+        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
+        int[] result = relativeSortArray(obj.array1, obj.array2);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

@@ -1,6 +1,7 @@
 package algorithms.twoPointers;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+import utils.TwoOneDArray;
 
 //You are given two non-increasing 0-indexed integer arrays nums1 and nums2.
 //
@@ -72,11 +73,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1855 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] nums2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int result = maxDistance(nums1, nums2);
+        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
+        int result = maxDistance(obj.array1, obj.array2);
         System.out.println(result);
     }
 
