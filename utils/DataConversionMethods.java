@@ -6,7 +6,16 @@ import java.util.List;
 
 
 public class DataConversionMethods {
-    public static int[][] convertArrayListTo2DArray(List<int[]> list) {
+
+    public static String[] convertStringArrayListTo1DArray(List<String> list) {
+        String[] array = new String[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            array[i] = list.get(i);
+        }
+        return array;
+    }
+
+    public static int[][] convertIntArrayListTo2DArray(List<int[]> list) {
         int[][] array = new int[list.size()][];
         for (int i = 0; i < list.size(); i++) {
             array[i] = list.get(i);

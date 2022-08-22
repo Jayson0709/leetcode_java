@@ -7,10 +7,8 @@ import java.util.*;
 
 
 public class InputMethods {
-    public static TreeNode getInputForOneTree() {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+    public static TreeNode getInputForOneBinaryTree(Scanner cin) {
         int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
         TreeNode root = new TreeNode(data[0]);
         for (int i = 1; i < data.length; i++) {
             root.insertInBT(root, data[i]);
@@ -18,7 +16,53 @@ public class InputMethods {
         return root;
     }
 
-    public static void getInputForIntArrayList(Scanner cin, List<int[]> list) {
+    public static TreeNode getInputForOneBinaryTree(int[] data) {
+        TreeNode root = new TreeNode(data[0]);
+        for (int i = 1; i < data.length; i++) {
+            root.insertInBT(root, data[i]);
+        }
+        return root;
+    }
+
+    public static int[] getInputForOneIntArray() {
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        cin.close();
+        return data;
+    }
+
+    public static void getInputForStringArrayList(Scanner cin, List<String> list) {
+        while (true) {
+            String line = cin.nextLine().strip();
+            if (line.length() == 0) {
+                break;
+            }
+            list.add(line);
+        }
+    }
+
+    public static void getInputForStringArrArrayList(Scanner cin, List<String[]> list) {
+        while (true) {
+            String line = cin.nextLine().strip();
+            if (line.length() == 0) {
+                break;
+            }
+            list.add(line.split(" "));
+        }
+    }
+
+    public static void getInputForEmbeddedStringArrayList(Scanner cin, List<List<String>> list) {
+        while (true) {
+            String line = cin.nextLine().strip();
+            if (line.length() == 0) {
+                break;
+            }
+            List<String> temp = Arrays.asList(line.split(" "));
+            list.add(temp);
+        }
+    }
+
+    public static void getInputForIntArrArrayList(Scanner cin, List<int[]> list) {
         while (true) {
             String line = cin.nextLine().strip();
             if (line.length() == 0) {
@@ -26,10 +70,9 @@ public class InputMethods {
             }
             list.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
         }
-        cin.close();
     }
 
-    public static OneDArrayAndOneInt get1DArrayAndOneIntInput() {
+    public static OneDArrayAndOneInt getOneInt1DArrayAndOneIntInput() {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] array = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val = cin.nextInt();
@@ -37,20 +80,23 @@ public class InputMethods {
         return new OneDArrayAndOneInt(array, val);
     }
 
-    public static OneDArrayAndTwoInt get1DArrayAndTwoIntInput() {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+    public static OneDArrayAndTwoInt getOneInt1DArrayAndTwoIntInput(Scanner cin) {
         int[] array = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val1 = cin.nextInt();
         int val2 = cin.nextInt();
-        cin.close();
         return new OneDArrayAndTwoInt(array, val1, val2);
     }
 
-    public static TwoOneDArray getTwo1DArrayInput() {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+    public static TwoOneDArray getTwoInt1DArrayInput(Scanner cin) {
         int[] array1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int[] array2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
         return new TwoOneDArray(array1, array2);
+    }
+
+    public static TwoOneDArrayAndOneInt getTwo1DArrayAndOneIntInput(Scanner cin) {
+        int[] array1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        int[] array2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        int val = cin.nextInt();
+        return new TwoOneDArrayAndOneInt(array1, array2, val);
     }
 }

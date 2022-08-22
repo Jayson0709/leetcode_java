@@ -1,6 +1,6 @@
 package algorithms.bitManipulation;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 // Find the two numbers that only appear once in the given array, where other numbers appear twice.
 // (This question is on the Chinese LeetCode website)
@@ -22,11 +22,7 @@ import java.nio.charset.StandardCharsets;
 
 public class FindSingleNumbers {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int[] result = singleNumbers(nums);
+        int[] result = singleNumbers(InputMethods.getInputForOneIntArray());
         System.out.println("[" + result[0] + "," + result[1] +  "]");
     }
 
