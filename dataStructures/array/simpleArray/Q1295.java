@@ -1,6 +1,6 @@
 package dataStructures.array.simpleArray;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 //Given an array nums of integers, return how many of them contain an even number of digits.
 //
@@ -53,10 +53,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1295 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int result = findNumbers(nums);
+        int result = findNumbers(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

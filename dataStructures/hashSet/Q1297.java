@@ -66,7 +66,6 @@ public class Q1297 {
         int minSize = cin.nextInt();
         int maxSize = cin.nextInt();
         cin.close();
-
         int result = maxFreq(s, maxLetters, minSize, maxSize);
         System.out.println(result);
     }

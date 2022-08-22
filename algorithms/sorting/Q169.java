@@ -1,6 +1,6 @@
 package algorithms.sorting;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 //Given an array nums of size n, return the majority element.
 //
@@ -45,11 +45,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q169 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = majorityElement(nums);
+        int result = majorityElement(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

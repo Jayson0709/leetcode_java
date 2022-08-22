@@ -3,6 +3,9 @@ package dataStructures.array.simpleArray;
 import utils.InputMethods;
 import utils.OneDArrayAndTwoInt;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //A bus has n stops numbered from 0 to n - 1 that form a circle. We know the distance between all pairs of neighboring stops where distance[i] is the distance between the stops number i and (i + 1) % n.
 //
@@ -94,7 +97,9 @@ import utils.OneDArrayAndTwoInt;
 
 public class Q1184 {
     public static void main(String[] args) {
-        OneDArrayAndTwoInt obj = InputMethods.get1DArrayAndTwoIntInput();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndTwoInt obj = InputMethods.getOneInt1DArrayAndTwoIntInput(cin);
+        cin.close();
         int result = distanceBetweenBusStops(obj.array, obj.val1, obj.val2);
         System.out.println(result);
     }

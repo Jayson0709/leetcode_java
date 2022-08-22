@@ -6,6 +6,9 @@ import utils.InputMethods;
 import utils.OutputMethods;
 import utils.TwoOneDArray;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sumas a linked list.
 //
@@ -62,7 +65,9 @@ import utils.TwoOneDArray;
 public class Q2 {
 
     public static void main(String[] args) {
-        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TwoOneDArray obj = InputMethods.getTwoInt1DArrayInput(cin);
+        cin.close();
         ListNode head1 = DataConversionMethods.convert1DArrayToLinkedList(obj.array1);
         ListNode head2 = DataConversionMethods.convert1DArrayToLinkedList(obj.array2);
         ListNode result = addTwoNumbers(head1, head2);

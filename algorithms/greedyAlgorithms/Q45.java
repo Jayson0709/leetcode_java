@@ -1,6 +1,6 @@
 package algorithms.greedyAlgorithms;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 
 //Given an array of non-negative integers nums, you are initially positioned at the first index of the array.
@@ -51,10 +51,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q45 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int result = jump(nums);
+        int result = jump(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

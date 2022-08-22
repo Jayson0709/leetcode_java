@@ -3,6 +3,9 @@ package dataStructures.tree.binaryTree;
 import sharedClasses.TreeNode;
 import utils.*;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //Given the root of a binary tree, return the length of the diameter of the tree.
 //
@@ -46,7 +49,9 @@ import utils.*;
 
 public class Q543 {
     public static void main(String[] args) {
-        TreeNode root = InputMethods.getInputForOneTree();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
+        cin.close();
         int result = diameterOfBinaryTree(root);
         System.out.println(result);
     }

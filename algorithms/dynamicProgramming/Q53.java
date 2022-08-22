@@ -1,6 +1,6 @@
 package algorithms.dynamicProgramming;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 //Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 //
@@ -52,10 +52,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q53 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int result = maxSubArray(nums);
+        int result = maxSubArray(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

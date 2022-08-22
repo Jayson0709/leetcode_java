@@ -1,6 +1,6 @@
 package algorithms.greedyAlgorithms;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 //You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.
 //
@@ -45,11 +45,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q55 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        boolean result = canJump(nums);
+        boolean result = canJump(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

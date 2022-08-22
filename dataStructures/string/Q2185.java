@@ -53,7 +53,6 @@ public class Q2185 {
         String[] words = cin.nextLine().strip().split(" ");
         String pref = cin.nextLine();
         cin.close();
-
         int result = prefixCount(words, pref);
         System.out.println(result);
     }

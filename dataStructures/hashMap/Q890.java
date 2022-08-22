@@ -1,7 +1,10 @@
 package dataStructures.hashMap;
-import java.util.*;
+
+import utils.InputMethods;
+import utils.OutputMethods;
+
 import java.nio.charset.StandardCharsets;
-import utils.*;
+import java.util.*;
 
 
 //Given a list of strings words and a string pattern, return a list of words[i] that match pattern. You may return the answer in any order.
@@ -55,13 +58,8 @@ public class Q890 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<String> wordsList = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            wordsList.add(line);
-        }
+        InputMethods.getInputForStringArrayList(cin, wordsList);
+        cin.close();
         int size = wordsList.size();
         String[] words = new String[size - 1];
         String pattern = null;
@@ -72,8 +70,6 @@ public class Q890 {
             }
             words[i] = wordsList.get(i);
         }
-        cin.close();
-
         List<String> result = findAndReplacePattern(words, pattern);
         OutputMethods.outputListData(result);
     }

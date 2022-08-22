@@ -44,8 +44,9 @@ public class Q1351 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> gridList = new ArrayList<>();
-        InputMethods.getInputForIntArrayList(cin, gridList);
-        int result = countNegatives(DataConversionMethods.convertArrayListTo2DArray(gridList));
+        InputMethods.getInputForIntArrArrayList(cin, gridList);
+        cin.close();
+        int result = countNegatives(DataConversionMethods.convertIntArrayListTo2DArray(gridList));
         System.out.println(result);
     }
 

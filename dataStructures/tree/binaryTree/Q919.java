@@ -1,8 +1,14 @@
 package dataStructures.tree.binaryTree;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
-import utils.*;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Queue;
+import java.util.Scanner;
 
 
 //A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
@@ -87,10 +93,7 @@ public class Q919 {
         if (orders[0].equals("CBTInserter")) {
             output.append("null");
             int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-            TreeNode root = new TreeNode(data[0]);
-            for (int i = 1; i < data.length; i++) {
-                root.insertInBT(root, data[i]);
-            }
+            TreeNode root = InputMethods.getInputForOneBinaryTree(data);
             CBTInserter obj = new CBTInserter(root);
             for (int i = 1; i < orders.length; i++) {
                 if (orders[i].equals("insert")) {

@@ -1,6 +1,9 @@
 package algorithms.search.binarySearch;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+
+import java.util.Arrays;
 
 
 //给你一个整数数组 arr 和一个目标值 target ，请你返回一个整数 value ，使得将数组中所有大于 value 的值变成 value 后，数组的和最接近  target （最接近表示两者之差的绝对值最小）。
@@ -54,11 +57,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1300 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int target = cin.nextInt();
-        cin.close();
-        System.out.println(findBestValue(arr, target));
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        System.out.println(findBestValue(obj.array, obj.val));
     }
 
     // Method 1: Enumeration + binary search

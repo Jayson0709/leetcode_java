@@ -3,6 +3,9 @@ package algorithms.search.dfs;
 import sharedClasses.TreeNode;
 import utils.*;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //Given the root of a binary tree, return its maximum depth.
 //
@@ -44,7 +47,9 @@ import utils.*;
 
 public class Q104 {
     public static void main(String[] args) {
-        TreeNode root = InputMethods.getInputForOneTree();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
+        cin.close();
         int result = maxDepth(root);
         System.out.println(result);
     }

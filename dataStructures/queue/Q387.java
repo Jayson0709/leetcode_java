@@ -46,7 +46,6 @@ public class Q387 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String s = cin.nextLine().strip();
         cin.close();
-
         int result = firstUniqueChar(s);
         System.out.println(result);
     }

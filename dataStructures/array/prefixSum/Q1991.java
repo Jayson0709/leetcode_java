@@ -1,6 +1,8 @@
 package dataStructures.array.prefixSum;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+
+import java.util.Arrays;
 
 
 //Given a 0-indexed integer array nums, find the leftmost middleIndex (i.e., the smallest amongst all the possible ones).
@@ -76,10 +78,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1991 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        System.out.println(findMiddleIndex(nums));
+        System.out.println(findMiddleIndex(InputMethods.getInputForOneIntArray()));
     }
 
     private static int findMiddleIndex(int[] nums) {

@@ -78,13 +78,12 @@ import java.nio.charset.StandardCharsets;
 public class Q88 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int m = Integer.parseInt(cin.nextLine().strip());
-        int[] nums2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int n = Integer.parseInt(cin.nextLine().strip());
+        OneDArrayAndOneInt obj1 = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int[] nums1 = obj1.array;
+        OneDArrayAndOneInt obj2 = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int[] nums2 = obj2.array;
         cin.close();
-
-        merge(nums1, m, nums2, n);
+        merge(nums1, obj1.val, nums2, obj1.val);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(nums1).boxed().toArray(Integer[]::new)));
     }
 

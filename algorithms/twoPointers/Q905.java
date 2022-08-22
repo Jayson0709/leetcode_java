@@ -1,7 +1,9 @@
 package algorithms.twoPointers;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
-import utils.*;
+
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 
 //Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers.
@@ -44,10 +46,7 @@ import utils.*;
 
 public class Q905 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int[] result = sortArrayByParity(nums);
+        int[] result = sortArrayByParity(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

@@ -1,6 +1,6 @@
 package algorithms.twoPointers;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 //Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice. The relative order of the elements should be kept the same.
 //
@@ -82,11 +82,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q80 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = removeDuplicates(nums);
+        int result = removeDuplicates(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

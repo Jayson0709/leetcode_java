@@ -1,6 +1,6 @@
 package algorithms.dynamicProgramming;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 //Alice and Bob continue their games with piles of stones. There are a number of piles arranged in a row, and each pile has a positive integer number of stones piles[i]. The objective of the game is to end with the most stones.
 //    Alice and Bob take turns, with Alice starting first. Initially, M = 1.
@@ -51,11 +51,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1140 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] piles = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = stoneGameII(piles);
+        int result = stoneGameII(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

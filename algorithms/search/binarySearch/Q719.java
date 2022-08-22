@@ -1,6 +1,9 @@
 package algorithms.search.binarySearch;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+
+import java.util.Arrays;
 
 //The distance of a pair of integers a and b is defined as the absolute difference between a and b.
 //
@@ -60,12 +63,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q719 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int k = cin.nextInt();
-        cin.close();
-
-        int result = smallestDistancePair(nums, k);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int result = smallestDistancePair(obj.array, obj.val);
         System.out.println(result);
     }
 

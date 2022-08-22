@@ -1,6 +1,7 @@
 package algorithms.search.binarySearch;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
 
 //Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 //
@@ -50,12 +51,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q35 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int target = cin.nextInt();
-        cin.close();
-
-        int result = searchInsert(nums, target);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int result = searchInsert(obj.array, obj.val);
         System.out.println(result);
     }
 

@@ -53,18 +53,9 @@ public class Q54 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        int[][] matrix = new int[data.size()][];
-        for (int i = 0; i < data.size(); i++) {
-            matrix[i] = data.get(i);
-        }
-        int[] result = spiralOrder(matrix);
+        InputMethods.getInputForIntArrArrayList(cin, data);
+        int[] result = spiralOrder(DataConversionMethods.convertIntArrayListTo2DArray(data));
+        cin.close();
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

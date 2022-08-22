@@ -1,6 +1,8 @@
 package algorithms.windowSliding;
-import java.util.*;
+
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Scanner;
 
 
 //Given an array of positive integers nums and a positive integer target, return the minimal length of a contiguous subarray [nums_l, nums_l+1, ..., nums_r-1, nums_r] of which the sum is greater than or equal to target. If there is no such subarray, return 0 instead.

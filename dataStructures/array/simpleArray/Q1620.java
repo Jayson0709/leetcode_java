@@ -1,4 +1,6 @@
 package dataStructures.array.simpleArray;
+import utils.InputMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -91,14 +93,8 @@ public class Q1620 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> inputData = new ArrayList<>();
-        while (true) {
-            String curLine = cin.nextLine().strip();
-            if (curLine.length() == 0) {
-                break;
-            } else {
-                inputData.add(Arrays.stream(curLine.split(" ")).mapToInt(Integer::parseInt).toArray());
-            }
-        }
+        InputMethods.getInputForIntArrArrayList(cin, inputData);
+        cin.close();
         int radius = 0;
         int size = inputData.size();
         int[][] towers = new int[size - 1][3];
@@ -109,7 +105,6 @@ public class Q1620 {
             }
             towers[i] = inputData.get(i);
         }
-        cin.close();
 
         int[] result = bestCoordinate(towers, radius);
         System.out.println("[" + result[0] + "," + result[1] + "]");

@@ -1,8 +1,9 @@
 package algorithms.sorting;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 
 //Given an array of integers nums, sort the array in ascending order.
@@ -39,10 +40,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q912 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int[] result = sortArray(nums);
+        int[] result = sortArray(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

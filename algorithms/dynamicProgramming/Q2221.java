@@ -1,6 +1,6 @@
 package algorithms.dynamicProgramming;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 //You are given a 0-indexed integer array nums, where nums[i] is a digit between 0 and 9 (inclusive).
 //
@@ -68,11 +68,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q2221 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = triangularSum(nums);
+        int result = triangularSum(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

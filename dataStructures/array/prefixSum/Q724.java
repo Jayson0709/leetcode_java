@@ -1,6 +1,8 @@
 package dataStructures.array.prefixSum;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+
+import java.util.Arrays;
 
 
 //Given an array of integers nums, calculate the pivot index of this array.
@@ -77,10 +79,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q724 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        System.out.println(pivotIndex(nums));
+        System.out.println(pivotIndex(InputMethods.getInputForOneIntArray()));
     }
 
     private static int pivotIndex(int[] nums) {

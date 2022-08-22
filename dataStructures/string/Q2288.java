@@ -79,7 +79,6 @@ public class Q2288 {
         String sentence = cin.nextLine().strip();
         int discount = cin.nextInt();
         cin.close();
-
         String result = discountPrices(sentence, discount);
         System.out.println(result);
     }

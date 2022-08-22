@@ -45,8 +45,9 @@ public class Q498 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> dataList = new ArrayList<>();
-        InputMethods.getInputForIntArrayList(cin, dataList);
-        int[] result = findDiagonalOrder(DataConversionMethods.convertArrayListTo2DArray(dataList));
+        InputMethods.getInputForIntArrArrayList(cin, dataList);
+        int[] result = findDiagonalOrder(DataConversionMethods.convertIntArrayListTo2DArray(dataList));
+        cin.close();
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

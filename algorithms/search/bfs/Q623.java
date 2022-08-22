@@ -1,8 +1,14 @@
 package algorithms.search.bfs;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
-import utils.*;
+import utils.InputMethods;
+import utils.OneDArrayAndTwoInt;
+import utils.OutputMethods;
+
+import java.nio.charset.StandardCharsets;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 
 //Given the root of a binary tree and two integers val and depth, add a row of nodes with value val at the given depth 'depth'.
@@ -92,15 +98,10 @@ import utils.*;
 public class Q623 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int val = Integer.parseInt(cin.nextLine().strip());
-        int depth = Integer.parseInt(cin.nextLine().strip());
+        OneDArrayAndTwoInt obj = InputMethods.getOneInt1DArrayAndTwoIntInput(cin);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(obj.array);
         cin.close();
-        TreeNode root = new TreeNode(data[0]);
-        for (int i = 1; i < data.length; i++) {
-            root.insertInBT(root, data[i]);
-        }
-        System.out.println(OutputMethods.levelOrderTraversalOutput(addOneRow(root, val, depth)));
+        System.out.println(OutputMethods.levelOrderTraversalOutput(addOneRow(root, obj.val1, obj.val2)));
     }
 
 

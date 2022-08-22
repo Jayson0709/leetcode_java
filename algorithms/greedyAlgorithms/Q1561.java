@@ -1,6 +1,8 @@
 package algorithms.greedyAlgorithms;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+
+import java.util.Arrays;
 
 
 //There are 3n piles of coins of varying size, you and your friends will take piles of coins as follows:
@@ -73,10 +75,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1561 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] piles = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int result = maxCoins(piles);
+        int result = maxCoins(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

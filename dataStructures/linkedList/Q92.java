@@ -6,6 +6,9 @@ import utils.InputMethods;
 import utils.OneDArrayAndTwoInt;
 import utils.OutputMethods;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
 //
@@ -56,7 +59,9 @@ import utils.OutputMethods;
 
 public class Q92 {
     public static void main(String[] args) {
-        OneDArrayAndTwoInt obj = InputMethods.get1DArrayAndTwoIntInput();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndTwoInt obj = InputMethods.getOneInt1DArrayAndTwoIntInput(cin);
+        cin.close();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode resultNode = reverseBetween(head, obj.val1, obj.val2);
         System.out.println(OutputMethods.outputLinkedListData(resultNode));

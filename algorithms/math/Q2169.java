@@ -66,7 +66,6 @@ public class Q2169 {
         int num1 = cin.nextInt();
         int num2 = cin.nextInt();
         cin.close();
-
         int result = countOperations(num1, num2);
         System.out.println(result);
     }

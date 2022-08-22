@@ -4,8 +4,10 @@ import sharedClasses.TreeNode;
 import utils.InputMethods;
 import utils.TwoOneDArray;
 
+import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 
 //Given the roots of two binary trees p and q, write a function to check if they are the same or not.
@@ -53,16 +55,12 @@ import java.util.Queue;
 
 public class Q100 {
     public static void main(String[] args) {
-        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
-        TreeNode p = new TreeNode(obj.array1[0]);
-        TreeNode q = new TreeNode(obj.array2[0]);
-        for (int i = 1; i < obj.array1.length; i++) {
-            p.insertInBT(p, obj.array1[i]);
-        }
-        for (int i = 1; i < obj.array2.length; i++) {
-            q.insertInBT(q, obj.array2[i]);
-        }
-        boolean result = isSameTree(p ,q);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TwoOneDArray obj = InputMethods.getTwoInt1DArrayInput(cin);
+        TreeNode p = InputMethods.getInputForOneBinaryTree(obj.array1);
+        TreeNode q = InputMethods.getInputForOneBinaryTree(obj.array2);
+        cin.close();
+        boolean result = isSameTree(p, q);
         System.out.println(result);
     }
 

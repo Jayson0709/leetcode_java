@@ -45,20 +45,9 @@ public class Q867 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> matrixData = new ArrayList<>();
-        while (true) {
-            String data = cin.nextLine();
-            if (data.length() == 0) {
-                break;
-            } else {
-                matrixData.add(Arrays.stream(data.strip().split(" ")).mapToInt(Integer::parseInt).toArray());
-            }
-        }
+        InputMethods.getInputForIntArrArrayList(cin, matrixData);
         cin.close();
-        int[][] matrix = new int[matrixData.size()][matrixData.get(0).length];
-        for (int i = 0; i < matrixData.size(); i++) {
-            matrix[i] = matrixData.get(i);
-        }
-        int[][] result = transpose(matrix);
+        int[][] result = transpose(DataConversionMethods.convertIntArrayListTo2DArray(matrixData));
         OutputMethods.output2DIntArrayData(result);
     }
 

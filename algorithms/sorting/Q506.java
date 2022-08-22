@@ -1,8 +1,11 @@
 package algorithms.sorting;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 
 //You are given an integer array score of size n, where score[i] is the score of the ith athlete in a competition. All the scores are guaranteed to be unique.
@@ -61,11 +64,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q506 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] score = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        String[] result = findRelativeRanks(score);
+        String[] result = findRelativeRanks(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.output1DArrayData(result));
     }
 

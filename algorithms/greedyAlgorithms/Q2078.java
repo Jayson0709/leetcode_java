@@ -1,6 +1,6 @@
 package algorithms.greedyAlgorithms;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 
 //There are n houses evenly lined up on the street, and each house is beautifully painted. You are given a 0-indexed integer array colors of length n, where colors[i] represents the color of the ith house.
@@ -82,11 +82,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q2078 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] colors = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = maxDistance(colors);
+        int result = maxDistance(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

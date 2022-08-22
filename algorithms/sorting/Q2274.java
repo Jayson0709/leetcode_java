@@ -63,7 +63,6 @@ public class Q2274 {
         int top = cin.nextInt();
         int[] special = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-
         int result = maxConsecutive(bottom, top, special);
         System.out.println(result);
     }

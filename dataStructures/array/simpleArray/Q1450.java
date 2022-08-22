@@ -1,6 +1,10 @@
 package dataStructures.array.simpleArray;
-import java.util.*;
+
+import utils.InputMethods;
+import utils.TwoOneDArrayAndOneInt;
+
 import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
 
 
 //Given two integer arrays startTime and endTime and given an integer queryTime.
@@ -72,11 +76,9 @@ import java.nio.charset.StandardCharsets;
 public class Q1450 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] startTime = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] endTime = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int queryTime = cin.nextInt();
+        TwoOneDArrayAndOneInt obj = InputMethods.getTwo1DArrayAndOneIntInput(cin);
         cin.close();
-        System.out.println(busyStudent(startTime, endTime, queryTime));
+        System.out.println(busyStudent(obj.array1, obj.array2, obj.val));
     }
 
     private static int busyStudent(int[] startTime, int[] endTime, int queryTime) {

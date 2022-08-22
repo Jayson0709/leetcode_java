@@ -74,7 +74,6 @@ public class Q2332 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String expression = cin.nextLine().strip();
         cin.close();
-
         String result = minimizeResult(expression);
         System.out.println(result);
     }

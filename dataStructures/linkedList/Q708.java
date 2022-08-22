@@ -37,7 +37,7 @@ import utils.OutputMethods;
 
 public class Q708 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.get1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode p = head;
         while (p.next != null) {

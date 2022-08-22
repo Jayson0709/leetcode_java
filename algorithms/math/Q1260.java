@@ -98,11 +98,7 @@ public class Q1260 {
             }
         }
         cin.close();
-        int[][] grid = new int[data.size()][data.get(0).length];
-        for (int i = 0; i < data.size(); i++) {
-            grid[i] = data.get(i);
-        }
-        List<List<Integer>> result = shiftGrid(grid, k);
+        List<List<Integer>> result = shiftGrid(DataConversionMethods.convertIntArrayListTo2DArray(data), k);
         OutputMethods.outputEmbeddedListData(result);
     }
 

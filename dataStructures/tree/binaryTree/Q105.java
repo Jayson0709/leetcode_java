@@ -5,8 +5,10 @@ import utils.InputMethods;
 import utils.OutputMethods;
 import utils.TwoOneDArray;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 
 //Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
@@ -63,7 +65,9 @@ import java.util.LinkedList;
 
 public class Q105 {
     public static void main(String[] args) {
-        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TwoOneDArray obj = InputMethods.getTwoInt1DArrayInput(cin);
+        cin.close();
         TreeNode resultNode = buildTree(obj.array1, obj.array2);
         System.out.println(OutputMethods.levelOrderTraversalOutput(resultNode));
     }

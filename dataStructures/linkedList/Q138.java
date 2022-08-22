@@ -1,4 +1,6 @@
 package dataStructures.linkedList;
+import utils.InputMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -81,13 +83,7 @@ public class Q138 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<String[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(line.split(" "));
-        }
+        InputMethods.getInputForStringArrArrayList(cin, data);
         cin.close();
         Node[] nodes = new Node[data.size()];
         Node head = new Node(Integer.parseInt(data.get(0)[0]));

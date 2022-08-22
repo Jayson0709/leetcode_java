@@ -1,6 +1,9 @@
 package dataStructures.hashMap;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 //Given an array nums of distinct positive integers, return the number of tuples (a, b, c, d) such that a * b = c * d where a, b, c, and d are elements of nums, and a != b != c != d.
@@ -54,10 +57,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1726 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        System.out.println(tupleSameProduct(nums));
+        System.out.println(tupleSameProduct(InputMethods.getInputForOneIntArray()));
     }
 
     private static int tupleSameProduct(int[] nums) {

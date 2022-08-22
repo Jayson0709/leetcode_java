@@ -1,8 +1,9 @@
 package algorithms.math;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 
 //You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
@@ -64,10 +65,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q66 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] digits = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int[] result = plusOne(digits);
+        int[] result = plusOne(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

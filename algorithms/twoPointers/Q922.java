@@ -1,7 +1,9 @@
 package algorithms.twoPointers;
-import utils.*;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 
 //Given an array of integers nums, half of the integers in nums are odd, and the other half are even.
@@ -56,10 +58,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q922 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int[] result = sortArrayByParityII(nums);
+        int[] result = sortArrayByParityII(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

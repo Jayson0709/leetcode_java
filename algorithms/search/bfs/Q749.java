@@ -110,8 +110,9 @@ public class Q749 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        InputMethods.getInputForIntArrayList(cin, data);
-        int result = containVirus(DataConversionMethods.convertArrayListTo2DArray(data));
+        InputMethods.getInputForIntArrArrayList(cin, data);
+        cin.close();
+        int result = containVirus(DataConversionMethods.convertIntArrayListTo2DArray(data));
         System.out.println(result);
     }
 

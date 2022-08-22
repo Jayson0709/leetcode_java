@@ -3,8 +3,10 @@ package algorithms.search.dfs;
 import sharedClasses.TreeNode;
 import utils.*;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 //Given the root of a binary tree, the level of its root is 1, the level of its children is 2, and so on.
@@ -65,7 +67,9 @@ import java.util.List;
 
 public class Q1161 {
     public static void main(String[] args) {
-        TreeNode root = InputMethods.getInputForOneTree();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
+        cin.close();
         System.out.println(maxLevelSum(root));
     }
 

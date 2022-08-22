@@ -1,7 +1,11 @@
 package algorithms.greedyAlgorithms;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
-import utils.*;
+
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 //Given the array nums, obtain a subsequence of the array whose sum of elements is strictly greater than the sum of the non-included elements in such subsequence.
@@ -60,10 +64,7 @@ import utils.*;
 
 public class Q1403 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        List<Integer> result = minSubsequence(nums);
+        List<Integer> result = minSubsequence(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.outputListData(result));
     }
 

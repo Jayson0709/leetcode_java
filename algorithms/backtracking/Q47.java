@@ -1,7 +1,11 @@
 package algorithms.backtracking;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
-import utils.*;
+
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 //Given a collection of numbers, nums, that might contain duplicates, return all possible unique permutations in any order.
@@ -42,10 +46,7 @@ import utils.*;
 
 public class Q47 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        List<List<Integer>> result = permuteUnique(nums);
+        List<List<Integer>> result = permuteUnique(InputMethods.getInputForOneIntArray());
         OutputMethods.outputEmbeddedListData(result);
     }
 

@@ -1,6 +1,9 @@
 package algorithms.dynamicProgramming;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+
+import java.util.HashMap;
+import java.util.Map;
 
 //A sequence x1, x2, ..., xn is Fibonacci-like if:
 //
@@ -50,11 +53,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q873 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = lenLongestFibSubsequence(arr);
+        int result = lenLongestFibSubsequence(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

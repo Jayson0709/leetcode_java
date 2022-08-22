@@ -1,6 +1,6 @@
 package algorithms.search.dfs;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 
 //You are given an integer array nums of length n where nums is a permutation of the numbers in the range [0, n - 1].
@@ -54,10 +54,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q565 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int result = arrayNesting(nums);
+        int result = arrayNesting(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

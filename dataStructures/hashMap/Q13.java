@@ -100,7 +100,6 @@ public class Q13 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String s = cin.nextLine().strip();
         cin.close();
-
         int result = romanToInt(s);
         System.out.println(result);
     }

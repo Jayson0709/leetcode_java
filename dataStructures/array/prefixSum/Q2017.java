@@ -1,4 +1,7 @@
 package dataStructures.array.prefixSum;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -98,18 +101,9 @@ public class Q2017 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        int[][] grid = new int[data.size()][];
-        for (int i = 0; i < data.size(); i++) {
-            grid[i] = data.get(i);
-        }
-        System.out.println(gridGame(grid));
+        InputMethods.getInputForIntArrArrayList(cin, data);
+        cin.close();
+        System.out.println(gridGame(DataConversionMethods.convertIntArrayListTo2DArray(data)));
     }
 
     private static long gridGame(int[][] grid) {

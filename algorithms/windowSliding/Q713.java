@@ -1,7 +1,7 @@
 package algorithms.windowSliding;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
-import java.util.stream.IntStream;
+
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
 
 
 //Given an array of integers nums and an integer k, return the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than k.
@@ -43,12 +43,8 @@ import java.util.stream.IntStream;
 
 public class Q713 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int k = cin.nextInt();
-        cin.close();
-
-        int result = numSubarrayProductLessThanK(nums, k);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int result = numSubarrayProductLessThanK(obj.array, obj.val);
         System.out.println(result);
     }
 

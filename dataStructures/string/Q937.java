@@ -72,19 +72,9 @@ public class Q937 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<String> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(line);
-        }
-        String[] logs = new String[data.size()];
-        for (int i = 0; i < data.size(); i++) {
-            logs[i] = data.get(i);
-        }
+        InputMethods.getInputForStringArrayList(cin, data);
         cin.close();
-        String[] result = reorderLogFiles(logs);
+        String[] result = reorderLogFiles(DataConversionMethods.convertStringArrayListTo1DArray(data));
         System.out.println(OutputMethods.output1DArrayData(result));
     }
 

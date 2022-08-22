@@ -1,7 +1,10 @@
 package algorithms.search.unionFind;
-import java.util.*;
+
+import utils.InputMethods;
+import utils.OutputMethods;
+
 import java.nio.charset.StandardCharsets;
-import utils.*;
+import java.util.*;
 
 
 //Given a list of accounts where each element accounts[i] is a list of strings, where the first element accounts[i][0] is a name, and the rest of the elements are emails representing emails of the account.
@@ -66,14 +69,7 @@ public class Q721 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<List<String>> accounts = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            List<String> accountData = Arrays.asList(line.split(" "));
-            accounts.add(accountData);
-        }
+        InputMethods.getInputForEmbeddedStringArrayList(cin, accounts);
         cin.close();
         List<List<String>> result = accountsMerge(accounts);
         OutputMethods.outputEmbeddedListData(result);

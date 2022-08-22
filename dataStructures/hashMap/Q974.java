@@ -1,6 +1,10 @@
 package dataStructures.hashMap;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 //Given an integer array nums and an integer k, return the number of non-empty subarrays that have a sum divisible by k.
@@ -48,11 +52,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q974 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int k = cin.nextInt();
-        cin.close();
-        int result = subarraysDivByK(nums, k);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int result = subarraysDivByK(obj.array, obj.val);
         System.out.println(result);
     }
 

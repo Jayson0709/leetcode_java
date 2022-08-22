@@ -1,6 +1,6 @@
 package algorithms.windowSliding;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 
 //You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.
@@ -72,11 +72,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q904 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] fruits = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = totalFruit(fruits);
+        int result = totalFruit(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

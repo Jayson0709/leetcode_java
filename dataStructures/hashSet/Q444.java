@@ -1,4 +1,7 @@
 package dataStructures.hashSet;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -55,18 +58,9 @@ public class Q444 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         List<int[]> seqData = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            seqData.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        int[][] sequences = new int[seqData.size()][];
-        for (int i = 0; i < seqData.size(); i++) {
-            sequences[i] = seqData.get(i);
-        }
-        boolean result = sequenceReconstruction(nums, sequences);
+        InputMethods.getInputForIntArrArrayList(cin, seqData);
+        cin.close();
+        boolean result = sequenceReconstruction(nums, DataConversionMethods.convertIntArrayListTo2DArray(seqData));
         System.out.println(result);
     }
 

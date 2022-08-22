@@ -1,8 +1,10 @@
 package algorithms.twoPointers;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 
 //You are given a 0-indexed integer array nums and an integer pivot. Rearrange nums such that the following conditions are satisfied:
@@ -67,12 +69,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q2161 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int pivot = cin.nextInt();
-        cin.close();
-
-        int[] result = pivotArray(nums, pivot);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int[] result = pivotArray(obj.array, obj.val);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

@@ -1,8 +1,9 @@
 package dataStructures.array.simpleArray;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 
 //Given a zero-based permutation nums (0-indexed), build an array 'ans' of the same length where ans[i] = nums[nums[i]] for each 0 <= i < nums.length and return it.
@@ -62,11 +63,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1920 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int[] result = buildArray(nums);
+        int[] result = buildArray(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

@@ -1,8 +1,9 @@
 package algorithms.divideAndConquer;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.ListNode;
-import utils.*;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+import utils.OutputMethods;
 
 
 //Given the head of a linked list, return the list after sorting it in ascending order.
@@ -67,17 +68,8 @@ import utils.*;
 
 public class Q148 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        ListNode head = new ListNode();
-        head.val = data[0];
-        ListNode p1 = head;
-        for (int i = 1; i < data.length; i++) {
-            ListNode temp = new ListNode(data[i]);
-            p1.next = temp;
-            p1 = temp;
-        }
+        int[] data = InputMethods.getInputForOneIntArray();
+        ListNode head = DataConversionMethods.convert1DArrayToLinkedList(data);
         ListNode resultHead = sortList(head);
         System.out.println(OutputMethods.outputLinkedListData(resultHead));
     }

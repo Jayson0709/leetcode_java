@@ -1,8 +1,12 @@
 package algorithms.bitManipulation;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+import utils.OutputMethods;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 
 //There are 8 prison cells in a row and each cell is either occupied or vacant.
@@ -78,11 +82,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q957 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] cells = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int n = Integer.parseInt(cin.nextLine().strip());
-        cin.close();
-        int[] result = prisonAfterNDays(cells, n);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int[] result = prisonAfterNDays(obj.array, obj.val);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

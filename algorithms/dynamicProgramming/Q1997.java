@@ -1,6 +1,6 @@
 package algorithms.dynamicProgramming;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 
 //There are n rooms you need to visit, labeled from 0 to n - 1. Each day is labeled, starting from 0. You will go in and visit one room a day.
@@ -85,10 +85,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1997 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nextVisit = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int result = firstDayBeenInALlRooms(nextVisit);
+        int result = firstDayBeenInALlRooms(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

@@ -1,4 +1,7 @@
 package dataStructures.string;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -66,18 +69,9 @@ public class Q2114 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<String> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(line);
-        }
-        String[] sentences = new String[data.size()];
-        for (int i = 0; i < data.size(); i++) {
-            sentences[i] = data.get(i);
-        }
-        int result = mostWordsFound(sentences);
+        InputMethods.getInputForStringArrayList(cin, data);
+        cin.close();
+        int result = mostWordsFound(DataConversionMethods.convertStringArrayListTo1DArray(data));
         System.out.println(result);
     }
 

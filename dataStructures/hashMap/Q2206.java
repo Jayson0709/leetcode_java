@@ -1,6 +1,8 @@
 package dataStructures.hashMap;
+
+import utils.InputMethods;
+
 import java.util.*;
-import java.nio.charset.StandardCharsets;
 
 
 //You are given an integer array nums consisting of 2 * n integers.
@@ -60,10 +62,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q2206 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        System.out.println(divideArray(nums));
+        System.out.println(divideArray(InputMethods.getInputForOneIntArray()));
     }
 
     private static boolean divideArray(int[] nums) {

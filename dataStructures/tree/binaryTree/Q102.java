@@ -4,10 +4,8 @@ import sharedClasses.TreeNode;
 import utils.*;
 
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 
 //Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
@@ -61,7 +59,9 @@ import java.util.Queue;
 
 public class Q102 {
     public static void main(String[] args) {
-        TreeNode root = InputMethods.getInputForOneTree();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
+        cin.close();
         List<List<Integer>> result = levelOrder(root);
         OutputMethods.outputEmbeddedListData(result);
     }

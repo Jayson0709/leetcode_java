@@ -1,8 +1,9 @@
 package algorithms.twoPointers;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 //Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.
 //
@@ -46,9 +47,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1089 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
+        int[] arr = InputMethods.getInputForOneIntArray();
         duplicateZeros(arr);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(arr).boxed().toArray(Integer[]::new)));
     }

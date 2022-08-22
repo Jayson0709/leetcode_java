@@ -90,8 +90,9 @@ public class Q1466 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int n = Integer.parseInt(cin.nextLine().strip());
         List<int[]> edges = new ArrayList<>();
-        InputMethods.getInputForIntArrayList(cin, edges);
-        System.out.println(minReorder(n, DataConversionMethods.convertArrayListTo2DArray(edges)));
+        InputMethods.getInputForIntArrArrayList(cin, edges);
+        cin.close();
+        System.out.println(minReorder(n, DataConversionMethods.convertIntArrayListTo2DArray(edges)));
     }
 
     private static final Map<Integer, List<int[]>> hMap = new HashMap<>();

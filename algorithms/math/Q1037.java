@@ -1,4 +1,7 @@
 package algorithms.math;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -41,16 +44,9 @@ public class Q1037 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> dataList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            String[] curPoint = cin.nextLine().strip().split(" ");
-            dataList.add(Arrays.stream(curPoint).mapToInt(Integer::parseInt).toArray());
-        }
+        InputMethods.getInputForIntArrArrayList(cin, dataList);
         cin.close();
-        int[][] points = new int[dataList.size()][2];
-        for (int i = 0; i < dataList.size(); i++) {
-            points[i] = dataList.get(i);
-        }
-        boolean result = isBoomerang(points);
+        boolean result = isBoomerang(DataConversionMethods.convertIntArrayListTo2DArray(dataList));
         System.out.println(result);
     }
     

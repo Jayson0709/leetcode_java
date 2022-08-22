@@ -1,4 +1,6 @@
 package algorithms.search.binarySearch;
+import utils.DataConversionMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -77,11 +79,7 @@ public class Q240 {
             }
         }
         cin.close();
-        int[][] matrix = new int[data.size()][];
-        for (int i = 0; i < data.size(); i++) {
-            matrix[i] = data.get(i);
-        }
-        System.out.println(findNumberIn2DArray(matrix, target));
+        System.out.println(findNumberIn2DArray(DataConversionMethods.convertIntArrayListTo2DArray(data), target));
     }
 
     private static boolean findNumberIn2DArray(int[][] matrix, int target) {

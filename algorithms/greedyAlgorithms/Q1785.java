@@ -1,4 +1,7 @@
 package algorithms.greedyAlgorithms;
+import utils.InputMethods;
+import utils.OneDArrayAndTwoInt;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -51,11 +54,9 @@ import java.nio.charset.StandardCharsets;
 public class Q1785 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int limit = Integer.parseInt(cin.nextLine());
-        int goal = Integer.parseInt(cin.nextLine());
+        OneDArrayAndTwoInt obj = InputMethods.getOneInt1DArrayAndTwoIntInput(cin);
         cin.close();
-        System.out.println(minElements(nums, limit, goal));
+        System.out.println(minElements(obj.array, obj.val1, obj.val2));
     }
 
     private static int minElements(int[] nums, int limit, int goal) {

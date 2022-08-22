@@ -1,7 +1,12 @@
 package algorithms.search.bfs;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
+import utils.InputMethods;
+
+import java.nio.charset.StandardCharsets;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 //Given the root of a binary tree, return the sum of values of its deepest leaves.
 //
@@ -52,11 +57,7 @@ import sharedClasses.TreeNode;
 public class Q1302 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        TreeNode root = new TreeNode(data[0]);
-        for (int i = 1; i < data.length; i++) {
-            root.insertInBT(root, data[i]);
-        }
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
         System.out.println(deepestLeavesSum(root));
     }

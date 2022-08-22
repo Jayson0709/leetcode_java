@@ -84,7 +84,6 @@ public class Q1946 {
         String num = cin.nextLine().strip();
         int[] change = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-
         String result = maximumNumber(num, change);
         System.out.println(result);
     }

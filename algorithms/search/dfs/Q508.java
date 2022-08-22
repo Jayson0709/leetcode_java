@@ -1,8 +1,11 @@
 package algorithms.search.dfs;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
-import utils.*;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 
 //Given the root of a binary tree, return the most frequent subtree sum. If there is a tie, return all the values with the highest frequency in any order.
@@ -45,13 +48,8 @@ public class Q508 {
 
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
-        TreeNode root = new TreeNode();
-        root.val = data[0];
-        for (int i = 1; i < data.length; i++) {
-            root.insertInBT(root, data[i]);
-        }
         int[] result = findFrequentTreeSum(root);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }

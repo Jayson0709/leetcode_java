@@ -5,6 +5,9 @@ import utils.InputMethods;
 import utils.OneDArrayAndTwoInt;
 import utils.OutputMethods;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 //Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high]. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node's descendant should remain a descendant). It can be proven that there is a unique answer.
 //
 //    Return the root of the trimmed binary search tree. Note that the root may change depending on the given bounds.
@@ -47,11 +50,10 @@ import utils.OutputMethods;
 
 public class Q669 {
     public static void main(String[] args) {
-        OneDArrayAndTwoInt obj = InputMethods.get1DArrayAndTwoIntInput();
-        TreeNode root = new TreeNode(obj.array[0]);
-        for (int i = 1; i < obj.array.length; i++) {
-            root.insertInBST(root, obj.array[i]);
-        }
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndTwoInt obj = InputMethods.getOneInt1DArrayAndTwoIntInput(cin);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(obj.array);
+        cin.close();
         // Tree traversal
         System.out.println(OutputMethods.levelOrderTraversalOutput(trimBST(root, obj.val1, obj.val2)));
     }

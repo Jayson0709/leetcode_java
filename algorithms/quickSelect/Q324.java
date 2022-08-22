@@ -1,8 +1,10 @@
 package algorithms.quickSelect;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
+import java.util.Random;
 
 
 //Given an integer array nums, reorder it such that nums[0] < nums[1] > nums[2] < nums[3]....
@@ -51,10 +53,7 @@ public class Q324 {
     static Random random = new Random();
 
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
+        int[] nums = InputMethods.getInputForOneIntArray();
         wiggleSort(nums);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(nums).boxed().toArray(Integer[]::new)));
     }

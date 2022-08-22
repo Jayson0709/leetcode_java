@@ -1,8 +1,11 @@
 package dataStructures.queue;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+import utils.OutputMethods;
+
+import java.util.Arrays;
+import java.util.PriorityQueue;
 
 //You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
 //
@@ -60,12 +63,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q239 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int k = cin.nextInt();
-        cin.close();
-
-        int[] result = maxSlidingWindow(nums, k);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int[] result = maxSlidingWindow(obj.array, obj.val);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

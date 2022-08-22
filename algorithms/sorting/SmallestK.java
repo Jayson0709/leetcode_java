@@ -1,8 +1,10 @@
 package algorithms.sorting;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 // Find the smallest K numbers given an array. (This question is on the Chinese LeetCode website)
 
@@ -25,11 +27,8 @@ import java.nio.charset.StandardCharsets;
 
 public class SmallestK {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int k = cin.nextInt();
-        cin.close();
-        int[] result = getLeastNumbers(arr, k);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int[] result = getLeastNumbers(obj.array, obj.val);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

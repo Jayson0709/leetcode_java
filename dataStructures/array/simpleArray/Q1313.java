@@ -1,8 +1,9 @@
 package dataStructures.array.simpleArray;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 //We are given a list nums of integers representing a list compressed with run-length encoding.
 //
@@ -53,11 +54,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1313 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int[] result = decompressRLEList(nums);
+        int[] result = decompressRLEList(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

@@ -1,6 +1,6 @@
 package dataStructures.array.prefixSum;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 
 //Given an array of integers nums, you start with an initial positive value startValue.
@@ -70,10 +70,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1413 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        System.out.println(minStartValue(nums));
+        System.out.println(minStartValue(InputMethods.getInputForOneIntArray()));
     }
 
     private static int minStartValue(int[] nums) {

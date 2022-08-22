@@ -69,7 +69,8 @@ public class Q729 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] orders = cin.nextLine().strip().split(" ");
         List<int[]> datePairList = new ArrayList<>();
-        InputMethods.getInputForIntArrayList(cin, datePairList);
+        InputMethods.getInputForIntArrArrayList(cin, datePairList);
+        cin.close();
         System.out.print("[");
         if (orders[0].equals("MyCalendar")) {
             System.out.print("null");

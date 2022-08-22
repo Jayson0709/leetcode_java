@@ -78,14 +78,12 @@ public class Q71 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String path = cin.nextLine().strip();
         cin.close();
-
         String result = simplifyPath(path);
         System.out.println(result);
     }
 
     private static String simplifyPath(String path) {
         String[] items = path.split("/");
-        int n = path.length();
         Deque<String> stack = new ArrayDeque<>();
         for (String item : items) {
             // 1: current item == "..", pop the top item of the stack, if there is one.

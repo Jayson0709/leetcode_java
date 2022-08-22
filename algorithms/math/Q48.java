@@ -57,17 +57,9 @@ public class Q48 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        int[][] matrix = new int[data.size()][data.size()];
-        for (int i = 0; i < data.size(); i++) {
-            matrix[i] = data.get(i);
-        }
+        InputMethods.getInputForIntArrArrayList(cin, data);
+        cin.close();
+        int[][] matrix = DataConversionMethods.convertIntArrayListTo2DArray(data);
         rotate(matrix);
         OutputMethods.output2DIntArrayData(matrix);
     }

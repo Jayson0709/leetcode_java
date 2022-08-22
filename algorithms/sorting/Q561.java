@@ -1,6 +1,6 @@
 package algorithms.sorting;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 //Given an integer array nums of 2n integers, group these integers into n pairs (a1, b1), (a2, b2), ..., (an, bn) such that the sum of min(ai, bi) for all i is maximized. Return the maximized sum.
 //        
@@ -50,11 +50,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q561 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = arrayPairSum(nums);
+        int result = arrayPairSum(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

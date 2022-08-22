@@ -1,8 +1,10 @@
 package dataStructures.array.prefixSum;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+import utils.OutputMethods;
+
+import java.util.Arrays;
 
 
 //You have a bomb to defuse, and your time is running out! Your informer will provide you with a circular array code of length of n and a key k.
@@ -77,11 +79,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1652 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] code = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int k = Integer.parseInt(cin.nextLine().strip());
-        cin.close();
-        int[] result = decrypt(code, k);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int[] result = decrypt(obj.array, obj.val);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

@@ -1,6 +1,7 @@
 package algorithms.windowSliding;
-import java.util.*;
-import java.nio.charset.*;
+
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
 
 //Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
 //
@@ -43,15 +44,8 @@ import java.nio.charset.*;
 
 public class Q1004 {
     public static void main (String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        String[] dataStringArray = cin.nextLine().strip().split(" ");
-        int k = Integer.parseInt(cin.nextLine());
-        cin.close();
-        int[] nums = new int[dataStringArray.length];
-        for (int i = 0; i < dataStringArray.length; i++) {
-            nums[i] = Integer.parseInt(dataStringArray[i]);
-        }
-        int result = longestOnes(nums, k);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int result = longestOnes(obj.array, obj.val);
         System.out.println(result);
     }
 

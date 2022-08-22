@@ -1,7 +1,12 @@
 package dataStructures.hashMap;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
-import utils.*;
+
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 //There are n people that are split into some unknown number of groups. Each person is labeled with a unique ID from 0 to n - 1.
@@ -61,10 +66,7 @@ import utils.*;
 
 public class Q1282 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] groupSizes = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        List<List<Integer>> result = groupThePeople(groupSizes);
+        List<List<Integer>> result = groupThePeople(InputMethods.getInputForOneIntArray());
         OutputMethods.outputEmbeddedListData(result);
     }
 

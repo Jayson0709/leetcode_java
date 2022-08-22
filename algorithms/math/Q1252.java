@@ -78,8 +78,9 @@ public class Q1252 {
         int m = cin.nextInt();
         int n = cin.nextInt();
         List<int[]> indicesData = new ArrayList<>();
-        InputMethods.getInputForIntArrayList(cin, indicesData);
-        int result = oddCells(m, n, DataConversionMethods.convertArrayListTo2DArray(indicesData));
+        InputMethods.getInputForIntArrArrayList(cin, indicesData);
+        cin.close();
+        int result = oddCells(m, n, DataConversionMethods.convertIntArrayListTo2DArray(indicesData));
         System.out.println(result);
     }
 

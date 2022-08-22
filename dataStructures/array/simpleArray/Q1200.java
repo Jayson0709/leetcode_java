@@ -1,8 +1,11 @@
 package dataStructures.array.simpleArray;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 //Given an array of distinct integers' arr, find all pairs of elements with the minimum absolute difference of any two elements.
 //
@@ -53,10 +56,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1200 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        List<List<Integer>> result = minimumAbsDifference(arr);
+        List<List<Integer>> result = minimumAbsDifference(InputMethods.getInputForOneIntArray());
         OutputMethods.outputEmbeddedListData(result);
     }
 

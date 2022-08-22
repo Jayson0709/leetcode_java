@@ -1,4 +1,7 @@
 package algorithms.greedyAlgorithms;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -55,18 +58,9 @@ public class Q757 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        int[][] intervals = new int[data.size()][2];
-        for (int i = 0; i < data.size(); i++) {
-            intervals[i] = data.get(i);
-        }
-        int result = intersectionSizeTwo(intervals);
+        InputMethods.getInputForIntArrArrayList(cin, data);
+        cin.close();
+        int result = intersectionSizeTwo(DataConversionMethods.convertIntArrayListTo2DArray(data));
         System.out.println(result);
     }
 

@@ -1,4 +1,7 @@
 package algorithms.dynamicProgramming;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -73,19 +76,9 @@ public class Q741 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        int[][] grid = new int[data.size()][data.size()];
-        for (int i = 0; i < grid.length; i++) {
-            grid[i] = data.get(i);
-        }
-
-        int result = cherryPickup(grid);
+        InputMethods.getInputForIntArrArrayList(cin, data);
+        cin.close();
+        int result = cherryPickup(DataConversionMethods.convertIntArrayListTo2DArray(data));
         System.out.println(result);
     }
 

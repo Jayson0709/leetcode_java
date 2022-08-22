@@ -3,6 +3,9 @@ package algorithms.twoPointers;
 import utils.InputMethods;
 import utils.TwoOneDArray;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 //You are given two non-increasing 0-indexed integer arrays nums1 and nums2.
 //
 //    A pair of indices (i, j), where 0 <= i < nums1.length and 0 <= j < nums2.length, is valid if both i <= j and nums1[i] <= nums2[j]. The distance of the pair is j - i​​​​.
@@ -73,8 +76,10 @@ import utils.TwoOneDArray;
 
 public class Q1855 {
     public static void main(String[] args) {
-        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TwoOneDArray obj = InputMethods.getTwoInt1DArrayInput(cin);
         int result = maxDistance(obj.array1, obj.array2);
+        cin.close();
         System.out.println(result);
     }
 

@@ -68,7 +68,8 @@ public class Q933 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] orders = cin.nextLine().strip().split(" ");
         List<int[]> pings = new ArrayList<>();
-        InputMethods.getInputForIntArrayList(cin, pings);
+        InputMethods.getInputForIntArrArrayList(cin, pings);
+        cin.close();
         RecentCounter obj = new RecentCounter();
         if (orders[0].equals("RecentCounter")) {
             System.out.print("[null");

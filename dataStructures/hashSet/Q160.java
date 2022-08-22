@@ -1,7 +1,13 @@
 package dataStructures.hashSet;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.ListNode;
+import utils.DataConversionMethods;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 
 
 //Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
@@ -142,20 +148,8 @@ public class Q160 {
         int skipA = Integer.parseInt(cin.nextLine().strip());
         int skipB = Integer.parseInt(cin.nextLine().strip());
         cin.close();
-        ListNode headA = new ListNode(listAData[0]);
-        ListNode headB = new ListNode(listBData[0]);
-        ListNode p1 = headA;
-        ListNode p2 = headB;
-        for (int i = 1; i < listAData.length; i++) {
-            ListNode temp = new ListNode(listAData[i]);
-            p1.next = temp;
-            p1 = temp;
-        }
-        for (int i = 1; i < listBData.length; i++) {
-            ListNode temp = new ListNode(listBData[i]);
-            p2.next = temp;
-            p2 = temp;
-        }
+        ListNode headA = DataConversionMethods.convert1DArrayToLinkedList(listAData);
+        ListNode headB = DataConversionMethods.convert1DArrayToLinkedList(listBData);
         for (int i = 0; i < skipA; i++) {
             headA = headA.next;
         }

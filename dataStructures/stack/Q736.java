@@ -86,17 +86,16 @@ public class Q736 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String expression = cin.nextLine().strip();
         cin.close();
-
         int result = evaluate(expression);
         System.out.println(result);
     }
 
-    static Map<String, Deque<Integer>> scope = new HashMap<String, Deque<Integer>>();
+    static Map<String, Deque<Integer>> scope = new HashMap<>();
 
     public static int evaluate(String expression) {
-        Deque<Deque<String>> vars = new ArrayDeque<Deque<String>>();
+        Deque<Deque<String>> vars = new ArrayDeque<>();
         int start = 0, n = expression.length();
-        Deque<Expr> stack = new ArrayDeque<Expr>();
+        Deque<Expr> stack = new ArrayDeque<>();
         Expr cur = new Expr(ExprStatus.VALUE);
         while (start < n) {
             if (expression.charAt(start) == ' ') {
@@ -142,7 +141,7 @@ public class Q736 {
                     switch (token) {
                         case "let" -> {
                             cur.status = ExprStatus.LET;
-                            vars.push(new ArrayDeque<String>()); // store all variables in this level's action scope
+                            vars.push(new ArrayDeque<>()); // store all variables in this level's action scope
                         }
                         case "add" -> cur.status = ExprStatus.ADD;
                         case "mult" -> cur.status = ExprStatus.MULT;
@@ -161,7 +160,7 @@ public class Q736 {
                     }
                     break;
                 case "LET1":
-                    scope.putIfAbsent(cur.var, new ArrayDeque<Integer>());
+                    scope.putIfAbsent(cur.var, new ArrayDeque<>());
                     scope.get(cur.var).push(calculateToken(token));
                     cur.status = ExprStatus.LET;
                     break;

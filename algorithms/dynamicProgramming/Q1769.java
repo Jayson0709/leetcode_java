@@ -63,7 +63,6 @@ public class Q1769 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String boxes = cin.nextLine().strip();
         cin.close();
-
         int[] result = minOperations(boxes);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }

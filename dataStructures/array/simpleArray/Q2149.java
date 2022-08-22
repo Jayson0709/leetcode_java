@@ -1,8 +1,11 @@
 package dataStructures.array.simpleArray;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 //You are given a 0-indexed integer array nums of even length consisting of an equal number of positive and negative integers.
@@ -69,11 +72,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q2149 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int[] result = rearrangeArray(nums);
+        int[] result = rearrangeArray(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

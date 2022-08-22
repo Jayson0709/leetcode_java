@@ -1,4 +1,7 @@
 package algorithms.dynamicProgramming;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -53,21 +56,9 @@ public class Q764 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int n = Integer.parseInt(cin.nextLine().strip());
         List<int[]> pairList = new ArrayList<>();
-        while (true) {
-            String curLine = cin.nextLine().strip();
-            if (curLine.length() == 0) {
-                break;
-            } else {
-                pairList.add(Arrays.stream(curLine.split(" ")).mapToInt(Integer::parseInt).toArray());
-            }
-        }
+        InputMethods.getInputForIntArrArrayList(cin, pairList);
         cin.close();
-        int[][] mines = new int[pairList.size()][2];
-        for (int i = 0; i < pairList.size(); i++) {
-            mines[i] = pairList.get(i);
-        }
-
-        int result = orderOfLargestPlusSign(n, mines);
+        int result = orderOfLargestPlusSign(n, DataConversionMethods.convertIntArrayListTo2DArray(pairList));
         System.out.println(result);
     }
 

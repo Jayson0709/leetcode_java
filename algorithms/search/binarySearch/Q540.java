@@ -1,6 +1,6 @@
 package algorithms.search.binarySearch;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 //You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.
 //
@@ -45,11 +45,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q540 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = singleNonDuplicate(nums);
+        int result = singleNonDuplicate(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 

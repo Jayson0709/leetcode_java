@@ -68,20 +68,10 @@ public class Q57 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
+        InputMethods.getInputForIntArrArrayList(cin, data);
         int[] newInterval = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-        int[][] intervals = new int[data.size()][];
-        for (int i = 0; i < data.size(); i++) {
-            intervals[i] = data.get(i);
-        }
-        int[][] result = insert(intervals, newInterval);
+        int[][] result = insert(DataConversionMethods.convertIntArrayListTo2DArray(data), newInterval);
         OutputMethods.output2DIntArrayData(result);
     }
 

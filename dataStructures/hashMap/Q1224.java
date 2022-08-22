@@ -1,6 +1,9 @@
 package dataStructures.hashMap;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 //Given an array nums of positive integers, return the longest possible length of an array prefix of nums, such that it is possible to remove exactly one element from this prefix so that every number that has appeared in it will have the same number of occurrences.
@@ -44,10 +47,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1224 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        System.out.println(maxEqualFreq(nums));
+        System.out.println(maxEqualFreq(InputMethods.getInputForOneIntArray()));
     }
 
     // ref: https://leetcode.cn/problems/maximum-equal-frequency/solution/zui-da-xiang-deng-pin-lu-by-leetcode-sol-5y2m/

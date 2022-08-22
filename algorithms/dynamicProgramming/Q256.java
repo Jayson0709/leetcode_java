@@ -34,8 +34,8 @@ public class Q256 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> dataList = new ArrayList<>();
-        InputMethods.getInputForIntArrayList(cin, dataList);
-        int result = minCost(DataConversionMethods.convertArrayListTo2DArray(dataList));
+        InputMethods.getInputForIntArrArrayList(cin, dataList);
+        int result = minCost(DataConversionMethods.convertIntArrayListTo2DArray(dataList));
         cin.close();
         System.out.println(result);
     }

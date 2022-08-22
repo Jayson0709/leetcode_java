@@ -52,7 +52,6 @@ public class Q522 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] strs = cin.nextLine().strip().split(" ");
         cin.close();
-
         int result = findLUSLength(strs);
         System.out.println(result);
     }

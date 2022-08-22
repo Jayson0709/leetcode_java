@@ -1,8 +1,12 @@
 package dataStructures.hashMap;
-import utils.*;
 
-import java.nio.charset.StandardCharsets;
-import java.util.*;
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+import utils.OutputMethods;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 //Given an array of integers numsand an integer target, return indices of the two numbers such that they add up to target.
 //
@@ -57,16 +61,8 @@ import java.util.*;
 
 class Q1 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        String[] data = cin.nextLine().strip().split(" ");
-        int target = cin.nextInt();
-        int[] nums = new int[data.length];
-        for (int i = 0; i < data.length; i++) {
-            nums[i] = Integer.parseInt(data[i]);
-        }
-        cin.close();
-
-        int[] result = twoSum(nums, target);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int[] result = twoSum(obj.array, obj.val);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

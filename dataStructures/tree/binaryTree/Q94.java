@@ -4,10 +4,8 @@ import sharedClasses.TreeNode;
 import utils.*;
 
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 
 //Given the root of a binary tree, return the inorder traversal of its nodes' values.
@@ -50,7 +48,9 @@ import java.util.List;
 
 public class Q94 {
     public static void main(String[] args) {
-        TreeNode root = InputMethods.getInputForOneTree();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
+        cin.close();
         List<Integer> result = inorderTraversal(root);
         System.out.println(OutputMethods.outputListData(result));
     }

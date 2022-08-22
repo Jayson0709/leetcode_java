@@ -4,10 +4,8 @@ import sharedClasses.TreeNode;
 import utils.*;
 
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 //Given the root of a binary tree, return an array of the largest value in each row of the tree (0-indexed).
 //
@@ -49,7 +47,9 @@ import java.util.Queue;
 
 public class Q515 {
     public static void main(String[] args) {
-        TreeNode root = InputMethods.getInputForOneTree();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
+        cin.close();
         List<Integer> result = largestValues(root);
         OutputMethods.outputListData(result);
     }

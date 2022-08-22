@@ -4,7 +4,9 @@ import utils.InputMethods;
 import utils.OutputMethods;
 import utils.TwoOneDArray;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Scanner;
 
 //Given two arrays arr1 and arr2, the elements of arr2 are distinct, and all elements in arr2 are also in arr1.
 //
@@ -46,7 +48,9 @@ import java.util.Arrays;
 
 public class Q1122 {
     public static void main(String[] args) {
-        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TwoOneDArray obj = InputMethods.getTwoInt1DArrayInput(cin);
+        cin.close();
         int[] result = relativeSortArray(obj.array1, obj.array2);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }

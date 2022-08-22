@@ -1,6 +1,10 @@
 package algorithms.windowSliding;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+
+import java.util.HashSet;
+import java.util.Set;
 
 //Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
 //
@@ -46,12 +50,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q219 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int k = cin.nextInt();
-        cin.close();
-
-        boolean result = containsNearbyDuplicate(nums, k);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        boolean result = containsNearbyDuplicate(obj.array, obj.val);
         System.out.println(result);
     }
 

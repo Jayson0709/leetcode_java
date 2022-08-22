@@ -1,4 +1,7 @@
 package algorithms.math;
+import utils.InputMethods;
+import utils.TwoOneDArray;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -54,12 +57,10 @@ import java.nio.charset.StandardCharsets;
 public class Q593 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] p1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] p2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] p3 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] p4 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        TwoOneDArray obj1 = InputMethods.getTwoInt1DArrayInput(cin);
+        TwoOneDArray obj2 = InputMethods.getTwoInt1DArrayInput(cin);
         cin.close();
-        System.out.println(validSquare(p1, p2, p3, p4));
+        System.out.println(validSquare(obj1.array1, obj1.array2, obj2.array1, obj2.array2));
     }
 
     private static boolean validSquare(int[] p1, int[] p2, int[] p3, int[] p4) {

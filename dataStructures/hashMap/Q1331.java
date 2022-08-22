@@ -1,8 +1,11 @@
 package dataStructures.hashMap;
-import utils.*;
 
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+import utils.InputMethods;
+import utils.OutputMethods;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 
 //Given an array of integers arr, replace each element with its rank.
@@ -62,10 +65,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1331 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] arr = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int[] result = arrayRankTransform(arr);
+        int[] result = arrayRankTransform(InputMethods.getInputForOneIntArray());
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

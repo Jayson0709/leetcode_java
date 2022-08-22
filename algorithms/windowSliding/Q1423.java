@@ -1,6 +1,9 @@
 package algorithms.windowSliding;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+
+import java.util.Arrays;
 
 //There are several cards arranged in a row, and each card has an associated number of points. The points are given in the integer array cardPoints.
 //
@@ -73,12 +76,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1423 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] cardPoints = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int k = cin.nextInt();
-        cin.close();
-
-        int result = maxScore(cardPoints, k);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        int result = maxScore(obj.array, obj.val);
         System.out.println(result);
     }
 

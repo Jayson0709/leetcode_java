@@ -3,8 +3,10 @@ package algorithms.search.dfs;
 import sharedClasses.TreeNode;
 import utils.*;
 
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 
 //Given the root of a binary tree, return the maximum width of the given tree.
@@ -106,7 +108,9 @@ import java.util.Map;
 
 public class Q662 {
     public static void main(String[] args) {
-        TreeNode root = InputMethods.getInputForOneTree();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
+        cin.close();
         System.out.println(widthOfBinaryTree(root));
     }
 

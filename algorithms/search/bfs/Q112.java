@@ -1,7 +1,11 @@
 package algorithms.search.bfs;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.TreeNode;
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 //Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
 //
@@ -77,15 +81,9 @@ import sharedClasses.TreeNode;
 
 public class Q112 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int targetSum = cin.nextInt();
-        cin.close();
-        TreeNode root = new TreeNode(data[0]);
-        for (int i = 1; i < data.length; i++) {
-            root.insertInBT(root, data[i]);
-        }
-        boolean result = hasPathSum(root, targetSum);
+        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        TreeNode root = InputMethods.getInputForOneBinaryTree(obj.array);
+        boolean result = hasPathSum(root, obj.val);
         System.out.println(result);
     }
 

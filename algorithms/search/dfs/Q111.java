@@ -3,6 +3,9 @@ package algorithms.search.dfs;
 import sharedClasses.TreeNode;
 import utils.*;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //Given a binary tree, find its minimum depth.
 //
@@ -55,7 +58,9 @@ import utils.*;
 
 public class Q111 {
     public static void main(String[] args) {
-        TreeNode root = InputMethods.getInputForOneTree();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
+        cin.close();
         int result = minDepth(root);
         System.out.println(result);
     }

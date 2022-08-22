@@ -1,6 +1,6 @@
 package algorithms.greedyAlgorithms;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
 
 
 //We have n chips, where the position of the ith chip is position[i].
@@ -88,11 +88,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1217 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] position = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-
-        int result = minCostToMoveChips(position);
+        int result = minCostToMoveChips(InputMethods.getInputForOneIntArray());
         System.out.println(result);
     }
 
