@@ -1,9 +1,13 @@
 package dataStructures.tree.binarySearchTree;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
-import sharedClasses.TreeNode;
+
 import sharedClasses.ListNode;
-import utils.*;
+import sharedClasses.TreeNode;
+import utils.DataConversionMethods;
+import utils.OutputMethods;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Scanner;
 
 
 //Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
@@ -62,14 +66,8 @@ import utils.*;
 public class Q109 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        String[] data1 = cin.nextLine().strip().split(" ");
-        ListNode head = new ListNode(Integer.parseInt(data1[0]));
-        ListNode tempHead1 = head;
-        for (int i = 1; i < data1.length; i++) {
-            ListNode tempNode = new ListNode(Integer.parseInt(data1[i]));
-            tempHead1.next = tempNode;
-            tempHead1 = tempNode;
-        }
+        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        ListNode head = DataConversionMethods.convert1DArrayToLinkedList(data);
         cin.close();
         System.out.println(OutputMethods.levelOrderTraversalOutput(sortedListToBST(head)));
     }

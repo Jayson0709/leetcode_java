@@ -1,8 +1,10 @@
 package dataStructures.linkedList;
-import java.nio.charset.StandardCharsets;
-import java.util.*;
+
 import sharedClasses.ListNode;
-import utils.*;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+import utils.OutputMethods;
+import utils.TwoOneDArray;
 
 
 //You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sumas a linked list.
@@ -60,26 +62,10 @@ import utils.*;
 public class Q2 {
 
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        String[] data1 = cin.nextLine().strip().split(" ");
-        ListNode l1 = new ListNode(Integer.parseInt(data1[0]));
-        ListNode tempHead1 = l1;
-        for (int i = 1; i < data1.length; i++) {
-            ListNode tempNode = new ListNode(Integer.parseInt(data1[i]));
-            tempHead1.next = tempNode;
-            tempHead1 = tempNode;
-        }
-        String[] data2 = cin.nextLine().strip().split(" ");
-        ListNode l2 = new ListNode(Integer.parseInt(data2[0]));
-        ListNode tempHead2 = l2;
-        for (int i = 1; i < data2.length; i++) {
-            ListNode tempNode = new ListNode(Integer.parseInt(data2[i]));
-            tempHead2.next = tempNode;
-            tempHead2 = tempNode;
-        }
-        cin.close();
-
-        ListNode result = addTwoNumbers(l1, l2);
+        TwoOneDArray obj = InputMethods.getTwo1DArrayInput();
+        ListNode head1 = DataConversionMethods.convert1DArrayToLinkedList(obj.array1);
+        ListNode head2 = DataConversionMethods.convert1DArrayToLinkedList(obj.array2);
+        ListNode result = addTwoNumbers(head1, head2);
         System.out.println(OutputMethods.outputLinkedListData(result));
     }
 
