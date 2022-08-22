@@ -47,6 +47,8 @@ Project root
 |       |--- OneDArrayAndOneInt
 |       |--- OneDArrayAndTwoInt
 |       |--- OutputMethods
+|       |--- TwoOneDArray
+|       |--- TwoOneDArrayAndOneInt
 ```
 
 ## Credit
