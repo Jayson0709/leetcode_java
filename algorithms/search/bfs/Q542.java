@@ -1,7 +1,10 @@
 package algorithms.search.bfs;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import utils.*;
+
+
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 
 //Given an m x n binary matrix mat, return the distance of the nearest 0 for each cell.
@@ -64,19 +67,8 @@ public class Q542 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-        int[][] mat = new int[data.size()][];
-        for (int i = 0; i < data.size(); i++) {
-            mat[i] = data.get(i);
-        }
-        int[][] result = updateMatrix(mat);
+        InputMethods.getInputForIntArrayList(cin, data);
+        int[][] result = updateMatrix(DataConversionMethods.convertArrayListTo2DArray(data));
         OutputMethods.output2DIntArrayData(result);
     }
 

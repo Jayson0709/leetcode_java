@@ -1,6 +1,9 @@
 package dataStructures.tree.segmentTree;
-import java.util.*;
+
+import utils.*;
+
 import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 
 //You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a double booking.
@@ -66,23 +69,17 @@ public class Q729 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] orders = cin.nextLine().strip().split(" ");
         List<int[]> datePairList = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            datePairList.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-        System.out.print("[null");
+        InputMethods.getInputForIntArrayList(cin, datePairList);
+        System.out.print("[");
         if (orders[0].equals("MyCalendar")) {
+            System.out.print("null");
             MyCalendar obj = new MyCalendar();
             for (int[] datePair : datePairList) {
                 boolean result = obj.book(datePair[0], datePair[1]);
                 System.out.print(", " + result);
             }
-            System.out.print("]");
         }
+        System.out.print("]");
     }
 }
 

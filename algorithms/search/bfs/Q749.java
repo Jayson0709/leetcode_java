@@ -1,4 +1,6 @@
 package algorithms.search.bfs;
+import utils.*;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -108,20 +110,8 @@ public class Q749 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while(true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-
-        int[][] isInfected = new int[data.size()][data.get(0).length];
-        for (int i = 0; i < data.size(); i++) {
-            isInfected[i] = data.get(i);
-        }
-        int result = containVirus(isInfected);
+        InputMethods.getInputForIntArrayList(cin, data);
+        int result = containVirus(DataConversionMethods.convertArrayListTo2DArray(data));
         System.out.println(result);
     }
 

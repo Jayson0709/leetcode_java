@@ -1,4 +1,6 @@
 package algorithms.dynamicProgramming;
+import utils.*;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -55,19 +57,8 @@ public class Q64 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-        int[][] grid = new int[data.size()][];
-        for (int i = 0; i < grid.length; i++) {
-            grid[i] = data.get(i);
-        }
-        System.out.println(minPathSum(grid));
+        InputMethods.getInputForIntArrayList(cin, data);
+        System.out.println(minPathSum(DataConversionMethods.convertArrayListTo2DArray(data)));
     }
 
     private static int minPathSum(int[][] grid) {

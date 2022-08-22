@@ -1,4 +1,6 @@
 package dataStructures.array.matrix;
+import utils.*;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -76,19 +78,8 @@ public class Q1582 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-        int[][] mat = new int[data.size()][];
-        for (int i = 0; i < data.size(); i++) {
-            mat[i] = data.get(i);
-        }
-        System.out.println(numSpecial(mat));
+        InputMethods.getInputForIntArrayList(cin, data);
+        System.out.println(numSpecial(DataConversionMethods.convertArrayListTo2DArray(data)));
     }
 
     private static int numSpecial(int[][] mat) {

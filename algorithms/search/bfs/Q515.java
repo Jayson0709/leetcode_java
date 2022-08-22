@@ -1,8 +1,8 @@
 package algorithms.search.bfs;
 
 import sharedClasses.TreeNode;
-import utils.InputMethods;
-import utils.OutputMethods;
+import utils.*;
+
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

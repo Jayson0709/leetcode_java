@@ -1,8 +1,8 @@
 package algorithms.backtracking;
 
 import sharedClasses.TreeNode;
-import utils.InputMethods;
-import utils.OutputMethods;
+import utils.*;
+
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,6 @@
 package algorithms.search.binarySearch;
+import utils.*;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -42,20 +44,8 @@ public class Q1351 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> gridList = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            gridList.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-        int[][] grid = new int[gridList.size()][2];
-        for (int i = 0; i < gridList.size(); i++) {
-            grid[i] = gridList.get(i);
-        }
-
-        int result = countNegatives(grid);
+        InputMethods.getInputForIntArrayList(cin, gridList);
+        int result = countNegatives(DataConversionMethods.convertArrayListTo2DArray(gridList));
         System.out.println(result);
     }
 

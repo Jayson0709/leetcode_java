@@ -1,8 +1,10 @@
 package dataStructures.linkedList;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.ListNode;
-import utils.*;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+import utils.OneDArrayAndTwoInt;
+import utils.OutputMethods;
 
 
 //Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
@@ -54,19 +56,9 @@ import utils.*;
 
 public class Q92 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int left = cin.nextInt();
-        int right = cin.nextInt();
-        cin.close();
-        ListNode head = new ListNode(data[0]);
-        ListNode p = head;
-        for (int i = 1; i < data.length; i++) {
-            ListNode temp = new ListNode(data[i]);
-            p.next = temp;
-            p = temp;
-        }
-        ListNode resultNode = reverseBetween(head, left, right);
+        OneDArrayAndTwoInt obj = InputMethods.get1DArrayAndTwoIntInput();
+        ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
+        ListNode resultNode = reverseBetween(head, obj.val1, obj.val2);
         System.out.println(OutputMethods.outputLinkedListData(resultNode));
     }
 

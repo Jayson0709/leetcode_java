@@ -1,8 +1,10 @@
 package dataStructures.linkedList;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.ListNode;
-import utils.*;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+import utils.OutputMethods;
 
 
 //给定循环单调非递减列表中的一个点，写一个函数向这个列表中插入一个新元素insertVal ，使这个列表仍然是循环升序的。
@@ -35,21 +37,14 @@ import utils.*;
 
 public class Q708 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int insertVal = cin.nextInt();
-        cin.close();
-
-        ListNode head = new ListNode(data[0]);
+        OneDArrayAndOneInt obj = InputMethods.get1DArrayAndOneIntInput();
+        ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode p = head;
-        for (int i = 1; i < data.length; i++) {
-            ListNode tempNode = new ListNode(data[i]);
-            p.next = tempNode;
-            p = tempNode;
+        while (p.next != null) {
+            p = p.next;
         }
         p.next= head;
-
-        ListNode result = insert(head, insertVal);
+        ListNode result = insert(head, obj.val);
         System.out.println(OutputMethods.outputLinkedListData(result));
     }
 

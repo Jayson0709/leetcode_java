@@ -1,7 +1,7 @@
 package dataStructures.tree.binaryTree;
 
 import sharedClasses.TreeNode;
-import utils.InputMethods;
+import utils.*;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,7 +1,7 @@
 package dataStructures.tree.binaryTree;
 
 import sharedClasses.TreeNode;
-import utils.InputMethods;
+import utils.*;
 
 
 //Given the root of a binary tree, return the length of the diameter of the tree.

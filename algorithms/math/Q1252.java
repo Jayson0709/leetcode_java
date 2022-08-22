@@ -1,4 +1,6 @@
 package algorithms.math;
+import utils.*;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -76,19 +78,8 @@ public class Q1252 {
         int m = cin.nextInt();
         int n = cin.nextInt();
         List<int[]> indicesData = new ArrayList<>();
-        while(true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            indicesData.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-        int[][] indices = new int[indicesData.size()][indicesData.get(0).length];
-        for (int i = 0; i < indicesData.size(); i++) {
-            indices[i] = indicesData.get(i);
-        }
-        int result = oddCells(m, n, indices);
+        InputMethods.getInputForIntArrayList(cin, indicesData);
+        int result = oddCells(m, n, DataConversionMethods.convertArrayListTo2DArray(indicesData));
         System.out.println(result);
     }
 

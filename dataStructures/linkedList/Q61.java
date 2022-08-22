@@ -1,8 +1,10 @@
 package dataStructures.linkedList;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.ListNode;
-import utils.*;
+import utils.DataConversionMethods;
+import utils.InputMethods;
+import utils.OneDArrayAndOneInt;
+import utils.OutputMethods;
 
 
 //Given the head of a linked list, rotate the list to the right by k places.
@@ -51,20 +53,9 @@ import utils.*;
 
 public class Q61 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int k = cin.nextInt();
-        cin.close();
-
-        ListNode head = new ListNode(data[0]);
-        ListNode tempHead = head;
-        for (int i = 1; i < data.length; i++) {
-            ListNode tempNode = new ListNode(data[i]);
-            tempHead.next = tempNode;
-            tempHead = tempNode;
-        }
-
-        ListNode resultHead = rotateRight(head, k);
+        OneDArrayAndOneInt obj = InputMethods.get1DArrayAndOneIntInput();
+        ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
+        ListNode resultHead = rotateRight(head, obj.val);
         System.out.println(OutputMethods.outputLinkedListData(resultHead));
     }
 

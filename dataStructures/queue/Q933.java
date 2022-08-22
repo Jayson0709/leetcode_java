@@ -1,4 +1,6 @@
 package dataStructures.queue;
+import utils.*;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -66,14 +68,7 @@ public class Q933 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] orders = cin.nextLine().strip().split(" ");
         List<int[]> pings = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            pings.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
+        InputMethods.getInputForIntArrayList(cin, pings);
         RecentCounter obj = new RecentCounter();
         if (orders[0].equals("RecentCounter")) {
             System.out.print("[null");

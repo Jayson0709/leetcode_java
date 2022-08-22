@@ -1,4 +1,6 @@
 package algorithms.greedyAlgorithms;
+import utils.*;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -82,20 +84,8 @@ public class Q871 {
         int target = Integer.parseInt(cin.nextLine().strip());
         int startFuel = Integer.parseInt(cin.nextLine().strip());
         List<int[]> stationsList = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            stationsList.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-        int[][] stations = new int[stationsList.size()][2];
-        for (int i = 0; i < stationsList.size(); i++) {
-            stations[i] = stationsList.get(i);
-        }
-
-        int result = minRefuelStops(target, startFuel, stations);
+        InputMethods.getInputForIntArrayList(cin, stationsList);
+        int result = minRefuelStops(target, startFuel, DataConversionMethods.convertArrayListTo2DArray(stationsList));
         System.out.println(result);
     }
 

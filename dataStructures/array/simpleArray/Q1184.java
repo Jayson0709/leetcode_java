@@ -1,6 +1,7 @@
 package dataStructures.array.simpleArray;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+import utils.OneDArrayAndTwoInt;
 
 
 //A bus has n stops numbered from 0 to n - 1 that form a circle. We know the distance between all pairs of neighboring stops where distance[i] is the distance between the stops number i and (i + 1) % n.
@@ -93,13 +94,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Q1184 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] distance = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int start = cin.nextInt();
-        int destination = cin.nextInt();
-        cin.close();
-
-        int result = distanceBetweenBusStops(distance, start, destination);
+        OneDArrayAndTwoInt obj = InputMethods.get1DArrayAndTwoIntInput();
+        int result = distanceBetweenBusStops(obj.array, obj.val1, obj.val2);
         System.out.println(result);
     }
 

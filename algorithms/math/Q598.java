@@ -1,4 +1,6 @@
 package algorithms.math;
+import utils.*;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -67,19 +69,8 @@ public class Q598 {
         int m = Integer.parseInt(cin.nextLine());
         int n = Integer.parseInt(cin.nextLine());
         List<int[]> data = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            data.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-        int[][] ops = new int[data.size()][];
-        for (int i = 0; i < data.size(); i++) {
-            ops[i] = data.get(i);
-        }
-        int result = maxCount(m, n, ops);
+        InputMethods.getInputForIntArrayList(cin, data);
+        int result = maxCount(m, n, DataConversionMethods.convertArrayListTo2DArray(data));
         System.out.println(result);
     }
 

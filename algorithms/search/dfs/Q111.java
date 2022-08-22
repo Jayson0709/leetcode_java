@@ -1,7 +1,7 @@
 package algorithms.search.dfs;
 
 import sharedClasses.TreeNode;
-import utils.InputMethods;
+import utils.*;
 
 
 //Given a binary tree, find its minimum depth.

@@ -1,8 +1,11 @@
 package dataStructures.linkedList;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.ListNode;
 import utils.*;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Scanner;
 
 
 //You are given the head of a singly linked-list. The list can be represented as:
@@ -70,13 +73,7 @@ public class Q143 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-        ListNode head = new ListNode(data[0]);
-        ListNode p = head;
-        for (int i = 1; i < data.length; i++) {
-            ListNode temp = new ListNode(data[i]);
-            p.next = temp;
-            p = temp;
-        }
+        ListNode head = DataConversionMethods.convert1DArrayToLinkedList(data);
         reorderList(head);
         System.out.println(OutputMethods.outputLinkedListData(head));
     }

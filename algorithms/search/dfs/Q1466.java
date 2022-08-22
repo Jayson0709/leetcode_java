@@ -1,4 +1,6 @@
 package algorithms.search.dfs;
+import utils.*;
+
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -88,19 +90,8 @@ public class Q1466 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int n = Integer.parseInt(cin.nextLine().strip());
         List<int[]> edges = new ArrayList<>();
-        while (true) {
-            String line = cin.nextLine().strip();
-            if (line.length() == 0) {
-                break;
-            }
-            edges.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
-        }
-        cin.close();
-        int[][] connections = new int[edges.size()][];
-        for (int i = 0; i < edges.size(); i++) {
-            connections[i] = edges.get(i);
-        }
-        System.out.println(minReorder(n, connections));
+        InputMethods.getInputForIntArrayList(cin, edges);
+        System.out.println(minReorder(n, DataConversionMethods.convertArrayListTo2DArray(edges)));
     }
 
     private static final Map<Integer, List<int[]>> hMap = new HashMap<>();

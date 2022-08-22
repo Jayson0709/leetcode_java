@@ -1,7 +1,7 @@
 package algorithms.search.dfs;
 
 import sharedClasses.TreeNode;
-import utils.InputMethods;
+import utils.*;
 
 import java.util.ArrayList;
 import java.util.List;

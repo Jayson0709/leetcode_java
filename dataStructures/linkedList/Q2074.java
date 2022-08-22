@@ -1,8 +1,11 @@
 package dataStructures.linkedList;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
 import sharedClasses.ListNode;
 import utils.*;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Scanner;
 
 
 //You are given the head of a linked list.
@@ -117,13 +120,7 @@ public class Q2074 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-        ListNode head = new ListNode(data[0]);
-        ListNode p = head;
-        for (int i = 1; i < data.length; i++) {
-            ListNode node = new ListNode(data[i]);
-            p.next = node;
-            p = node;
-        }
+        ListNode head = DataConversionMethods.convert1DArrayToLinkedList(data);
         ListNode resultNode = reverseEvenLengthGroups(head);
         System.out.println(OutputMethods.outputLinkedListData(resultNode));
     }

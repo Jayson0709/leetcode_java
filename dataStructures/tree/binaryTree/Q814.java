@@ -1,8 +1,8 @@
 package dataStructures.tree.binaryTree;
 
 import sharedClasses.TreeNode;
-import utils.InputMethods;
-import utils.OutputMethods;
+import utils.*;
+
 
 
 //Given the root of a binary tree, return the same tree where every subtree (of the given tree) not containing a 1 has been removed.

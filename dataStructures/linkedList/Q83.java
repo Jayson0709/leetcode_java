@@ -1,8 +1,11 @@
 package dataStructures.linkedList;
 
 import sharedClasses.ListNode;
-import utils.InputMethods;
-import utils.OutputMethods;
+import utils.*;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Scanner;
 
 
 //Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
@@ -56,7 +59,10 @@ import utils.OutputMethods;
 
 public class Q83 {
     public static void main(String[] args) {
-        ListNode head = InputMethods.getInputForListNode();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        cin.close();
+        ListNode head = DataConversionMethods.convert1DArrayToLinkedList(data);
         ListNode resultHead = deleteDuplicates(head);
         System.out.println(OutputMethods.outputLinkedListData(resultHead));
     }
