@@ -42,7 +42,11 @@ Project root
 |       |--- ListNode
 |       |--- TreeNode
 |--- utils
-|       |--- IOMethods
+|       |--- DataConversionMethods
+|       |--- InputMethods
+|       |--- OneDArrayAndOneInt
+|       |--- OneDArrayAndTwoInt
+|       |--- OutputMethods
 ```
 
 ## Credit
