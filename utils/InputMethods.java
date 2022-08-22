@@ -45,4 +45,12 @@ public class InputMethods {
         cin.close();
         return new OneDArrayAndTwoInt(array, val1, val2);
     }
+
+    public static TwoOneDArray getTwo1DArrayInput() {
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        int[] array1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        int[] array2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        cin.close();
+        return new TwoOneDArray(array1, array2);
+    }
 }
