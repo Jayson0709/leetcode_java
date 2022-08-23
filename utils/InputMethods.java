@@ -72,7 +72,7 @@ public class InputMethods {
         }
     }
 
-    public static OneDArrayAndOneInt getOneInt1DArrayAndOneIntInput() {
+    public static OneDArrayAndOneInt getInputForOneInt1DArrayAndOneInt() {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int[] array = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val = cin.nextInt();
@@ -80,20 +80,20 @@ public class InputMethods {
         return new OneDArrayAndOneInt(array, val);
     }
 
-    public static OneDArrayAndTwoInt getOneInt1DArrayAndTwoIntInput(Scanner cin) {
+    public static OneDArrayAndTwoInt getInputFOrOneInt1DArrayAndTwoInt(Scanner cin) {
         int[] array = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val1 = cin.nextInt();
         int val2 = cin.nextInt();
         return new OneDArrayAndTwoInt(array, val1, val2);
     }
 
-    public static TwoOneDArray getTwoInt1DArrayInput(Scanner cin) {
+    public static TwoOneDArray getInputForTwoInt1DArray(Scanner cin) {
         int[] array1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int[] array2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         return new TwoOneDArray(array1, array2);
     }
 
-    public static TwoOneDArrayAndOneInt getTwo1DArrayAndOneIntInput(Scanner cin) {
+    public static TwoOneDArrayAndOneInt getInputForTwo1DArrayAndOneInt(Scanner cin) {
         int[] array1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int[] array2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val = cin.nextInt();

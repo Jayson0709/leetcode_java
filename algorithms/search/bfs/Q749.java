@@ -112,7 +112,7 @@ public class Q749 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        int result = containVirus(DataConversionMethods.convertIntArrayListTo2DArray(data));
+        int result = containVirus(DataConversionMethods.convertIntArrArrayListTo2DArray(data));
         System.out.println(result);
     }
 

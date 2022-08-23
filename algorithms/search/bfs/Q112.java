@@ -81,7 +81,7 @@ import java.util.Queue;
 
 public class Q112 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         TreeNode root = InputMethods.getInputForOneBinaryTree(obj.array);
         boolean result = hasPathSum(root, obj.val);
         System.out.println(result);

@@ -103,7 +103,7 @@ public class Q2017 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        System.out.println(gridGame(DataConversionMethods.convertIntArrayListTo2DArray(data)));
+        System.out.println(gridGame(DataConversionMethods.convertIntArrArrayListTo2DArray(data)));
     }
 
     private static long gridGame(int[][] grid) {

@@ -80,7 +80,7 @@ public class Q1582 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        System.out.println(numSpecial(DataConversionMethods.convertIntArrayListTo2DArray(data)));
+        System.out.println(numSpecial(DataConversionMethods.convertIntArrArrayListTo2DArray(data)));
     }
 
     private static int numSpecial(int[][] mat) {

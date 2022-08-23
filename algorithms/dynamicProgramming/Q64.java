@@ -59,7 +59,7 @@ public class Q64 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        System.out.println(minPathSum(DataConversionMethods.convertIntArrayListTo2DArray(data)));
+        System.out.println(minPathSum(DataConversionMethods.convertIntArrArrayListTo2DArray(data)));
     }
 
     private static int minPathSum(int[][] grid) {

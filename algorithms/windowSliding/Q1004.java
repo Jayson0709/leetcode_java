@@ -44,7 +44,7 @@ import utils.OneDArrayAndOneInt;
 
 public class Q1004 {
     public static void main (String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         int result = longestOnes(obj.array, obj.val);
         System.out.println(result);
     }

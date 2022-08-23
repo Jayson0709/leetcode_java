@@ -52,7 +52,7 @@ import java.util.Map;
 
 public class Q974 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         int result = subarraysDivByK(obj.array, obj.val);
         System.out.println(result);
     }

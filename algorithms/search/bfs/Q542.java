@@ -69,7 +69,7 @@ public class Q542 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        int[][] result = updateMatrix(DataConversionMethods.convertIntArrayListTo2DArray(data));
+        int[][] result = updateMatrix(DataConversionMethods.convertIntArrArrayListTo2DArray(data));
         OutputMethods.output2DIntArrayData(result);
     }
 

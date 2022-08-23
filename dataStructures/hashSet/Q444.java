@@ -60,7 +60,7 @@ public class Q444 {
         List<int[]> seqData = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, seqData);
         cin.close();
-        boolean result = sequenceReconstruction(nums, DataConversionMethods.convertIntArrayListTo2DArray(seqData));
+        boolean result = sequenceReconstruction(nums, DataConversionMethods.convertIntArrArrayListTo2DArray(seqData));
         System.out.println(result);
     }
 

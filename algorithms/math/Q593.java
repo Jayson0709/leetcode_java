@@ -57,8 +57,8 @@ import java.nio.charset.StandardCharsets;
 public class Q593 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArray obj1 = InputMethods.getTwoInt1DArrayInput(cin);
-        TwoOneDArray obj2 = InputMethods.getTwoInt1DArrayInput(cin);
+        TwoOneDArray obj1 = InputMethods.getInputForTwoInt1DArray(cin);
+        TwoOneDArray obj2 = InputMethods.getInputForTwoInt1DArray(cin);
         cin.close();
         System.out.println(validSquare(obj1.array1, obj1.array2, obj2.array1, obj2.array2));
     }

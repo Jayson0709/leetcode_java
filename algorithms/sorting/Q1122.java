@@ -49,7 +49,7 @@ import java.util.Scanner;
 public class Q1122 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArray obj = InputMethods.getTwoInt1DArrayInput(cin);
+        TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         cin.close();
         int[] result = relativeSortArray(obj.array1, obj.array2);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));

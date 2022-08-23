@@ -92,7 +92,7 @@ import utils.OneDArrayAndOneInt;
 
 public class Q27 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         System.out.println(removeElement(obj.array, obj.val));
     }
 

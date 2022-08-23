@@ -63,7 +63,7 @@ import java.util.Arrays;
 
 public class Q719 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         int result = smallestDistancePair(obj.array, obj.val);
         System.out.println(result);
     }

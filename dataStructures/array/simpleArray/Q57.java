@@ -71,7 +71,7 @@ public class Q57 {
         InputMethods.getInputForIntArrArrayList(cin, data);
         int[] newInterval = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
-        int[][] result = insert(DataConversionMethods.convertIntArrayListTo2DArray(data), newInterval);
+        int[][] result = insert(DataConversionMethods.convertIntArrArrayListTo2DArray(data), newInterval);
         OutputMethods.output2DIntArrayData(result);
     }
 

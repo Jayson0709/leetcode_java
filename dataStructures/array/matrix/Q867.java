@@ -47,7 +47,7 @@ public class Q867 {
         List<int[]> matrixData = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, matrixData);
         cin.close();
-        int[][] result = transpose(DataConversionMethods.convertIntArrayListTo2DArray(matrixData));
+        int[][] result = transpose(DataConversionMethods.convertIntArrArrayListTo2DArray(matrixData));
         OutputMethods.output2DIntArrayData(result);
     }
 

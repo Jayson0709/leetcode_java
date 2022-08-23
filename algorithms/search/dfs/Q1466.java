@@ -92,7 +92,7 @@ public class Q1466 {
         List<int[]> edges = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, edges);
         cin.close();
-        System.out.println(minReorder(n, DataConversionMethods.convertIntArrayListTo2DArray(edges)));
+        System.out.println(minReorder(n, DataConversionMethods.convertIntArrArrayListTo2DArray(edges)));
     }
 
     private static final Map<Integer, List<int[]>> hMap = new HashMap<>();

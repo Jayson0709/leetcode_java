@@ -51,7 +51,7 @@ import utils.OneDArrayAndOneInt;
 
 public class Q35 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         int result = searchInsert(obj.array, obj.val);
         System.out.println(result);
     }

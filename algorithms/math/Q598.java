@@ -71,7 +71,7 @@ public class Q598 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        int result = maxCount(m, n, DataConversionMethods.convertIntArrayListTo2DArray(data));
+        int result = maxCount(m, n, DataConversionMethods.convertIntArrArrayListTo2DArray(data));
         System.out.println(result);
     }
 

@@ -46,7 +46,7 @@ public class Q1351 {
         List<int[]> gridList = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, gridList);
         cin.close();
-        int result = countNegatives(DataConversionMethods.convertIntArrayListTo2DArray(gridList));
+        int result = countNegatives(DataConversionMethods.convertIntArrArrayListTo2DArray(gridList));
         System.out.println(result);
     }
 

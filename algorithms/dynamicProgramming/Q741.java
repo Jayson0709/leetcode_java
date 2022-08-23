@@ -78,7 +78,7 @@ public class Q741 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        int result = cherryPickup(DataConversionMethods.convertIntArrayListTo2DArray(data));
+        int result = cherryPickup(DataConversionMethods.convertIntArrArrayListTo2DArray(data));
         System.out.println(result);
     }
 

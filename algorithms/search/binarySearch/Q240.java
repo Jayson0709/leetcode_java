@@ -79,7 +79,7 @@ public class Q240 {
             }
         }
         cin.close();
-        System.out.println(findNumberIn2DArray(DataConversionMethods.convertIntArrayListTo2DArray(data), target));
+        System.out.println(findNumberIn2DArray(DataConversionMethods.convertIntArrArrayListTo2DArray(data), target));
     }
 
     private static boolean findNumberIn2DArray(int[][] matrix, int target) {

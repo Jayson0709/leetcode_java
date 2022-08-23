@@ -60,7 +60,7 @@ public class Q757 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        int result = intersectionSizeTwo(DataConversionMethods.convertIntArrayListTo2DArray(data));
+        int result = intersectionSizeTwo(DataConversionMethods.convertIntArrArrayListTo2DArray(data));
         System.out.println(result);
     }
 

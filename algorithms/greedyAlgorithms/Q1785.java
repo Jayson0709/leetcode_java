@@ -54,7 +54,7 @@ import java.nio.charset.StandardCharsets;
 public class Q1785 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        OneDArrayAndTwoInt obj = InputMethods.getOneInt1DArrayAndTwoIntInput(cin);
+        OneDArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
         cin.close();
         System.out.println(minElements(obj.array, obj.val1, obj.val2));
     }

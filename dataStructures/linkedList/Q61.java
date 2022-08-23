@@ -53,7 +53,7 @@ import utils.OutputMethods;
 
 public class Q61 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode resultHead = rotateRight(head, obj.val);
         System.out.println(OutputMethods.outputLinkedListData(resultHead));

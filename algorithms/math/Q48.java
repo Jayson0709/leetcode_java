@@ -59,7 +59,7 @@ public class Q48 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        int[][] matrix = DataConversionMethods.convertIntArrayListTo2DArray(data);
+        int[][] matrix = DataConversionMethods.convertIntArrArrayListTo2DArray(data);
         rotate(matrix);
         OutputMethods.output2DIntArrayData(matrix);
     }

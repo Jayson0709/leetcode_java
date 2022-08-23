@@ -56,7 +56,7 @@ import java.util.Scanner;
 public class Q100 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArray obj = InputMethods.getTwoInt1DArrayInput(cin);
+        TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         TreeNode p = InputMethods.getInputForOneBinaryTree(obj.array1);
         TreeNode q = InputMethods.getInputForOneBinaryTree(obj.array2);
         cin.close();

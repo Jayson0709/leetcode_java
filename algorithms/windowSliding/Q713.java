@@ -43,7 +43,7 @@ import utils.OneDArrayAndOneInt;
 
 public class Q713 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         int result = numSubarrayProductLessThanK(obj.array, obj.val);
         System.out.println(result);
     }

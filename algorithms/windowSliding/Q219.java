@@ -50,7 +50,7 @@ import java.util.Set;
 
 public class Q219 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         boolean result = containsNearbyDuplicate(obj.array, obj.val);
         System.out.println(result);
     }

@@ -98,7 +98,7 @@ import java.util.Scanner;
 public class Q1184 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        OneDArrayAndTwoInt obj = InputMethods.getOneInt1DArrayAndTwoIntInput(cin);
+        OneDArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
         cin.close();
         int result = distanceBetweenBusStops(obj.array, obj.val1, obj.val2);
         System.out.println(result);

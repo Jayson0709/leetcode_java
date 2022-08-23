@@ -46,7 +46,7 @@ public class Q1037 {
         List<int[]> dataList = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, dataList);
         cin.close();
-        boolean result = isBoomerang(DataConversionMethods.convertIntArrayListTo2DArray(dataList));
+        boolean result = isBoomerang(DataConversionMethods.convertIntArrArrayListTo2DArray(dataList));
         System.out.println(result);
     }
     

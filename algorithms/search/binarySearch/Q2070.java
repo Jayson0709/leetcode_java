@@ -96,7 +96,7 @@ public class Q2070 {
         }
         cin.close();
         int[] queries = line;
-        int[] result = maximumBeauty(DataConversionMethods.convertIntArrayListTo2DArray(data), queries);
+        int[] result = maximumBeauty(DataConversionMethods.convertIntArrArrayListTo2DArray(data), queries);
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 

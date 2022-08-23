@@ -76,7 +76,7 @@ import java.util.Arrays;
 
 public class Q1423 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         int result = maxScore(obj.array, obj.val);
         System.out.println(result);
     }

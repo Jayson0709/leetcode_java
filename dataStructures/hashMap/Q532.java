@@ -69,7 +69,7 @@ import java.util.Map;
 
 public class Q532 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         int result = findPairs(obj.array, obj.val);
         System.out.println(result);
     }

@@ -58,7 +58,7 @@ public class Q764 {
         List<int[]> pairList = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, pairList);
         cin.close();
-        int result = orderOfLargestPlusSign(n, DataConversionMethods.convertIntArrayListTo2DArray(pairList));
+        int result = orderOfLargestPlusSign(n, DataConversionMethods.convertIntArrArrayListTo2DArray(pairList));
         System.out.println(result);
     }
 

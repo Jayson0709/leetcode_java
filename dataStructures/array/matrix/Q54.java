@@ -54,7 +54,7 @@ public class Q54 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
-        int[] result = spiralOrder(DataConversionMethods.convertIntArrayListTo2DArray(data));
+        int[] result = spiralOrder(DataConversionMethods.convertIntArrArrayListTo2DArray(data));
         cin.close();
         System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }

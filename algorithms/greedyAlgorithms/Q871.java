@@ -86,7 +86,7 @@ public class Q871 {
         List<int[]> stationsList = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, stationsList);
         cin.close();
-        int result = minRefuelStops(target, startFuel, DataConversionMethods.convertIntArrayListTo2DArray(stationsList));
+        int result = minRefuelStops(target, startFuel, DataConversionMethods.convertIntArrArrayListTo2DArray(stationsList));
         System.out.println(result);
     }
 

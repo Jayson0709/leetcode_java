@@ -64,7 +64,7 @@ public class Q447 {
         List<int[]> data = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
-        int result = numberOfBoomerangs(DataConversionMethods.convertIntArrayListTo2DArray(data));
+        int result = numberOfBoomerangs(DataConversionMethods.convertIntArrArrayListTo2DArray(data));
         System.out.println(result);
     }
 

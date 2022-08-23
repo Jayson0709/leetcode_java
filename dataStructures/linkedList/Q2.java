@@ -66,7 +66,7 @@ public class Q2 {
 
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArray obj = InputMethods.getTwoInt1DArrayInput(cin);
+        TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         cin.close();
         ListNode head1 = DataConversionMethods.convert1DArrayToLinkedList(obj.array1);
         ListNode head2 = DataConversionMethods.convert1DArrayToLinkedList(obj.array2);

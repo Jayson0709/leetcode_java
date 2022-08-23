@@ -57,7 +57,7 @@ import java.util.Arrays;
 
 public class Q1300 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getOneInt1DArrayAndOneIntInput();
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         System.out.println(findBestValue(obj.array, obj.val));
     }
 

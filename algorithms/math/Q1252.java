@@ -80,7 +80,7 @@ public class Q1252 {
         List<int[]> indicesData = new ArrayList<>();
         InputMethods.getInputForIntArrArrayList(cin, indicesData);
         cin.close();
-        int result = oddCells(m, n, DataConversionMethods.convertIntArrayListTo2DArray(indicesData));
+        int result = oddCells(m, n, DataConversionMethods.convertIntArrArrayListTo2DArray(indicesData));
         System.out.println(result);
     }
 
