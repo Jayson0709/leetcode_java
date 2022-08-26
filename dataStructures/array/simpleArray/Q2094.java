@@ -80,7 +80,7 @@ import java.util.*;
 public class Q2094 {
     public static void main(String[] args) {
         int[] result = findEvenNumbers(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] findEvenNumbers(int[] digits) {

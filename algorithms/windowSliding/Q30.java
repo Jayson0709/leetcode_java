@@ -65,7 +65,7 @@ public class Q30 {
         String[] words = cin.nextLine().strip().split(" ");
         cin.close();
         List<Integer> result = findSubstring(s, words);
-        System.out.println(OutputMethods.outputListData(result));
+        System.out.println(OutputMethods.formatListOutputData(result));
     }
 
     private static List<Integer> findSubstring(String s, String[] words) {

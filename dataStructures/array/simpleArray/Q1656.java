@@ -89,7 +89,7 @@ public class Q1656 {
                 if (orders[i].equals("insert")) {
                     String[] pair = cin.nextLine().strip().split(" ");
                     List<String> result = obj.insert(Integer.parseInt(pair[0]), pair[1]);
-                    output.append(", ").append(OutputMethods.outputListData(result));
+                    output.append(", ").append(OutputMethods.formatListOutputData(result));
                 }
             }
         }

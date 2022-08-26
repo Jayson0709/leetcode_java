@@ -75,7 +75,7 @@ public class Q937 {
         InputMethods.getInputForStringArrayList(cin, data);
         cin.close();
         String[] result = reorderLogFiles(DataConversionMethods.convertStringArrayListTo1DArray(data));
-        System.out.println(OutputMethods.output1DArrayData(result));
+        System.out.println(OutputMethods.format1DArrayOutputData(result));
     }
 
     private static String[] reorderLogFiles(String[] logs) {

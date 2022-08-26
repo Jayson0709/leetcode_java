@@ -56,7 +56,7 @@ public class Q54 {
         InputMethods.getInputForIntArrArrayList(cin, data);
         int[] result = spiralOrder(DataConversionMethods.convertIntArrArrayListTo2DArray(data));
         cin.close();
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     // Method 1: Use four variables to limit the boundary

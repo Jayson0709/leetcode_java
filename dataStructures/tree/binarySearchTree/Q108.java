@@ -80,7 +80,7 @@ public class Q108 {
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         TreeNode resultNode = sortedArrayToBST(nums);
-        System.out.println(OutputMethods.levelOrderTraversalOutput(resultNode));
+        System.out.println(OutputMethods.formatLevelOrderTreeTraversalOutputData(resultNode));
     }
 
     private static TreeNode sortedArrayToBST(int[] nums) {

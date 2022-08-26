@@ -52,7 +52,7 @@ public class Q94 {
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
         List<Integer> result = inorderTraversal(root);
-        System.out.println(OutputMethods.outputListData(result));
+        System.out.println(OutputMethods.formatListOutputData(result));
     }
 
     // Method 1: Recursion

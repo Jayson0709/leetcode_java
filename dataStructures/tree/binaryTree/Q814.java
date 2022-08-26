@@ -97,7 +97,7 @@ public class Q814 {
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
         TreeNode resultRoot = pruneTree(root);
-        System.out.print(OutputMethods.inorderTraversalOutput(resultRoot));
+        System.out.print(OutputMethods.formatInorderTreeTraversalOutputData(resultRoot));
     }
 
     // Method 1: Recursion

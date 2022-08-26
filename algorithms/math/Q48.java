@@ -61,7 +61,7 @@ public class Q48 {
         cin.close();
         int[][] matrix = DataConversionMethods.convertIntArrArrayListTo2DArray(data);
         rotate(matrix);
-        OutputMethods.output2DIntArrayData(matrix);
+        OutputMethods.format2DIntArrayOutputData(matrix);
     }
 
     private static void rotate(int[][] matrix) {

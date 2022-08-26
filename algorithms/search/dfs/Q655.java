@@ -88,7 +88,7 @@ public class Q655 {
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
         List<List<String>> result = printTree(root);
-        OutputMethods.outputEmbeddedListData(result);
+        System.out.println(OutputMethods.formatNestedListOutputData(result));
     }
 
     // Method 1: BFS

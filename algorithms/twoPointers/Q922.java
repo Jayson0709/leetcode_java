@@ -59,7 +59,7 @@ import java.util.Arrays;
 public class Q922 {
     public static void main(String[] args) {
         int[] result = sortArrayByParityII(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] sortArrayByParityII(int[] nums) {

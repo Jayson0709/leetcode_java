@@ -65,7 +65,7 @@ public class Q735 {
         int[] asteroids = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         int[] result = asteroidCollision(asteroids);
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] asteroidCollision(int[] asteroids) {

@@ -63,7 +63,7 @@ public class Q102 {
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
         List<List<Integer>> result = levelOrder(root);
-        OutputMethods.outputEmbeddedListData(result);
+        System.out.println(OutputMethods.formatNestedListOutputData(result));
     }
 
     private static List<List<Integer>> levelOrder(TreeNode root) {

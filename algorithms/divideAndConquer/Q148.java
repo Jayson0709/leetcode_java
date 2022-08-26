@@ -71,7 +71,7 @@ public class Q148 {
         int[] data = InputMethods.getInputForOneIntArray();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(data);
         ListNode resultHead = sortList(head);
-        System.out.println(OutputMethods.outputLinkedListData(resultHead));
+        System.out.println(OutputMethods.formatLinkedListOutputData(resultHead));
     }
 
     // Method 1: From top to bottom

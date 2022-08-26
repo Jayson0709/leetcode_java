@@ -101,7 +101,7 @@ public class Q623 {
         OneDArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
         TreeNode root = InputMethods.getInputForOneBinaryTree(obj.array);
         cin.close();
-        System.out.println(OutputMethods.levelOrderTraversalOutput(addOneRow(root, obj.val1, obj.val2)));
+        System.out.println(OutputMethods.formatLevelOrderTreeTraversalOutputData(addOneRow(root, obj.val1, obj.val2)));
     }
 
 

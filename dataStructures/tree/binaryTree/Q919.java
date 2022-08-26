@@ -100,7 +100,7 @@ public class Q919 {
                     int val = Integer.parseInt(cin.nextLine());
                     output.append(", ").append(obj.insert(val));
                 } else if (orders[i].equals("get_root")) {
-                    output.append(", ").append(OutputMethods.levelOrderTraversalOutput(obj.get_root()));
+                    output.append(", ").append(OutputMethods.formatLevelOrderTreeTraversalOutputData(obj.get_root()));
                 }
             }
         }

@@ -75,7 +75,7 @@ public class Q143 {
         cin.close();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(data);
         reorderList(head);
-        System.out.println(OutputMethods.outputLinkedListData(head));
+        System.out.println(OutputMethods.formatLinkedListOutputData(head));
     }
 
     // Method 1: linear list

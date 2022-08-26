@@ -51,7 +51,7 @@ public class Q515 {
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
         List<Integer> result = largestValues(root);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     private static List<Integer> largestValues(TreeNode root) {

@@ -1,12 +1,14 @@
 package utils;
-import java.util.*;
+
 import sharedClasses.ListNode;
 import sharedClasses.TreeNode;
+
+import java.util.*;
 
 
 public class OutputMethods {
 
-    public static <T> StringBuilder outputListData(List<T> list) {
+    public static <T> StringBuilder formatListOutputData(List<T> list) {
         StringBuilder res = new StringBuilder();
         res.append("[");
         for (int i = 0; i < list.size(); i++) {
@@ -20,21 +22,21 @@ public class OutputMethods {
         return res;
     }
 
-    public static <T> void outputEmbeddedListData(List<List<T>> list) {
+    public static <T> StringBuilder formatNestedListOutputData(List<List<T>> list) {
         StringBuilder res = new StringBuilder();
         res.append("[");
         for (int i = 0; i < list.size(); i++) {
             if (i == 0) {
-                res.append(outputListData(list.get(i)));
+                res.append(formatListOutputData(list.get(i)));
             } else {
-                res.append(", ").append(outputListData(list.get(i)));
+                res.append(", ").append(formatListOutputData(list.get(i)));
             }
         }
         res.append("]");
-        System.out.println(res);
+        return res;
     }
 
-    public static <T> StringBuilder output1DArrayData(T[] array) {
+    public static <T> StringBuilder format1DArrayOutputData(T[] array) {
         StringBuilder res = new StringBuilder();
         res.append("[");
         for (int i = 0; i < array.length; i++) {
@@ -48,12 +50,12 @@ public class OutputMethods {
         return res;
     }
 
-    public static void output2DIntArrayData(int[][] array) {
+    public static void format2DIntArrayOutputData(int[][] array) {
         StringBuilder res = new StringBuilder();
         res.append("[");
         for (int i = 0; i < array.length; i++) {
             if (i == 0) {
-                res.append(output1DArrayData(Arrays.stream(array[i]).boxed().toArray(Integer[]::new)));
+                res.append(format1DArrayOutputData(Arrays.stream(array[i]).boxed().toArray(Integer[]::new)));
             } else {
                 res.append(", ").append(Arrays.toString(Arrays.stream(array[i]).boxed().toArray(Integer[]::new)));
             }
@@ -62,7 +64,7 @@ public class OutputMethods {
         System.out.println(res);
     }
 
-    public static StringBuilder outputLinkedListData(ListNode head) {
+    public static StringBuilder formatLinkedListOutputData(ListNode head) {
         StringBuilder res = new StringBuilder();
         res.append("[");
         res.append(head.val);
@@ -75,7 +77,7 @@ public class OutputMethods {
         return res;
     }
 
-    public static StringBuilder levelOrderTraversalOutput(TreeNode root) {
+    public static StringBuilder formatLevelOrderTreeTraversalOutputData(TreeNode root) {
         if (root == null) {
             System.out.println("[]");
         }
@@ -98,7 +100,7 @@ public class OutputMethods {
         return output;
     }
 
-    public static StringBuilder inorderTraversalOutput(TreeNode root) {
+    public static StringBuilder formatInorderTreeTraversalOutputData(TreeNode root) {
         StringBuilder output = new StringBuilder();
         output.append("[");
         Deque<TreeNode> stack = new LinkedList<>();

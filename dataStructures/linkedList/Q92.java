@@ -64,7 +64,7 @@ public class Q92 {
         cin.close();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode resultNode = reverseBetween(head, obj.val1, obj.val2);
-        System.out.println(OutputMethods.outputLinkedListData(resultNode));
+        System.out.println(OutputMethods.formatLinkedListOutputData(resultNode));
     }
 
     private static ListNode reverseBetween(ListNode head, int left, int right) {

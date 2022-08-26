@@ -74,7 +74,7 @@ public class Q1382 {
             root.insertInBST(root, data[i]);
         }
         TreeNode resultNode = balanceBST(root);
-        System.out.println(OutputMethods.inorderTraversalOutput(resultNode));
+        System.out.println(OutputMethods.formatInorderTreeTraversalOutputData(resultNode));
     }
 
     static List<Integer> inorderSeq = new ArrayList<>();

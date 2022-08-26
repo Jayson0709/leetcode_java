@@ -65,7 +65,7 @@ import java.util.Map;
 public class Q506 {
     public static void main(String[] args) {
         String[] result = findRelativeRanks(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.output1DArrayData(result));
+        System.out.println(OutputMethods.format1DArrayOutputData(result));
     }
 
     private static String[] findRelativeRanks(int[] score) {

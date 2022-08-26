@@ -38,7 +38,7 @@ public class Q22 {
         int n = cin.nextInt();
         cin.close();
         List<String> result = generateParenthesis(n);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     private static List<String> generateParenthesis(int n) {

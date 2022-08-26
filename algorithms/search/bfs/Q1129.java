@@ -79,7 +79,7 @@ public class Q1129 {
             blueEdges[i] = Arrays.stream(blueEdgesData[i].split(",")).mapToInt(Integer::parseInt).toArray();
         }
         int[] result = shortestAlternatingPaths(n, redEdges, blueEdges);
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] shortestAlternatingPaths(int n, int[][] redEdges, int[][] blueEdges) {

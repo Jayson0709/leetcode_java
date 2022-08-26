@@ -71,7 +71,7 @@ public class Q890 {
             words[i] = wordsList.get(i);
         }
         List<String> result = findAndReplacePattern(words, pattern);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     private static List<String> findAndReplacePattern(String[] words, String pattern) {

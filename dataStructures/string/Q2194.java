@@ -80,7 +80,7 @@ public class Q2194 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String s = cin.nextLine().strip();
         cin.close();
-        System.out.println(OutputMethods.outputListData(cellsInRange(s)));
+        System.out.println(OutputMethods.formatListOutputData(cellsInRange(s)));
     }
 
     private static List<String> cellsInRange(String s) {

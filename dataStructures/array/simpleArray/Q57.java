@@ -72,7 +72,7 @@ public class Q57 {
         int[] newInterval = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         int[][] result = insert(DataConversionMethods.convertIntArrArrayListTo2DArray(data), newInterval);
-        OutputMethods.output2DIntArrayData(result);
+        OutputMethods.format2DIntArrayOutputData(result);
     }
 
     private static int[][] insert(int[][] intervals, int[] newInterval) {

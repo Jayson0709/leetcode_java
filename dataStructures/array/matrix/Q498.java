@@ -48,7 +48,7 @@ public class Q498 {
         InputMethods.getInputForIntArrArrayList(cin, dataList);
         int[] result = findDiagonalOrder(DataConversionMethods.convertIntArrArrayListTo2DArray(dataList));
         cin.close();
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] findDiagonalOrder(int[][] mat) {

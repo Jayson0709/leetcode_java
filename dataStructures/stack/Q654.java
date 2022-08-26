@@ -99,7 +99,7 @@ public class Q654 {
         int[] nums = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         cin.close();
         TreeNode resultNode = constructMaximumBinaryTree(nums);
-        System.out.println(OutputMethods.levelOrderTraversalOutput(resultNode));
+        System.out.println(OutputMethods.formatLevelOrderTreeTraversalOutputData(resultNode));
     }
 
     // Method 1: Recursion

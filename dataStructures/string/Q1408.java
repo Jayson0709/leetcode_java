@@ -64,7 +64,7 @@ public class Q1408 {
         String[] words = cin.nextLine().strip().split(" ");
         cin.close();
         List<String> result = stringMatching(words);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     private static List<String> stringMatching(String[] words) {

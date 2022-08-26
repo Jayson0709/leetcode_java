@@ -1,7 +1,9 @@
 package dataStructures.hashMap;
-import java.util.*;
+
+import utils.OutputMethods;
+
 import java.nio.charset.StandardCharsets;
-import utils.*;
+import java.util.*;
 
 
 //Given an array of strings strs, group the anagrams together. You can return the answer in any order.
@@ -54,7 +56,7 @@ public class Q49 {
         String[] strs = cin.nextLine().strip().split(" ");
         cin.close();
         List<List<String>> result = groupAnagrams(strs);
-        OutputMethods.outputEmbeddedListData(result);
+        System.out.println(OutputMethods.formatNestedListOutputData(result));
     }
 
     // Method 1: Sorting

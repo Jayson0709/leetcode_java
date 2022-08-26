@@ -69,7 +69,7 @@ public class Q109 {
         int[] data = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(data);
         cin.close();
-        System.out.println(OutputMethods.levelOrderTraversalOutput(sortedListToBST(head)));
+        System.out.println(OutputMethods.formatLevelOrderTreeTraversalOutputData(sortedListToBST(head)));
     }
 
     private static TreeNode sortedListToBST(ListNode head) {

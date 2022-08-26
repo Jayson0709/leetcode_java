@@ -72,7 +72,7 @@ public class Q721 {
         InputMethods.getInputForEmbeddedStringArrayList(cin, accounts);
         cin.close();
         List<List<String>> result = accountsMerge(accounts);
-        OutputMethods.outputEmbeddedListData(result);
+        System.out.println(OutputMethods.formatNestedListOutputData(result));
     }
 
     private static List<List<String>> accountsMerge(List<List<String>> accounts) {

@@ -66,7 +66,7 @@ public class Q241 {
         cin.close();
 
         List<Integer> result = diffWaysToCompute(expression);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     // Method 1: Memoization

@@ -66,7 +66,7 @@ import java.util.Map;
 public class Q1331 {
     public static void main(String[] args) {
         int[] result = arrayRankTransform(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] arrayRankTransform(int[] arr) {

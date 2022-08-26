@@ -122,7 +122,7 @@ public class Q2074 {
         cin.close();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(data);
         ListNode resultNode = reverseEvenLengthGroups(head);
-        System.out.println(OutputMethods.outputLinkedListData(resultNode));
+        System.out.println(OutputMethods.formatLinkedListOutputData(resultNode));
     }
 
     private static ListNode reverseEvenLengthGroups(ListNode head) {

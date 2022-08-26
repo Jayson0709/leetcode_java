@@ -63,7 +63,7 @@ class Q1 {
     public static void main(String[] args) {
         OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         int[] result = twoSum(obj.array, obj.val);
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     public static int[] twoSum(int[] nums, int target) {

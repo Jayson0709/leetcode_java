@@ -99,7 +99,7 @@ public class Q1260 {
         }
         cin.close();
         List<List<Integer>> result = shiftGrid(DataConversionMethods.convertIntArrArrayListTo2DArray(data), k);
-        OutputMethods.outputEmbeddedListData(result);
+        System.out.println(OutputMethods.formatNestedListOutputData(result));
     }
 
     private static List<List<Integer>> shiftGrid(int[][] grid, int k) {

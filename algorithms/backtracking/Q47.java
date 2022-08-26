@@ -47,7 +47,7 @@ import java.util.List;
 public class Q47 {
     public static void main(String[] args) {
         List<List<Integer>> result = permuteUnique(InputMethods.getInputForOneIntArray());
-        OutputMethods.outputEmbeddedListData(result);
+        System.out.println(OutputMethods.formatNestedListOutputData(result));
     }
 
     static boolean[] visited;

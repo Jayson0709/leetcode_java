@@ -52,7 +52,7 @@ public class Q728 {
         int right = cin.nextInt();
         cin.close();
         List<Integer> result = selfDividingNumbers(left, right);
-        System.out.println(OutputMethods.outputListData(result));
+        System.out.println(OutputMethods.formatListOutputData(result));
     }
 
     // Method 1: Use Math

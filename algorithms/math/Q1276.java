@@ -78,7 +78,7 @@ public class Q1276 {
         cin.close();
 
         List<Integer> result = numOfBurgers(tomatoSlices, cheeseSlices);
-        System.out.println(OutputMethods.outputListData(result));
+        System.out.println(OutputMethods.formatListOutputData(result));
     }
 
     private static List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {

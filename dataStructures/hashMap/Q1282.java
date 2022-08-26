@@ -67,7 +67,7 @@ import java.util.Map;
 public class Q1282 {
     public static void main(String[] args) {
         List<List<Integer>> result = groupThePeople(InputMethods.getInputForOneIntArray());
-        OutputMethods.outputEmbeddedListData(result);
+        System.out.println(OutputMethods.formatNestedListOutputData(result));
     }
 
     private static List<List<Integer>> groupThePeople(int[] groupSizes) {

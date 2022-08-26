@@ -70,7 +70,7 @@ public class Q542 {
         InputMethods.getInputForIntArrArrayList(cin, data);
         cin.close();
         int[][] result = updateMatrix(DataConversionMethods.convertIntArrArrayListTo2DArray(data));
-        OutputMethods.output2DIntArrayData(result);
+        OutputMethods.format2DIntArrayOutputData(result);
     }
 
     // Method 1: BFS

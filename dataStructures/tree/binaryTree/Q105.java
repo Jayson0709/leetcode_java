@@ -69,7 +69,7 @@ public class Q105 {
         TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         cin.close();
         TreeNode resultNode = buildTree(obj.array1, obj.array2);
-        System.out.println(OutputMethods.levelOrderTraversalOutput(resultNode));
+        System.out.println(OutputMethods.formatLevelOrderTreeTraversalOutputData(resultNode));
     }
 
     // Method 1: Recursively (reference answer)

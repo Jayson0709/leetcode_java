@@ -45,7 +45,7 @@ public class Q708 {
         }
         p.next= head;
         ListNode result = insert(head, obj.val);
-        System.out.println(OutputMethods.outputLinkedListData(result));
+        System.out.println(OutputMethods.formatLinkedListOutputData(result));
     }
 
     private static ListNode insert(ListNode head, int insertVal) {

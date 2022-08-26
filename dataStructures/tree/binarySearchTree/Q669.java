@@ -55,7 +55,7 @@ public class Q669 {
         TreeNode root = InputMethods.getInputForOneBinaryTree(obj.array);
         cin.close();
         // Tree traversal
-        System.out.println(OutputMethods.levelOrderTraversalOutput(trimBST(root, obj.val1, obj.val2)));
+        System.out.println(OutputMethods.formatLevelOrderTreeTraversalOutputData(trimBST(root, obj.val1, obj.val2)));
     }
 
     private static TreeNode trimBST(TreeNode root, int low, int high) {

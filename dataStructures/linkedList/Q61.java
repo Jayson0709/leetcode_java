@@ -56,7 +56,7 @@ public class Q61 {
         OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode resultHead = rotateRight(head, obj.val);
-        System.out.println(OutputMethods.outputLinkedListData(resultHead));
+        System.out.println(OutputMethods.formatLinkedListOutputData(resultHead));
     }
 
     private static ListNode rotateRight(ListNode head, int k) {

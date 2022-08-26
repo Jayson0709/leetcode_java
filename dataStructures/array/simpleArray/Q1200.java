@@ -57,7 +57,7 @@ import java.util.List;
 public class Q1200 {
     public static void main(String[] args) {
         List<List<Integer>> result = minimumAbsDifference(InputMethods.getInputForOneIntArray());
-        OutputMethods.outputEmbeddedListData(result);
+        System.out.println(OutputMethods.formatNestedListOutputData(result));
     }
 
     private static List<List<Integer>> minimumAbsDifference(int[] arr) {

@@ -51,7 +51,7 @@ public class Q763 {
         cin.close();
 
         List<Integer> result = partitionLabels(s);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     private static List<Integer> partitionLabels(String s) {

@@ -64,7 +64,7 @@ public class Q257 {
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
         List<String> result = binaryTreePaths(root);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     private static List<String> binaryTreePaths(TreeNode root) {

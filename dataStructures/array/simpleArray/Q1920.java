@@ -64,7 +64,7 @@ import java.util.Arrays;
 public class Q1920 {
     public static void main(String[] args) {
         int[] result = buildArray(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     // Method 1: O(n) space complexity

@@ -70,7 +70,7 @@ public class Q401 {
         int turnedOn = cin.nextInt();
         cin.close();
         List<String> result = readBinaryWatch(turnedOn);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     // Method 1: Enumeration

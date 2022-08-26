@@ -67,7 +67,7 @@ public class Q17 {
         String digits = cin.nextLine().strip();
         cin.close();
         List<String> result = letterCombinations(digits);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     private static List<String> letterCombinations(String digits) {

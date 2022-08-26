@@ -65,7 +65,7 @@ import java.util.List;
 public class Q1403 {
     public static void main(String[] args) {
         List<Integer> result = minSubsequence(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.outputListData(result));
+        System.out.println(OutputMethods.formatListOutputData(result));
     }
 
     // Version 1

@@ -51,7 +51,7 @@ public class Q508 {
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
         int[] result = findFrequentTreeSum(root);
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] findFrequentTreeSum(TreeNode root) {

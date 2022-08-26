@@ -49,7 +49,7 @@ public class Q1089 {
     public static void main(String[] args) {
         int[] arr = InputMethods.getInputForOneIntArray();
         duplicateZeros(arr);
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(arr).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(arr).boxed().toArray(Integer[]::new)));
     }
 
     // 方法一：双指针，模拟一个栈

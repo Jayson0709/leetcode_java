@@ -59,7 +59,7 @@ public class Q83 {
     public static void main(String[] args) {
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(InputMethods.getInputForOneIntArray());
         ListNode resultHead = deleteDuplicates(head);
-        System.out.println(OutputMethods.outputLinkedListData(resultHead));
+        System.out.println(OutputMethods.formatLinkedListOutputData(resultHead));
     }
 
     // Method 1: Two Pointers

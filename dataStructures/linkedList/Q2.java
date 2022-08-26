@@ -71,7 +71,7 @@ public class Q2 {
         ListNode head1 = DataConversionMethods.convert1DArrayToLinkedList(obj.array1);
         ListNode head2 = DataConversionMethods.convert1DArrayToLinkedList(obj.array2);
         ListNode result = addTwoNumbers(head1, head2);
-        System.out.println(OutputMethods.outputLinkedListData(result));
+        System.out.println(OutputMethods.formatLinkedListOutputData(result));
     }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {

@@ -83,7 +83,7 @@ public class Q2273 {
         String[] words = cin.nextLine().strip().split(" ");
         cin.close();
         List<String> result = removeAnagrams(words);
-        System.out.println(OutputMethods.outputListData(result));
+        System.out.println(OutputMethods.formatListOutputData(result));
     }
 
     private static List<String> removeAnagrams(String[] words) {

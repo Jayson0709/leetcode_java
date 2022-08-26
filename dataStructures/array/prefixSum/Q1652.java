@@ -81,7 +81,7 @@ public class Q1652 {
     public static void main(String[] args) {
         OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
         int[] result = decrypt(obj.array, obj.val);
-        System.out.println(OutputMethods.output1DArrayData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
     }
 
     private static int[] decrypt(int[] code, int k) {

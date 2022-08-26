@@ -105,7 +105,7 @@ public class Q589 {
             }
         }
         result = preorder(root);
-        OutputMethods.outputListData(result);
+        OutputMethods.formatListOutputData(result);
     }
 
     // Method 1: recursively

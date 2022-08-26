@@ -51,7 +51,7 @@ import java.util.List;
 public class Q46 {
     public static void main(String[] args) {
         List<List<Integer>> result = permute(InputMethods.getInputForOneIntArray());
-        OutputMethods.outputEmbeddedListData(result);
+        System.out.println(OutputMethods.formatNestedListOutputData(result));
     }
 
     private static List<List<Integer>> permute(int[] nums) {
