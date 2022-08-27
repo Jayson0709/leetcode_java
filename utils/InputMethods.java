@@ -51,7 +51,7 @@ public class InputMethods {
         }
     }
 
-    public static void getInputForEmbeddedStringArrayList(Scanner cin, List<List<String>> list) {
+    public static void getInputForNestedStringArrayList(Scanner cin, List<List<String>> list) {
         while (true) {
             String line = cin.nextLine().strip();
             if (line.length() == 0) {

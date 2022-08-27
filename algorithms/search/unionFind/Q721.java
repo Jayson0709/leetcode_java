@@ -69,7 +69,7 @@ public class Q721 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         List<List<String>> accounts = new ArrayList<>();
-        InputMethods.getInputForEmbeddedStringArrayList(cin, accounts);
+        InputMethods.getInputForNestedStringArrayList(cin, accounts);
         cin.close();
         List<List<String>> result = accountsMerge(accounts);
         System.out.println(OutputMethods.formatNestedListOutputData(result));
