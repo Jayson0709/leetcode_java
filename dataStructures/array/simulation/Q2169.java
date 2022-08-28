@@ -1,4 +1,4 @@
-package algorithms.math;
+package dataStructures.array.simulation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 

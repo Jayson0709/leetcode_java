@@ -1,4 +1,4 @@
-package algorithms.math;
+package dataStructures.array.simulation;
 import utils.*;
 
 import java.util.*;

@@ -1,4 +1,4 @@
-package dataStructures.array.simpleArray;
+package dataStructures.array.simulation;
 
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
