@@ -93,7 +93,7 @@ public class InputMethods {
         return new TwoOneDArray(array1, array2);
     }
 
-    public static TwoOneDArrayAndOneInt getInputForTwo1DArrayAndOneInt(Scanner cin) {
+    public static TwoOneDArrayAndOneInt getInputForTwoInt1DArrayAndOneInt(Scanner cin) {
         int[] array1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int[] array2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val = cin.nextInt();
