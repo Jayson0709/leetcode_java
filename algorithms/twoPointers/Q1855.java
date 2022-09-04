@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 //You are given two non-increasing 0-indexed integer arrays nums1 and nums2.
 //
-//    A pair of indices (i, j), where 0 <= i < nums1.length and 0 <= j < nums2.length, is valid if both i <= j and nums1[i] <= nums2[j]. The distance of the pair is j - i​​​​.
+//    A pair of indices (i, j), where 0 <= i < nums1.length and 0 <= j < nums2.length, is valid if both i <= j and nums1[i] <= nums2[j]. The distance of the pair is j - i.
 //
 //    Return the maximum distance of any valid pair (i, j). If there are no valid pairs, return 0.
 //
@@ -42,7 +42,7 @@ import java.util.Scanner;
 
 //给你两个 非递增 的整数数组 nums1 和 nums2，数组下标均 从 0 开始 计数。
 //
-//    下标对 (i, j) 中 0 <= i < nums1.length 且 0 <= j < nums2.length 。如果该下标对同时满足 i <= j 且 nums1[i] <= nums2[j] ，则称之为 有效 下标对，该下标对的 距离 为 j - i​​ 。​​
+//    下标对 (i, j) 中 0 <= i < nums1.length 且 0 <= j < nums2.length 。如果该下标对同时满足 i <= j 且 nums1[i] <= nums2[j] ，则称之为 有效 下标对，该下标对的 距离 为 j - i 。
 //
 //    返回所有 有效 下标对 (i, j) 中的 最大距离 。如果不存在有效下标对，返回 0 。
 //
