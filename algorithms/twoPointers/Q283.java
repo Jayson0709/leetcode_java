@@ -1,7 +1,6 @@
 package algorithms.twoPointers;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 
@@ -50,7 +49,7 @@ public class Q283 {
     public static void main(String[] args) {
         int[] nums = InputMethods.getInputForOneIntArray();
         moveZeros(nums);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(nums).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(nums));
     }
 
     private static void moveZeros(int[] nums) {

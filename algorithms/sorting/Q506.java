@@ -1,7 +1,6 @@
 package algorithms.sorting;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -64,8 +63,7 @@ import java.util.Map;
 
 public class Q506 {
     public static void main(String[] args) {
-        String[] result = findRelativeRanks(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.format1DArrayOutputData(result));
+        System.out.println(Arrays.toString(findRelativeRanks(InputMethods.getInputForOneIntArray())));
     }
 
     private static String[] findRelativeRanks(int[] score) {

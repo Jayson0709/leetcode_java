@@ -1,7 +1,6 @@
 package algorithms.greedyAlgorithms;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,8 +63,7 @@ import java.util.List;
 
 public class Q1403 {
     public static void main(String[] args) {
-        List<Integer> result = minSubsequence(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.formatListOutputData(result));
+        System.out.println(minSubsequence(InputMethods.getInputForOneIntArray()));
     }
 
     // Version 1

@@ -1,7 +1,11 @@
 package dataStructures.stack;
-import utils.*;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
+
+import utils.InputMethods;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Stack;
 
 
 //We are given an array asteroids of integers representing asteroids in a row.
@@ -61,11 +65,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Q735 {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int[] asteroids = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        cin.close();
-        int[] result = asteroidCollision(asteroids);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(asteroidCollision(InputMethods.getInputForOneIntArray())));
     }
 
     private static int[] asteroidCollision(int[] asteroids) {

@@ -84,7 +84,7 @@ public class Q88 {
         int[] nums2 = obj2.array;
         cin.close();
         merge(nums1, obj1.val, nums2, obj1.val);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(nums1).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(nums1));
     }
 
     private static void merge(int[] nums1, int m, int[] nums2, int n) {

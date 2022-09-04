@@ -1,8 +1,9 @@
 package algorithms.greedyAlgorithms;
-import utils.*;
 
-import java.util.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 //You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part.
 //
@@ -49,9 +50,7 @@ public class Q763 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String s = cin.nextLine().strip();
         cin.close();
-
-        List<Integer> result = partitionLabels(s);
-        OutputMethods.formatListOutputData(result);
+        System.out.println(partitionLabels(s));
     }
 
     private static List<Integer> partitionLabels(String s) {

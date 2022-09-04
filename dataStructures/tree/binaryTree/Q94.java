@@ -51,8 +51,7 @@ public class Q94 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
-        List<Integer> result = inorderTraversal(root);
-        System.out.println(OutputMethods.formatListOutputData(result));
+        System.out.println(inorderTraversal(root));
     }
 
     // Method 1: Recursion

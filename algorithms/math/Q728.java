@@ -1,8 +1,9 @@
 package algorithms.math;
-import utils.*;
 
-import java.util.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 
 //A self-dividing number is a number that is divisible by every digit it contains.
@@ -51,8 +52,7 @@ public class Q728 {
         int left = cin.nextInt();
         int right = cin.nextInt();
         cin.close();
-        List<Integer> result = selfDividingNumbers(left, right);
-        System.out.println(OutputMethods.formatListOutputData(result));
+        System.out.println(selfDividingNumbers(left, right));
     }
 
     // Method 1: Use Math

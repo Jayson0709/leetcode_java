@@ -1,7 +1,9 @@
 package algorithms.backtracking;
-import java.util.*;
+
 import java.nio.charset.StandardCharsets;
-import utils.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 
 //Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
@@ -37,8 +39,7 @@ public class Q22 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int n = cin.nextInt();
         cin.close();
-        List<String> result = generateParenthesis(n);
-        OutputMethods.formatListOutputData(result);
+        System.out.println(generateParenthesis(n));
     }
 
     private static List<String> generateParenthesis(int n) {

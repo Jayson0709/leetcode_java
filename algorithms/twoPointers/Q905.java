@@ -1,7 +1,6 @@
 package algorithms.twoPointers;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 
@@ -46,8 +45,7 @@ import java.util.Arrays;
 
 public class Q905 {
     public static void main(String[] args) {
-        int[] result = sortArrayByParity(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(sortArrayByParity(InputMethods.getInputForOneIntArray())));
     }
 
     private static int[] sortArrayByParity(int[] nums) {

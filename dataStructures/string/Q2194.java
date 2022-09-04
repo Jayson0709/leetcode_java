@@ -1,9 +1,9 @@
 package dataStructures.string;
 
-import utils.OutputMethods;
-
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 
 //A cell (r, c) of an Excel sheet is represented as a string "<col><row>" where:
@@ -80,7 +80,7 @@ public class Q2194 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String s = cin.nextLine().strip();
         cin.close();
-        System.out.println(OutputMethods.formatListOutputData(cellsInRange(s)));
+        System.out.println(cellsInRange(s));
     }
 
     private static List<String> cellsInRange(String s) {

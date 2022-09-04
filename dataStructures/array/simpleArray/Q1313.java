@@ -1,7 +1,6 @@
 package dataStructures.array.simpleArray;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 
@@ -54,8 +53,7 @@ import java.util.Arrays;
 
 public class Q1313 {
     public static void main(String[] args) {
-        int[] result = decompressRLEList(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(decompressRLEList(InputMethods.getInputForOneIntArray())));
     }
 
     private static int[] decompressRLEList(int[] nums){

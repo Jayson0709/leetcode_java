@@ -2,7 +2,6 @@ package dataStructures.queue;
 
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
@@ -64,8 +63,7 @@ import java.util.PriorityQueue;
 public class Q239 {
     public static void main(String[] args) {
         OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        int[] result = maxSlidingWindow(obj.array, obj.val);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(maxSlidingWindow(obj.array, obj.val)));
     }
 
     // Method 1: Priority Queue

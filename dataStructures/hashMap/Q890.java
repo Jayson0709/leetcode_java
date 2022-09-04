@@ -1,7 +1,6 @@
 package dataStructures.hashMap;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -70,8 +69,7 @@ public class Q890 {
             }
             words[i] = wordsList.get(i);
         }
-        List<String> result = findAndReplacePattern(words, pattern);
-        OutputMethods.formatListOutputData(result);
+        System.out.println(findAndReplacePattern(words, pattern));
     }
 
     private static List<String> findAndReplacePattern(String[] words, String pattern) {

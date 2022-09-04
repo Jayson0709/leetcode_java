@@ -1,7 +1,6 @@
 package algorithms.greedyAlgorithms;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -103,8 +102,7 @@ import java.util.Map;
 
 public class Q1488 {
     public static void main(String[] args) {
-        int[] result = avoidFlood(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(avoidFlood(InputMethods.getInputForOneIntArray())));
     }
 
     private static int[] avoidFlood(int[] rains) {

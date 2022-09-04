@@ -1,7 +1,6 @@
 package dataStructures.array.simulation;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -72,8 +71,7 @@ import java.util.List;
 
 public class Q2149 {
     public static void main(String[] args) {
-        int[] result = rearrangeArray(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(rearrangeArray(InputMethods.getInputForOneIntArray())));
     }
 
     private static int[] rearrangeArray(int[] nums) {

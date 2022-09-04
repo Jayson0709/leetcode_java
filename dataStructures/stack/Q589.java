@@ -1,8 +1,7 @@
 package dataStructures.stack;
-import utils.*;
 
-import java.util.*;
 import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 
 //Given the root of an n-ary tree, return the preorder traversal of its nodes' values.
@@ -79,7 +78,6 @@ public class Q589 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String[] data = cin.nextLine().strip().split(" ");
         cin.close();
-        List<Integer> result;
         Node root = new Node(Integer.parseInt(data[0]));
         if (data.length > 2) {
             Queue<Node> queue = new LinkedList<>();
@@ -104,8 +102,7 @@ public class Q589 {
                 index++;
             }
         }
-        result = preorder(root);
-        OutputMethods.formatListOutputData(result);
+        System.out.print(preorder(root));
     }
 
     // Method 1: recursively

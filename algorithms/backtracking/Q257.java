@@ -63,8 +63,7 @@ public class Q257 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
-        List<String> result = binaryTreePaths(root);
-        OutputMethods.formatListOutputData(result);
+        System.out.println(binaryTreePaths(root));
     }
 
     private static List<String> binaryTreePaths(TreeNode root) {

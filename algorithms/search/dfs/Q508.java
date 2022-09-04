@@ -2,7 +2,6 @@ package algorithms.search.dfs;
 
 import sharedClasses.TreeNode;
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -50,8 +49,7 @@ public class Q508 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
-        int[] result = findFrequentTreeSum(root);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(findFrequentTreeSum(root)));
     }
 
     private static int[] findFrequentTreeSum(TreeNode root) {

@@ -2,7 +2,6 @@ package algorithms.bitManipulation;
 
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -83,8 +82,7 @@ import java.util.Map;
 public class Q957 {
     public static void main(String[] args) {
         OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        int[] result = prisonAfterNDays(obj.array, obj.val);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(prisonAfterNDays(obj.array, obj.val)));
     }
 
     private static int[] prisonAfterNDays(int[] cells, int n) {

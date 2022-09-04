@@ -1,7 +1,6 @@
 package algorithms.quickSelect;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -55,7 +54,7 @@ public class Q324 {
     public static void main(String[] args) {
         int[] nums = InputMethods.getInputForOneIntArray();
         wiggleSort(nums);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(nums).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(nums));
     }
 
     public static void wiggleSort(int[] nums) {

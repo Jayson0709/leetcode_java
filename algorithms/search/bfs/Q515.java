@@ -50,8 +50,7 @@ public class Q515 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         TreeNode root = InputMethods.getInputForOneBinaryTree(cin);
         cin.close();
-        List<Integer> result = largestValues(root);
-        OutputMethods.formatListOutputData(result);
+        System.out.println(largestValues(root));
     }
 
     private static List<Integer> largestValues(TreeNode root) {

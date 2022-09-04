@@ -2,7 +2,6 @@ package algorithms.sorting;
 
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 
@@ -28,8 +27,7 @@ import java.util.Arrays;
 public class SmallestK {
     public static void main(String[] args) {
         OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        int[] result = getLeastNumbers(obj.array, obj.val);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(getLeastNumbers(obj.array, obj.val)));
     }
 
     private static int[] getLeastNumbers(int[] arr, int k) {

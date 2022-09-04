@@ -1,7 +1,7 @@
 package algorithms.windowSliding;
-import java.util.*;
+
 import java.nio.charset.StandardCharsets;
-import utils.*;
+import java.util.*;
 
 
 //You are given a dataStructures.string s and an array of strings words of the same length. Return all starting indices of substring(s) in s that is a concatenation of each word in words exactly once, in any order,and without any intervening characters.
@@ -64,8 +64,7 @@ public class Q30 {
         String s = cin.nextLine().strip();
         String[] words = cin.nextLine().strip().split(" ");
         cin.close();
-        List<Integer> result = findSubstring(s, words);
-        System.out.println(OutputMethods.formatListOutputData(result));
+        System.out.println(findSubstring(s, words));
     }
 
     private static List<Integer> findSubstring(String s, String[] words) {

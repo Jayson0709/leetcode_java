@@ -1,7 +1,6 @@
 package dataStructures.array.simpleArray;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.*;
 
@@ -79,8 +78,7 @@ import java.util.*;
 
 public class Q2094 {
     public static void main(String[] args) {
-        int[] result = findEvenNumbers(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(findEvenNumbers(InputMethods.getInputForOneIntArray())));
     }
 
     private static int[] findEvenNumbers(int[] digits) {

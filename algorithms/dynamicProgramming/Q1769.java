@@ -1,8 +1,8 @@
 package algorithms.dynamicProgramming;
-import utils.*;
 
-import java.util.*;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Scanner;
 
 
 //You have n boxes. You are given a binary string boxes of length n, where boxes[i] is '0' if the ith box is empty, and '1' if it contains one ball.
@@ -63,8 +63,7 @@ public class Q1769 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String boxes = cin.nextLine().strip();
         cin.close();
-        int[] result = minOperations(boxes);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(minOperations(boxes)));
     }
 
     private static int[] minOperations(String boxes) {

@@ -1,7 +1,7 @@
 package algorithms.search.bfs;
-import utils.*;
-import java.util.*;
+
 import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 
 //You are given an integer n, the number of nodes in a directed graph where the nodes are labeled from 0 to n - 1. Each edge is red or blue in this graph, and there could be self-edges and parallel edges.
@@ -78,8 +78,7 @@ public class Q1129 {
         for (int i = 0; i < blueEdgesData.length; i++) {
             blueEdges[i] = Arrays.stream(blueEdgesData[i].split(",")).mapToInt(Integer::parseInt).toArray();
         }
-        int[] result = shortestAlternatingPaths(n, redEdges, blueEdges);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(shortestAlternatingPaths(n, redEdges, blueEdges)));
     }
 
     private static int[] shortestAlternatingPaths(int n, int[][] redEdges, int[][] blueEdges) {

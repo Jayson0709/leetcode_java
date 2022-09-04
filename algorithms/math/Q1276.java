@@ -1,8 +1,9 @@
 package algorithms.math;
-import utils.*;
 
-import java.util.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 
 //Given two integers tomatoSlices and cheeseSlices. The ingredients of different burgers are as follows:
@@ -76,9 +77,7 @@ public class Q1276 {
         int tomatoSlices = cin.nextInt();
         int cheeseSlices = cin.nextInt();
         cin.close();
-
-        List<Integer> result = numOfBurgers(tomatoSlices, cheeseSlices);
-        System.out.println(OutputMethods.formatListOutputData(result));
+        System.out.println(numOfBurgers(tomatoSlices, cheeseSlices));
     }
 
     private static List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {

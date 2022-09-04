@@ -55,7 +55,7 @@ public class Q658 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         OneDArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
         cin.close();
-        System.out.println(OutputMethods.formatListOutputData(findClosestElements(obj.array, obj.val1, obj.val2)));
+        System.out.println(findClosestElements(obj.array, obj.val1, obj.val2));
     }
 
     // Method 1: purely use Sorting

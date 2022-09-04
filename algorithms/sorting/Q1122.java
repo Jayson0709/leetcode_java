@@ -1,7 +1,6 @@
 package algorithms.sorting;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 import utils.TwoOneDArray;
 
 import java.nio.charset.StandardCharsets;
@@ -51,8 +50,7 @@ public class Q1122 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         cin.close();
-        int[] result = relativeSortArray(obj.array1, obj.array2);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(relativeSortArray(obj.array1, obj.array2)));
     }
 
     // Method: Counting sort

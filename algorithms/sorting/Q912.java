@@ -1,7 +1,6 @@
 package algorithms.sorting;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 
@@ -40,8 +39,7 @@ import java.util.Arrays;
 
 public class Q912 {
     public static void main(String[] args) {
-        int[] result = sortArray(InputMethods.getInputForOneIntArray());
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(sortArray(InputMethods.getInputForOneIntArray())));
     }
 
     // Version 1: Quick Sort

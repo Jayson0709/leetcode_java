@@ -1,7 +1,6 @@
 package algorithms.twoPointers;
 
 import utils.InputMethods;
-import utils.OutputMethods;
 
 import java.util.Arrays;
 
@@ -49,7 +48,7 @@ public class Q1089 {
     public static void main(String[] args) {
         int[] arr = InputMethods.getInputForOneIntArray();
         duplicateZeros(arr);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(arr).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(arr));
     }
 
     // 方法一：双指针，模拟一个栈

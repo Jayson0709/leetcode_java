@@ -1,8 +1,9 @@
 package algorithms.memoization;
-import utils.*;
 
-import java.util.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 //Given a string expression of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators. You may return the answer in any order.
 //
@@ -64,9 +65,7 @@ public class Q241 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String expression = cin.nextLine().strip();
         cin.close();
-
-        List<Integer> result = diffWaysToCompute(expression);
-        OutputMethods.formatListOutputData(result);
+        System.out.println(diffWaysToCompute(expression));
     }
 
     // Method 1: Memoization

@@ -1,8 +1,7 @@
 package dataStructures.stack;
-import utils.*;
 
-import java.util.*;
 import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 
 //On a single-threaded CPU, we execute a program containing n functions. Each function has a unique ID between 0 and n-1.
@@ -130,8 +129,7 @@ public class Q636 {
         int n = Integer.parseInt(cin.nextLine().strip());
         List<String> logs = Arrays.stream(cin.nextLine().strip().split(" ")).toList();
         cin.close();
-        int[] result = exclusiveTime(n, logs);
-        System.out.println(OutputMethods.format1DArrayOutputData(Arrays.stream(result).boxed().toArray(Integer[]::new)));
+        System.out.println(Arrays.toString(exclusiveTime(n, logs)));
     }
 
     private static int[] exclusiveTime(int n, List<String> logs) {
