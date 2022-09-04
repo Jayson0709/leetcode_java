@@ -27,6 +27,7 @@ Project root
 |       |       |--- prefixSum
 |       |       |--- simpleArray
 |       |       |--- simulation
+|       |       |--- suffixArray
 |       |--- hashMap
 |       |--- hashSet
 |       |--- linkedList
