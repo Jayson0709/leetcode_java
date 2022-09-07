@@ -34,6 +34,9 @@ Project root
 |       |--- queue
 |       |--- stack
 |       |--- string
+|       |       |--- simulation
+|       |       |--- stringMatching
+|       |       |--- stringOperation
 |       |--- tree
 |       |       |--- binarySearchTree
 |       |       |--- binaryTree
