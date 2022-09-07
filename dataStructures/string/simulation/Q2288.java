@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.simulation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -79,8 +79,7 @@ public class Q2288 {
         String sentence = cin.nextLine().strip();
         int discount = cin.nextInt();
         cin.close();
-        String result = discountPrices(sentence, discount);
-        System.out.println(result);
+        System.out.println(discountPrices(sentence, discount));
     }
 
     private static String discountPrices(String sentence, int discount) {

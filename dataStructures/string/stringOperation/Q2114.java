@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringOperation;
 import utils.DataConversionMethods;
 import utils.InputMethods;
 
@@ -71,8 +71,7 @@ public class Q2114 {
         List<String> data = new ArrayList<>();
         InputMethods.getInputForStringArrayList(cin, data);
         cin.close();
-        int result = mostWordsFound(DataConversionMethods.convertStringArrayListTo1DArray(data));
-        System.out.println(result);
+        System.out.println(mostWordsFound(DataConversionMethods.convertStringArrayListTo1DArray(data)));
     }
 
     private static int mostWordsFound(String[] sentences) {

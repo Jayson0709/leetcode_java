@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringOperation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -64,9 +64,7 @@ public class Q1662 {
         String[] word1 = cin.nextLine().strip().split(" ");
         String[] word2 = cin.nextLine().strip().split(" ");
         cin.close();
-
-        boolean result = arrayStringsAreEqual(word1, word2);
-        System.out.println(result);
+        System.out.println(arrayStringsAreEqual(word1, word2));
     }
 
     private static boolean arrayStringsAreEqual(String[] word1, String[] word2) {

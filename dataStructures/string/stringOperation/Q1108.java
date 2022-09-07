@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringOperation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -39,8 +39,7 @@ public class Q1108 {
         String address = cin.nextLine().strip();
         cin.close();
 
-        String result = defangIPAddress(address);
-        System.out.println(result);
+        System.out.println(defangIPAddress(address));
     }
 
     private static String defangIPAddress(String address) {

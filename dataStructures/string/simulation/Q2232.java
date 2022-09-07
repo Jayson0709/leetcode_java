@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.simulation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -69,13 +69,12 @@ import java.nio.charset.StandardCharsets;
 //    expression 的原始值和添加满足要求的任一对括号之后 expression 的值，都符合 32-bit 带符号整数范围
 
 
-public class Q2332 {
+public class Q2232 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String expression = cin.nextLine().strip();
         cin.close();
-        String result = minimizeResult(expression);
-        System.out.println(result);
+        System.out.println(minimizeResult(expression));
     }
 
     private static String minimizeResult(String expression) {

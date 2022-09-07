@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringOperation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -54,8 +54,7 @@ public class Q1576 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String s = cin.nextLine();
         cin.close();
-        String result = modifyString(s);
-        System.out.println(result);
+        System.out.println(modifyString(s));
     }
 
     private static String modifyString(String s) {

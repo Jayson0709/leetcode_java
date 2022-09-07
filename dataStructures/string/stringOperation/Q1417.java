@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringOperation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 

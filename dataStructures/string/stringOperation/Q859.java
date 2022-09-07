@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringOperation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -62,9 +62,7 @@ public class Q859 {
         String s = cin.nextLine().strip();
         String goal = cin.nextLine().strip();
         cin.close();
-
-        boolean result = buddyStrings(s, goal);
-        System.out.println(result);
+        System.out.println(buddyStrings(s, goal));
     }
 
     private static boolean buddyStrings(String s, String goal) {

@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringOperation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -40,8 +40,7 @@ public class Q556 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int n = cin.nextInt();
         cin.close();
-        int result = nextGreaterElement(n);
-        System.out.println(result);
+        System.out.println(nextGreaterElement(n));
     }
 
     private static int nextGreaterElement(int n) {

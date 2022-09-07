@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringOperation;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -47,8 +47,7 @@ public class Q273 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         int num = cin.nextInt();
         cin.close();
-        String result = numberToWords(num);
-        System.out.println(result);
+        System.out.println(numberToWords(num));
     }
 
     static String[] singles = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};

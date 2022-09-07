@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringMatching;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -54,9 +54,7 @@ public class Q686 {
         String a = cin.nextLine().strip();
         String b = cin.nextLine().strip();
         cin.close();
-
-        int result = repeatedStringMatch(a, b);
-        System.out.println(result);
+        System.out.println(repeatedStringMatch(a, b));
     }
 
     // Method 1: Rabin-Karp algorithm

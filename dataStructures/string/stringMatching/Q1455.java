@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.stringMatching;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 
@@ -63,8 +63,7 @@ public class Q1455 {
         String sentence = cin.nextLine().strip();
         String searchWord = cin.nextLine().strip();
         cin.close();
-        int result = isPrefixOfWord(sentence, searchWord);
-        System.out.println(result);
+        System.out.println(isPrefixOfWord(sentence, searchWord));
     }
 
     public static int isPrefixOfWord(String sentence, String searchWord) {

@@ -1,4 +1,4 @@
-package dataStructures.string;
+package dataStructures.string.simulation;
 import java.util.*;
 import java.nio.charset.*;
 
@@ -73,9 +73,7 @@ public class Q1910 {
         String s = cin.nextLine().strip();
         String part = cin.nextLine().strip();
         cin.close();
-
-        String result = removeOccurrences(s, part);
-        System.out.println(result);
+        System.out.println(removeOccurrences(s, part));
     }
 
     private static String removeOccurrences(String s, String part) {
