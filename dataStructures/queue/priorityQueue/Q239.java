@@ -1,4 +1,4 @@
-package dataStructures.queue;
+package dataStructures.queue.priorityQueue;
 
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
@@ -74,10 +74,17 @@ public class Q239 {
         for (int i = 0; i < k; i++) {
             pq.offer(new int[]{nums[i], i});
         }
-        result[0] = pq.peek()[0];
+        int[] temp = pq.peek();
+        if (temp != null) {
+            result[0] = temp[0];
+        }
         for (int i = k; i < len; i++) {
             pq.offer(new int[]{nums[i], i});
-            while (pq.peek()[1] <= i - k) {
+            while (true) {
+                int[] curr = pq.peek();
+                if (curr != null && curr[1] > i - k) {
+                    break;
+                }
                 pq.poll();
             }
             result[i - k + 1] = pq.peek()[0];
