@@ -1,4 +1,4 @@
-package dataStructures.queue;
+package dataStructures.queue.generalQueue;
 import utils.*;
 
 import java.util.*;

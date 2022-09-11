@@ -1,4 +1,4 @@
-package dataStructures.queue;
+package dataStructures.queue.generalQueue;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import sharedClasses.ListNode;
