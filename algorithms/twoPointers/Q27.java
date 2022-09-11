@@ -3,6 +3,9 @@ package algorithms.twoPointers;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The relative order of the elements may be changed.
 //
@@ -92,7 +95,9 @@ import utils.OneDArrayAndOneInt;
 
 public class Q27 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
         System.out.println(removeElement(obj.array, obj.val));
     }
 

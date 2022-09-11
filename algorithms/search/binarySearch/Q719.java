@@ -3,7 +3,9 @@ package algorithms.search.binarySearch;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Scanner;
 
 //The distance of a pair of integers a and b is defined as the absolute difference between a and b.
 //
@@ -63,9 +65,10 @@ import java.util.Arrays;
 
 public class Q719 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        int result = smallestDistancePair(obj.array, obj.val);
-        System.out.println(result);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
+        System.out.println(smallestDistancePair(obj.array, obj.val));
     }
 
     private static int smallestDistancePair(int[] nums, int k) {

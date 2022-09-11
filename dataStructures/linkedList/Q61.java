@@ -6,6 +6,9 @@ import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 import utils.OutputMethods;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //Given the head of a linked list, rotate the list to the right by k places.
 //
@@ -53,9 +56,9 @@ import utils.OutputMethods;
 
 public class Q61 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
-        ListNode resultHead = rotateRight(head, obj.val);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        ListNode resultHead = rotateRight(DataConversionMethods.convert1DArrayToLinkedList(obj.array), obj.val);
         System.out.println(OutputMethods.formatLinkedListOutputData(resultHead));
     }
 

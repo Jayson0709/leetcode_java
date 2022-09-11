@@ -3,8 +3,10 @@ package dataStructures.hashMap;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 //Given an array of integers nums and an integer k, return the number of unique k-diff pairs in the array.
 //
@@ -69,9 +71,10 @@ import java.util.Map;
 
 public class Q532 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        int result = findPairs(obj.array, obj.val);
-        System.out.println(result);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
+        System.out.println(findPairs(obj.array, obj.val));
     }
 
     private static int findPairs(int[] nums, int k) {

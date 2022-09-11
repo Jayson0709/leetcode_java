@@ -4,8 +4,10 @@ import sharedClasses.TreeNode;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 //Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
 //
@@ -81,10 +83,10 @@ import java.util.Queue;
 
 public class Q112 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        TreeNode root = InputMethods.getInputForOneBinaryTree(obj.array);
-        boolean result = hasPathSum(root, obj.val);
-        System.out.println(result);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
+        System.out.println(hasPathSum(InputMethods.getInputForOneBinaryTree(obj.array), obj.val));
     }
 
     private static boolean hasPathSum(TreeNode root, int targetSum) {

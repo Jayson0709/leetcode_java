@@ -3,7 +3,9 @@ package algorithms.twoPointers;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Scanner;
 
 
 //You are given a 0-indexed integer array nums and an integer pivot. Rearrange nums such that the following conditions are satisfied:
@@ -68,7 +70,9 @@ import java.util.Arrays;
 
 public class Q2161 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
         System.out.println(Arrays.toString(pivotArray(obj.array, obj.val)));
     }
 

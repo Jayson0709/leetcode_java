@@ -3,6 +3,9 @@ package algorithms.search.binarySearch;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 //Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 //
 //    You must write an algorithm with O(log n) runtime complexity.
@@ -51,9 +54,10 @@ import utils.OneDArrayAndOneInt;
 
 public class Q35 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        int result = searchInsert(obj.array, obj.val);
-        System.out.println(result);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
+        System.out.println(searchInsert(obj.array, obj.val));
     }
 
     private static int searchInsert(int[] nums, int target) {

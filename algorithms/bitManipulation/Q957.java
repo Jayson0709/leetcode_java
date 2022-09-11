@@ -3,9 +3,11 @@ package algorithms.bitManipulation;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 
 //There are 8 prison cells in a row and each cell is either occupied or vacant.
@@ -81,7 +83,9 @@ import java.util.Map;
 
 public class Q957 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
         System.out.println(Arrays.toString(prisonAfterNDays(obj.array, obj.val)));
     }
 

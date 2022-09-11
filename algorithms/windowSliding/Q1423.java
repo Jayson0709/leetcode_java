@@ -3,7 +3,9 @@ package algorithms.windowSliding;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Scanner;
 
 //There are several cards arranged in a row, and each card has an associated number of points. The points are given in the integer array cardPoints.
 //
@@ -76,9 +78,10 @@ import java.util.Arrays;
 
 public class Q1423 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        int result = maxScore(obj.array, obj.val);
-        System.out.println(result);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
+        System.out.println(maxScore(obj.array, obj.val));
     }
 
     private static int maxScore(int[] cardPoints, int k) {

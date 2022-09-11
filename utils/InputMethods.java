@@ -72,11 +72,9 @@ public class InputMethods {
         }
     }
 
-    public static OneDArrayAndOneInt getInputForOneInt1DArrayAndOneInt() {
-        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+    public static OneDArrayAndOneInt getInputForOneInt1DArrayAndOneInt(Scanner cin) {
         int[] array = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val = cin.nextInt();
-        cin.close();
         return new OneDArrayAndOneInt(array, val);
     }
 

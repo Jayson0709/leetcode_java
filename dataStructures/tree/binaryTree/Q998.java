@@ -5,6 +5,9 @@ import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 import utils.OutputMethods;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //A maximum tree is a tree where every node has a value greater than any other value in its subtree.
 //
@@ -122,9 +125,10 @@ import utils.OutputMethods;
 
 public class Q998 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        TreeNode root = InputMethods.getInputForOneBinaryTree(obj.array);
-        TreeNode resultNode = insertIntoMaxTree(root, obj.val);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
+        TreeNode resultNode = insertIntoMaxTree(InputMethods.getInputForOneBinaryTree(obj.array), obj.val);
         System.out.println(OutputMethods.formatLevelOrderTreeTraversalOutputData(resultNode));
     }
 

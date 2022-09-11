@@ -3,6 +3,9 @@ package algorithms.greedyAlgorithms;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //You have a long flowerbed in which some plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.
 //
@@ -45,7 +48,9 @@ import utils.OneDArrayAndOneInt;
 
 public class Q605 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
         System.out.println(canPlaceFlowers(obj.array, obj.val));
     }
 

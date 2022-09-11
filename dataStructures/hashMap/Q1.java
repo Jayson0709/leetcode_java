@@ -3,9 +3,11 @@ package dataStructures.hashMap;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 //Given an array of integers numsand an integer target, return indices of the two numbers such that they add up to target.
 //
@@ -60,7 +62,9 @@ import java.util.Map;
 
 class Q1 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
         System.out.println(Arrays.toString(twoSum(obj.array, obj.val)));
     }
 

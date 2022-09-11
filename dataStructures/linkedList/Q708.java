@@ -6,6 +6,9 @@ import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 import utils.OutputMethods;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //给定循环单调非递减列表中的一个点，写一个函数向这个列表中插入一个新元素insertVal ，使这个列表仍然是循环升序的。
 //
@@ -37,7 +40,9 @@ import utils.OutputMethods;
 
 public class Q708 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode p = head;
         while (p.next != null) {

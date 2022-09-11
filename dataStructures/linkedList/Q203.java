@@ -6,6 +6,9 @@ import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 import utils.OutputMethods;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.
 //
@@ -58,7 +61,9 @@ import utils.OutputMethods;
 
 public class Q203 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode resultHead = removeElements(head, obj.val);
         System.out.println(OutputMethods.formatLinkedListOutputData(resultHead));

@@ -3,6 +3,9 @@ package algorithms.windowSliding;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 //You are given an integer array nums and an integer x. In one operation, you can either remove the leftmost or the rightmost element from the array nums and subtract its value from x. Note that this modifies the array for future operations.
 //
@@ -54,9 +57,10 @@ import utils.OneDArrayAndOneInt;
 
 public class Q1658 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        int result = minOperations(obj.array, obj.val);
-        System.out.println(result);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
+        System.out.println(minOperations(obj.array, obj.val));
     }
 
     // Method: use Window Sliding + Two Pointers

@@ -3,7 +3,9 @@ package dataStructures.array.simpleArray;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Scanner;
 
 
 //Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
@@ -56,7 +58,9 @@ import java.util.Arrays;
 
 public class Q1470 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
         System.out.println(Arrays.toString(shuffle(obj.array, obj.val)));
     }
 

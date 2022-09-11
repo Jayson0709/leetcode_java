@@ -3,7 +3,9 @@ package algorithms.windowSliding;
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
 
+import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 //Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
@@ -50,9 +52,10 @@ import java.util.Set;
 
 public class Q219 {
     public static void main(String[] args) {
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt();
-        boolean result = containsNearbyDuplicate(obj.array, obj.val);
-        System.out.println(result);
+        Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
+        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        cin.close();
+        System.out.println(containsNearbyDuplicate(obj.array, obj.val));
     }
 
     private static boolean containsNearbyDuplicate(int[] nums, int k) {
