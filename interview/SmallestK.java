@@ -1,4 +1,4 @@
-package algorithms.sorting;
+package interview;
 
 import utils.InputMethods;
 import utils.OneDArrayAndOneInt;
