@@ -45,6 +45,7 @@ Project root
 |       |       |--- quadTree
 |       |       |--- segmentTree
 |       |       |--- trie
+|--- interview
 |--- sharedClasses
 |       |--- ListNode
 |       |--- TreeNode
