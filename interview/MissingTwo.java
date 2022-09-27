@@ -38,7 +38,7 @@ import java.util.Arrays;
 //    nums.length <= 30000
 
 
-public class MissingTwoLCCI {
+public class MissingTwo {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(missingTwo(InputMethods.getInputForOneIntArray())));
     }
