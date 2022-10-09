@@ -3,7 +3,7 @@ package dataStructures.hashSet;
 import sharedClasses.ListNode;
 import utils.DataConversionMethods;
 import utils.InputMethods;
-import utils.OneDArrayAndOneInt;
+import utils.OneDIntArrayAndOneInt;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
@@ -14,7 +14,7 @@ import java.util.Set;
 public class Q141 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        OneDIntArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
         cin.close();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode p1 = head, p2 = head;

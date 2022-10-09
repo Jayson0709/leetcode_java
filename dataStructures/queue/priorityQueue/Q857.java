@@ -1,7 +1,7 @@
 package dataStructures.queue.priorityQueue;
 
 import utils.InputMethods;
-import utils.TwoOneDArrayAndOneInt;
+import utils.TwoOneDIntArrayAndOneInt;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
@@ -63,7 +63,7 @@ import java.util.Scanner;
 public class Q857 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArrayAndOneInt obj = InputMethods.getInputForTwoInt1DArrayAndOneInt(cin);
+        TwoOneDIntArrayAndOneInt obj = InputMethods.getInputForTwoInt1DArrayAndOneInt(cin);
         cin.close();
         System.out.println(mincostToHireWorkers(obj.array1, obj.array2, obj.val));
     }

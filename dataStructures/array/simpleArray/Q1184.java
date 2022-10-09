@@ -1,7 +1,7 @@
 package dataStructures.array.simpleArray;
 
 import utils.InputMethods;
-import utils.OneDArrayAndTwoInt;
+import utils.OneDIntArrayAndTwoInt;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -98,7 +98,7 @@ import java.util.Scanner;
 public class Q1184 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        OneDArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
+        OneDIntArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
         cin.close();
         int result = distanceBetweenBusStops(obj.array, obj.val1, obj.val2);
         System.out.println(result);

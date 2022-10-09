@@ -1,7 +1,7 @@
 package algorithms.windowSliding;
 
 import utils.InputMethods;
-import utils.OneDArrayAndOneInt;
+import utils.OneDIntArrayAndOneInt;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -47,7 +47,7 @@ import java.util.Scanner;
 public class Q713 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        OneDIntArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
         cin.close();
         System.out.println(numSubarrayProductLessThanK(obj.array, obj.val));
     }

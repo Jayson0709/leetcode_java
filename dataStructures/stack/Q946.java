@@ -1,7 +1,7 @@
 package dataStructures.stack;
 
 import utils.InputMethods;
-import utils.TwoOneDArray;
+import utils.TwoOneDIntArray;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Deque;
@@ -59,7 +59,7 @@ import java.util.Scanner;
 public class Q946 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
+        TwoOneDIntArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         cin.close();
         System.out.println(validateStackSequences(obj.array1, obj.array2));
     }

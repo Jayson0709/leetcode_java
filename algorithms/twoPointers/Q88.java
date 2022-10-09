@@ -78,9 +78,9 @@ import java.nio.charset.StandardCharsets;
 public class Q88 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        OneDArrayAndOneInt obj1 = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        OneDIntArrayAndOneInt obj1 = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
         int[] nums1 = obj1.array;
-        OneDArrayAndOneInt obj2 = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        OneDIntArrayAndOneInt obj2 = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
         int[] nums2 = obj2.array;
         cin.close();
         merge(nums1, obj1.val, nums2, obj1.val);

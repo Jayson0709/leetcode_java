@@ -72,7 +72,7 @@ import java.util.*;
 public class Q1460 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
+        TwoOneDIntArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         cin.close();
         System.out.println(canBeEqual(obj.array1, obj.array2));
     }

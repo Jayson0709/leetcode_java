@@ -1,7 +1,7 @@
 package algorithms.windowSliding;
 
 import utils.InputMethods;
-import utils.TwoOneDArrayAndOneInt;
+import utils.TwoOneDIntArrayAndOneInt;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -66,7 +66,7 @@ import java.util.Scanner;
 public class Q1052 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArrayAndOneInt obj = InputMethods.getInputForTwoInt1DArrayAndOneInt(cin);
+        TwoOneDIntArrayAndOneInt obj = InputMethods.getInputForTwoInt1DArrayAndOneInt(cin);
         cin.close();
         System.out.println(maxSatisfied(obj.array1, obj.array2, obj.val));
     }

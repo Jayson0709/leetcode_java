@@ -3,7 +3,7 @@ package dataStructures.linkedList;
 import sharedClasses.ListNode;
 import utils.DataConversionMethods;
 import utils.InputMethods;
-import utils.OneDArrayAndOneInt;
+import utils.OneDIntArrayAndOneInt;
 import utils.OutputMethods;
 
 import java.nio.charset.StandardCharsets;
@@ -57,7 +57,7 @@ import java.util.Scanner;
 public class Q61 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        OneDArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
+        OneDIntArrayAndOneInt obj = InputMethods.getInputForOneInt1DArrayAndOneInt(cin);
         ListNode resultHead = rotateRight(DataConversionMethods.convert1DArrayToLinkedList(obj.array), obj.val);
         System.out.println(OutputMethods.formatLinkedListOutputData(resultHead));
     }

@@ -3,7 +3,7 @@ package dataStructures.linkedList;
 import sharedClasses.ListNode;
 import utils.DataConversionMethods;
 import utils.InputMethods;
-import utils.OneDArrayAndTwoInt;
+import utils.OneDIntArrayAndTwoInt;
 import utils.OutputMethods;
 
 import java.nio.charset.StandardCharsets;
@@ -60,7 +60,7 @@ import java.util.Scanner;
 public class Q92 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        OneDArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
+        OneDIntArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
         cin.close();
         ListNode head = DataConversionMethods.convert1DArrayToLinkedList(obj.array);
         ListNode resultNode = reverseBetween(head, obj.val1, obj.val2);

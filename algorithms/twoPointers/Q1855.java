@@ -1,7 +1,7 @@
 package algorithms.twoPointers;
 
 import utils.InputMethods;
-import utils.TwoOneDArray;
+import utils.TwoOneDIntArray;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -77,7 +77,7 @@ import java.util.Scanner;
 public class Q1855 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
+        TwoOneDIntArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         int result = maxDistance(obj.array1, obj.array2);
         cin.close();
         System.out.println(result);

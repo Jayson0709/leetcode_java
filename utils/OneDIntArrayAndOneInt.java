@@ -1,10 +1,10 @@
 package utils;
 
-public class OneDArrayAndOneInt {
+public class OneDIntArrayAndOneInt {
     public int[] array;
     public int val;
 
-    public OneDArrayAndOneInt(int[] array, int val) {
+    public OneDIntArrayAndOneInt(int[] array, int val) {
         this.array = array;
         this.val = val;
     }

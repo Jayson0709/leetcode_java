@@ -3,7 +3,7 @@ package dataStructures.tree.binaryTree;
 import sharedClasses.TreeNode;
 import utils.InputMethods;
 import utils.OutputMethods;
-import utils.TwoOneDArray;
+import utils.TwoOneDIntArray;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Deque;
@@ -66,7 +66,7 @@ import java.util.Scanner;
 public class Q105 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
+        TwoOneDIntArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         cin.close();
         TreeNode resultNode = buildTree(obj.array1, obj.array2);
         System.out.println(OutputMethods.formatLevelOrderTreeTraversalOutputData(resultNode));

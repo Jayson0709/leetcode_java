@@ -53,7 +53,7 @@ import java.util.*;
 public class Q658 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        OneDArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
+        OneDIntArrayAndTwoInt obj = InputMethods.getInputFOrOneInt1DArrayAndTwoInt(cin);
         cin.close();
         System.out.println(findClosestElements(obj.array, obj.val1, obj.val2));
     }

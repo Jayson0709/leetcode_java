@@ -4,7 +4,7 @@ import sharedClasses.ListNode;
 import utils.DataConversionMethods;
 import utils.InputMethods;
 import utils.OutputMethods;
-import utils.TwoOneDArray;
+import utils.TwoOneDIntArray;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -66,7 +66,7 @@ public class Q2 {
 
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        TwoOneDArray obj = InputMethods.getInputForTwoInt1DArray(cin);
+        TwoOneDIntArray obj = InputMethods.getInputForTwoInt1DArray(cin);
         cin.close();
         ListNode head1 = DataConversionMethods.convert1DArrayToLinkedList(obj.array1);
         ListNode head2 = DataConversionMethods.convert1DArrayToLinkedList(obj.array2);

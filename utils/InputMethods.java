@@ -72,29 +72,29 @@ public class InputMethods {
         }
     }
 
-    public static OneDArrayAndOneInt getInputForOneInt1DArrayAndOneInt(Scanner cin) {
+    public static OneDIntArrayAndOneInt getInputForOneInt1DArrayAndOneInt(Scanner cin) {
         int[] array = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val = cin.nextInt();
-        return new OneDArrayAndOneInt(array, val);
+        return new OneDIntArrayAndOneInt(array, val);
     }
 
-    public static OneDArrayAndTwoInt getInputFOrOneInt1DArrayAndTwoInt(Scanner cin) {
+    public static OneDIntArrayAndTwoInt getInputFOrOneInt1DArrayAndTwoInt(Scanner cin) {
         int[] array = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val1 = cin.nextInt();
         int val2 = cin.nextInt();
-        return new OneDArrayAndTwoInt(array, val1, val2);
+        return new OneDIntArrayAndTwoInt(array, val1, val2);
     }
 
-    public static TwoOneDArray getInputForTwoInt1DArray(Scanner cin) {
+    public static TwoOneDIntArray getInputForTwoInt1DArray(Scanner cin) {
         int[] array1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int[] array2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        return new TwoOneDArray(array1, array2);
+        return new TwoOneDIntArray(array1, array2);
     }
 
-    public static TwoOneDArrayAndOneInt getInputForTwoInt1DArrayAndOneInt(Scanner cin) {
+    public static TwoOneDIntArrayAndOneInt getInputForTwoInt1DArrayAndOneInt(Scanner cin) {
         int[] array1 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int[] array2 = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val = cin.nextInt();
-        return new TwoOneDArrayAndOneInt(array1, array2, val);
+        return new TwoOneDIntArrayAndOneInt(array1, array2, val);
     }
 }
