@@ -37,9 +37,9 @@ import java.util.Scanner;
 
 
 
-//给你一个数组 items ，其中 items[i] = [type_i, color_i, name_i] ，描述第 i 件物品的类型、颜色以及名称。
+//给你一个数组 items ，其中  items[i] = [type_i, color_i, name_i] ，描述第 i 件物品的类型、颜色以及名称。
 //
-//    另给你一条由两个字符串 ruleKey 和 ruleValue 表示的检索规则。
+//    另给你一条由两个字符串  ruleKey 和 ruleValue 表示的检索规则。
 //
 //    如果第 i 件物品能满足下述条件之一，则认为该物品与给定的检索规则 匹配 ：
 //
