@@ -32,7 +32,7 @@ Project root
 |       |--- hashSet
 |       |--- linkedList
 |       |--- queue
-|       |---    |--- generalQueue
+|       |       |--- generalQueue
 |       |       |--- priorityQueue
 |       |--- stack
 |       |--- string
