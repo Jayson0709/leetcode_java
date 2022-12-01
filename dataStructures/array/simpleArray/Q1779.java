@@ -76,23 +76,23 @@ public class Q1779 {
 
     private static int nearestValidPoint(int x, int y, int[][] points) {
         int n = points.length;
-        int best = Integer.MAX_VALUE, bestid = -1;
+        int best = Integer.MAX_VALUE, bestId = -1;
         for (int i = 0; i < n; ++i) {
             int px = points[i][0], py = points[i][1];
             if (x == px) {
                 int dist = Math.abs(y - py);
                 if (dist < best) {
                     best = dist;
-                    bestid = i;
+                    bestId = i;
                 }
             } else if (y == py) {
                 int dist = Math.abs(x - px);
                 if (dist < best) {
                     best = dist;
-                    bestid = i;
+                    bestId = i;
                 }
             }
         }
-        return bestid;
+        return bestId;
     }
 }
