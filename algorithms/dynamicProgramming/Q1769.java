@@ -66,6 +66,7 @@ public class Q1769 {
         System.out.println(Arrays.toString(minOperations(boxes)));
     }
 
+    // Version 1: Dynamic programming
     private static int[] minOperations(String boxes) {
         int n = boxes.length();
         int[] dp = new int[n];
@@ -85,4 +86,43 @@ public class Q1769 {
         }
         return dp;
     }
+
+    // Version 2: simulation - brute force
+//    private static int[] minOperations(String boxes) {
+//        int n = boxes.length();
+//        int[] res = new int[n];
+//        for (int i = 0; i < n; i++) {
+//            int sm = 0;
+//            for (int j = 0; j < n; j++) {
+//                if (boxes.charAt(j) == '1') {
+//                    sm += Math.abs(j - i);
+//                }
+//            }
+//            res[i] = sm;
+//        }
+//        return res;
+//    }
+
+    // Version3 : use dp-like method
+//    private static int[] minOperations(String boxes) {
+//        int left = boxes.charAt(0) - '0', right = 0, operations = 0;
+//        int n = boxes.length();
+//        for (int i = 1; i < n; i++) {
+//            if (boxes.charAt(i) == '1') {
+//                right++;
+//                operations += i;
+//            }
+//        }
+//        int[] res = new int[n];
+//        res[0] = operations;
+//        for (int i = 1; i < n; i++) {
+//            operations += left - right;
+//            if (boxes.charAt(i) == '1') {
+//                left++;
+//                right--;
+//            }
+//            res[i] = operations;
+//        }
+//        return res;
+//    }
 }
