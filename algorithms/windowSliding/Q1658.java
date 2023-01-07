@@ -63,34 +63,55 @@ public class Q1658 {
         System.out.println(minOperations(obj.array, obj.val));
     }
 
-    // Method: use Window Sliding + Two Pointers
+    // Method 1: use Window Sliding + Two Pointers
     // The question can be turned into this: find the longest continuous subarray with sum - x.
     // Use window sliding to solve
+//    private static int minOperations(int[] nums, int x) {
+//        int n = nums.length;
+//        int left = 0, right = 0;
+//        int maxLength = -1;
+//        int sum = 0;
+//        for (int num : nums) {
+//            sum += num;
+//        }
+//        int curSum = 0;
+//        while (left < n) {
+//            // if the right pointer does not reach the end, keep probing to the right
+//            // if it is greater than sum - x, move the left pointer until it ends.
+//            if (right < n) {
+//                curSum += nums[right++];
+//            }
+//            while (curSum > sum - x && left < n) {
+//                curSum -= nums[left++];
+//            }
+//            if (curSum == sum - x) {
+//                maxLength = Math.max(maxLength, right - left);
+//            }
+//            if (right == n) {
+//                left++;
+//            }
+//        }
+//        return maxLength == -1 ? -1 : n - maxLength;
+//    }
+
+    // Method 2: think backwards + two pointers
+    // Remove the longest sub-array, and the sum of remaining elements is equal to the target
     private static int minOperations(int[] nums, int x) {
-        int n = nums.length;
-        int left = 0, right = 0;
-        int maxLength = -1;
-        int sum = 0;
+        int target = -x;
         for (int num : nums) {
-            sum += num;
+            target += num;
         }
-        int curSum = 0;
-        while (left < n) {
-            // if the right pointer does not reach the end, keep probing to the right
-            // if it is greater than sum - x, move the left pointer until it ends.
-            if (right < n) {
-                curSum += nums[right++];
-            }
-            while (curSum > sum - x && left < n) {
-                curSum -= nums[left++];
-            }
-            if (curSum == sum - x) {
-                maxLength = Math.max(maxLength, right - left);
-            }
-            if (right == n) {
-                left++;
-            }
+        if (target < 0) {
+            return -1;
         }
-        return maxLength == -1 ? -1 : n - maxLength;
+        int ans = -1, left = 0, sum = 0, n = nums.length;
+        for (int right = 0; right < n; right++) {
+            sum += nums[right];
+            while (sum > target) {
+                sum -= nums[left++];
+            }
+            if (sum == target) ans = Math.max(ans, right - left + 1);
+        }
+        return ans < 0 ? -1 : n - ans;
     }
 }
