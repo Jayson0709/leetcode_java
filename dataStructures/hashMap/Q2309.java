@@ -71,6 +71,7 @@ public class Q2309 {
         System.out.println(greatestLetter(s));
     }
 
+    // Method 1: HashMap
     private static String greatestLetter(String s) {
         char[] letters = s.toCharArray();
         Map<Character, Integer> hMap = new HashMap<>();
@@ -87,4 +88,38 @@ public class Q2309 {
         }
         return res.toString();
     }
+
+    // Method 2: HashSet
+//    private static String greatestLetter(String s) {
+//        Set<Character> hashSet = new HashSet<>();
+//        for (int i = 0; i < s.length(); i++) {
+//            char c = s.charAt(i);
+//            hashSet.add(c);
+//        }
+//        for (int i = 25; i >= 0; i--) {
+//            if (hashSet.contains((char) ('a' + i)) && hashSet.contains((char) ('A' + i))) {
+//                return String.valueOf((char) ('A' + i));
+//            }
+//        }
+//        return "";
+//    }
+
+    // Method 3: Bit Manipulation
+//    private static String greatestLetter(String s) {
+//        int lower = 0, upper = 0;
+//        for (int i = 0; i < s.length(); i++) {
+//            char c = s.charAt(i);
+//            if (Character.isLowerCase(c)) {
+//                lower |= 1 << (c - 'a');
+//            } else {
+//                upper |= 1 << (c - 'A');
+//            }
+//        }
+//        for (int i = 25; i >= 0; i--) {
+//            if ((lower & upper & (1 << i)) != 0) {
+//                return String.valueOf((char) ('A' + i));
+//            }
+//        }
+//        return "";
+//    }
 }
