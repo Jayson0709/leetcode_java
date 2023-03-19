@@ -117,30 +117,63 @@ public class Q1625 {
         System.out.println(result);
     }
 
-    private static String findLexSmallestString(String s, int a, int b) {
-        SortedSet<String> set = new TreeSet<>();
-        Deque<String> q = new ArrayDeque<>();
-        set.add(s);
-        q.offer(s);
-        while (!q.isEmpty()) {
-            String cur = q.poll();
-            int len = cur.length();
-            String temp1 = cur.substring(len - b) + cur.substring(0, len - b);
-            helper(temp1, set, q);
-            char[] arr = cur.toCharArray();
-            for (int i = 1; i < len; i += 2) {
-                arr[i] = (char) ((arr[i] - '0' + a) % 10 + '0');
-            }
-            String temp2 = new String(arr);
-            helper(temp2, set, q);
-        }
-        return set.first();
-    }
+    // Method 1: BFS
+//    private static String findLexSmallestString(String s, int a, int b) {
+//        SortedSet<String> set = new TreeSet<>();
+//        Deque<String> q = new ArrayDeque<>();
+//        set.add(s);
+//        q.offer(s);
+//        while (!q.isEmpty()) {
+//            String cur = q.poll();
+//            int len = cur.length();
+//            String temp1 = cur.substring(len - b) + cur.substring(0, len - b);
+//            helper(temp1, set, q);
+//            char[] arr = cur.toCharArray();
+//            for (int i = 1; i < len; i += 2) {
+//                arr[i] = (char) ((arr[i] - '0' + a) % 10 + '0');
+//            }
+//            String temp2 = new String(arr);
+//            helper(temp2, set, q);
+//        }
+//        return set.first();
+//    }
+//
+//    private static void helper(String s, SortedSet<String> set, Deque<String> q) {
+//        if (!set.contains(s)) {
+//            set.add(s);
+//            q.offer(s);
+//        }
+//    }
 
-    private static void helper(String s, SortedSet<String> set, Deque<String> q) {
-        if (!set.contains(s)) {
-            set.add(s);
-            q.offer(s);
+    // Method 2: enumerate
+    private static String findLexSmallestString(String s, int a, int b) {
+        int length = s.length();
+        String res = s;
+        for (int i = 0; i < length; i++) {
+            s = s.substring(b) + s.substring(0, b);
+            char[] chars = s.toCharArray();
+            for (int j = 0; j < 10; j++) {
+                for (int k = 1; k < length; k += 2) {
+                    chars[k] = (char) (((chars[k] - '0' + a) % 10) + '0');
+                }
+                if ((b & 1) == 1) {
+                    for (int p = 0; p < 10; ++p) {
+                        for (int k = 0; k < length; k += 2) {
+                            chars[k] = (char) (((chars[k] - '0' + a) % 10) + '0');
+                        }
+                        s = String.valueOf(chars);
+                        if (res.compareTo(s) > 0) {
+                            res = s;
+                        }
+                    }
+                } else {
+                    s = String.valueOf(chars);
+                    if (res.compareTo(s) > 0) {
+                        res = s;
+                    }
+                }
+            }
         }
+        return res;
     }
 }
