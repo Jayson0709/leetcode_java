@@ -1,4 +1,4 @@
-package algorithms.backtracking;
+package dataStructures.string.simulation;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -29,7 +29,7 @@ import java.util.Scanner;
 //    time is a valid string of length 5 in the format "hh:mm".
 //    "00" <= hh <= "23"
 //    "00" <= mm <= "59"
-//    Some of the digits might be replaced with '?' and need to be replaced with digits from 0 to 9.
+//    Some digits might be replaced with '?' and need to be replaced with digits from 0 to 9.
 
 
 //给你一个长度为 5 的字符串 time ，表示一个电子时钟当前的时间，格式为 "hh:mm" 。最早 可能的时间是 "00:00" ，最晚 可能的时间是 "23:59" 。
@@ -65,11 +65,11 @@ public class Q2437 {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
         String time = cin.nextLine().strip();
         cin.close();
-        System.out.println(countTimes(time));
+        System.out.println(countTime(time));
     }
 
     // Method 1: Enumeration
-    private static int countTimes(String time) {
+    private static int countTime(String time) {
         int countHour = 0;
         int countMinute = 0;
         // For hours
@@ -92,4 +92,37 @@ public class Q2437 {
         }
         return countHour * countMinute;
     }
+
+    // Method 2: Backtracking
+//    int res = 0;
+//
+//    private int countTime(String time) {
+//        char[] arr = time.toCharArray();
+//        dfs(arr, 0);
+//        return res;
+//    }
+//
+//    private void dfs(char[] arr, int pos) {
+//        if (pos == arr.length) {
+//            if (check(arr)) {
+//                res++;
+//            }
+//            return;
+//        }
+//        if (arr[pos] == '?') {
+//            for (int i = 0; i <= 9; i++) {
+//                arr[pos] = (char) ('0' + i);
+//                dfs(arr, pos + 1);
+//                arr[pos] = '?';
+//            }
+//        } else {
+//            dfs(arr, pos + 1);
+//        }
+//    }
+//
+//    private boolean check(char[] arr) {
+//        int hour = (arr[0] - '0') * 10 + arr[1] - '0';
+//        int minute = (arr[3] - '0') * 10 + arr[4] - '0';
+//        return hour < 24 && minute < 60;
+//    }
 }
