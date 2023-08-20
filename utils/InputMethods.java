@@ -72,6 +72,15 @@ public class InputMethods {
         }
     }
 
+    public static TwoIntAndOne2DArray getInputForTwoIntAndOneInt2DArray(Scanner cin) {
+        int val1 = Integer.parseInt(cin.nextLine().strip());
+        int val2 = Integer.parseInt(cin.nextLine().strip());
+        List<int[]> data = new ArrayList<>();
+        getInputForIntArrArrayList(cin, data);
+        return new TwoIntAndOne2DArray(val1, val2,
+            DataConversionMethods.convertIntArrArrayListTo2DArray(data));
+    }
+
     public static OneDIntArrayAndOneInt getInputForOneInt1DArrayAndOneInt(Scanner cin) {
         int[] array = Arrays.stream(cin.nextLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
         int val = cin.nextInt();
