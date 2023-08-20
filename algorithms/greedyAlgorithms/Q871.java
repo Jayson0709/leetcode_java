@@ -81,13 +81,9 @@ import java.nio.charset.StandardCharsets;
 public class Q871 {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in, StandardCharsets.UTF_8);
-        int target = Integer.parseInt(cin.nextLine().strip());
-        int startFuel = Integer.parseInt(cin.nextLine().strip());
-        List<int[]> stationsList = new ArrayList<>();
-        InputMethods.getInputForIntArrArrayList(cin, stationsList);
+        TwoIntAndOne2DArray obj = InputMethods.getInputForTwoIntAndOneInt2DArray(cin);
         cin.close();
-        int result = minRefuelStops(target, startFuel, DataConversionMethods.convertIntArrArrayListTo2DArray(stationsList));
-        System.out.println(result);
+        System.out.println(minRefuelStops(obj.val1, obj.val2, obj.array));
     }
 
     // Method 1: Dynamic programming
