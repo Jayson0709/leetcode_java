@@ -41,27 +41,51 @@ public class SmallestDifference {
     }
 
     // Method 1: sort and two pointers
+//    private static int smallestDifference(int[] a, int[] b) {
+//        if (a.length == 1 && b.length == 1) {
+//            return Math.abs(a[0] - b[0]);
+//        }
+//        Arrays.sort(a);
+//        Arrays.sort(b);
+//        int p1 = 0;
+//        int p2 = 0;
+//        long minAbs = Long.MAX_VALUE;
+//        while (p1 < a.length && p2 < b.length) {
+//            if (a[p1] == b[p2]) {
+//                return 0;
+//            }
+//            long curDif = a[p1] - b[p2];
+//            minAbs = Math.min(Math.abs(curDif), minAbs);
+//            if (curDif > 0) {
+//                p2++;
+//            } else {
+//                p1++;
+//            }
+//        }
+//        return (int) minAbs;
+//    }
+
+    // Method 2: binary search
     private static int smallestDifference(int[] a, int[] b) {
-        if (a.length == 1 && b.length == 1) {
-            return Math.abs(a[0] - b[0]);
-        }
         Arrays.sort(a);
         Arrays.sort(b);
-        int p1 = 0;
-        int p2 = 0;
-        long minAbs = Long.MAX_VALUE;
-        while (p1 < a.length && p2 < b.length) {
-            if (a[p1] == b[p2]) {
+        int res = Integer.MAX_VALUE;
+        for (int num_a : a) {
+            int index = Arrays.binarySearch(b, num_a);
+            if (index >= 0) {
                 return 0;
             }
-            long curDif = a[p1] - b[p2];
-            minAbs = Math.min(Math.abs(curDif), minAbs);
-            if (curDif > 0) {
-                p2++;
-            } else {
-                p1++;
+            index = -index - 1;
+            if (index > 0) {
+                int diff = num_a - b[index - 1];
+                if (diff > 0)
+                    res = Math.min(res, diff);
+            }
+            if (index < b.length) {
+                int diff = b[index] - num_a;
+                if (diff > 0) res = Math.min(res, diff);
             }
         }
-        return (int) minAbs;
+        return res;
     }
 }
