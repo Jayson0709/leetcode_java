@@ -34,7 +34,7 @@ public class InputMethods {
     public static void getInputForStringArrayList(Scanner cin, List<String> list) {
         while (true) {
             String line = cin.nextLine().strip();
-            if (line.length() == 0) {
+            if (line.isEmpty()) {
                 break;
             }
             list.add(line);
@@ -44,7 +44,7 @@ public class InputMethods {
     public static void getInputForStringArrArrayList(Scanner cin, List<String[]> list) {
         while (true) {
             String line = cin.nextLine().strip();
-            if (line.length() == 0) {
+            if (line.isEmpty()) {
                 break;
             }
             list.add(line.split(" "));
@@ -54,7 +54,7 @@ public class InputMethods {
     public static void getInputForNestedStringArrayList(Scanner cin, List<List<String>> list) {
         while (true) {
             String line = cin.nextLine().strip();
-            if (line.length() == 0) {
+            if (line.isEmpty()) {
                 break;
             }
             List<String> temp = Arrays.asList(line.split(" "));
@@ -65,7 +65,7 @@ public class InputMethods {
     public static void getInputForIntArrArrayList(Scanner cin, List<int[]> list) {
         while (true) {
             String line = cin.nextLine().strip();
-            if (line.length() == 0) {
+            if (line.isEmpty()) {
                 break;
             }
             list.add(Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray());
